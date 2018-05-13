@@ -38,5 +38,53 @@ console.log(otherName);
 const
 jina = 'Some'
 console.log(jina);
-jina = 'Name'
-console.log(jina); //TypeError: Assignment to const var.
+// jina = 'Name'
+// console.log(jina); --> TypeError: Assignment to const var.
+
+// Const values have to be assigned. They cannot be initializes without being assigned a value
+// const greeting; --> SyntaxError: Missing initializer in const declaration
+
+/*
+
+When working with objects and arrays, the const key word allows us
+to mutate properties and/or elements within them but we can't
+re-assign.
+
+For example:
+*/
+const person = {
+  name: 'David',
+  age: '30'
+}
+console.log(person);
+
+// Allowed
+person.name = 'Solomon'
+console.log(person);
+
+/*
+
+Would throw an error even before logging.
+  person = {
+    name: 'Jedidiah',
+    age: '30'
+  }
+console.log(person);  --> TypeError: Assignment to constant variable
+
+*/
+
+// Works the same for lists/arrays
+
+const numbers = [1, 2, 3, 4];
+console.log(numbers);
+// Allowed
+numbers.push(5)
+console.log(numbers);
+
+/*
+
+Would throw an error
+numbers = [1,2,3,4,5,7]
+console.log(numbers);  --> TypeError: Assignment to constant variable
+
+*/
