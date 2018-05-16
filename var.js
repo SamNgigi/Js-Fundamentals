@@ -1,3 +1,5 @@
+// Note: var is considered a global variable no matter where it is declared
+
 var name = 'Jedi Master';
 console.log(name);
 // reassigning

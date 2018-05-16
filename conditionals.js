@@ -41,9 +41,11 @@ if (num > 99 || num < 101) {
 }
 
 // TERNARY OPERATOR
+// Read as --> is this = to this, do this else do something else.
 console.log(num === 100 ? 'Ternary working' : 'Ternary not working');
 
 // WITHOUT BRACES
+// Almost similiar to python.
   if(num !== 100)
     console.log("Can't work without braces");
   else
