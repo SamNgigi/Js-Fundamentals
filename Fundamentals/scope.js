@@ -21,10 +21,14 @@ if (true) {
 }
 
 // LOOP SCOPE With let
+console.log('');
+console.log('Loop with let');
 for (let a = 0; a < 10; a++) {
     console.log(`Loop: ${a}`);
 } // Global let does not change.
 // LOOP SCOPE With var
+console.log('');
+console.log('Loop with var');
 for (var a = 0; a < 10; a++) {
     console.log(`Loop: ${a}`);
 } // Global var changes according to loop
