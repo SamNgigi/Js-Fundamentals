@@ -49,5 +49,4 @@ function onClick(event) {
   res = event.offsetX;
 
   console.log(res);
-
 }

@@ -49,6 +49,6 @@ function runEvent(event) {
   let red = event.offsetY;
   let green = event.offsetX;
   let blue = 40;
-  document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
+  document.body.style.backgroundColor = `rgb(${green}, ${red}, ${40})`
 
 }
