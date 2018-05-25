@@ -36,7 +36,46 @@ function submitForm(event) {
   // console.log(777);// Testing form
   // Extracting the input
   const task = document.getElementById('task').value;
-  console.log(task); // Logging it to test input.
-  localStorage.setItem('task', task)
 
+  // Initializing array that will store our tasks
+  let task_array;
+
+  // Checking if there is already data in localStorage.
+  if (localStorage.getItem("to-do's") === null) {
+    // Setting our empty array if their is nothing in local storage.
+    task_array = [];
+  } else {
+    // Setting the todo's to our empty array if data exists in local storage.
+    task_array = JSON.parse(localStorage.getItem("to-do's"));
+  }
+
+  // Adding new tasks to our array.
+  task_array.push(task);
+
+
+  console.log(task); // Logging it to test input.
+  /* 
+    Setting task to local storage.this setup without an array
+    would keep on replacing the previous task instead of adding
+    new tasks.
+
+    So thats why we added an array to store the tasks in.
+  */
+  // Setting our all items in our task_array as todos
+  localStorage.setItem("to-do's", JSON.stringify(task_array))
+  // Alert that task has been added.
+  alert('Task saved.')
+}
+
+// Retriving data from our array in localStorage
+const task_results = JSON.parse(localStorage.getItem("to-do's"));
+
+// Conditional statement to make sure the we handle the null if the task_result is empty
+if (task_results === null) {
+  console.log('No tasks yet fam!');
+} else {
+  console.clear()
+  task_results.forEach(function (task) {
+    console.log(task);
+  })
 }
