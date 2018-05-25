@@ -32,11 +32,18 @@ function deleteItem(event) {
   //   console.log('Delete this specific item.From parent a tag.');
   // }
 
-  // Better way of doing this is using the classList. So that the target is not problematic
 
+  /*  
+    Better way of doing this is using the classList.So that the
+    targeting an element in an array if it has at least on of the
+    class Name we define.
+  */
   if (event.target.parentElement.classList.contains('delete-item')) {
     console.log('Delete this item.');
+    // This removes the whole li.
     event.target.parentElement.parentElement.remove();
+
   }
+  // 
 
 }
