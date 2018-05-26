@@ -76,7 +76,7 @@ function addTodo(event) {
   // Adding materialize class 
   li.className = 'collection-item';
   // Create text node(taskInput value.) and append to li.
-  li.appendChild(document.createTextNode(todoInput.value))
+  li.appendChild(document.createTextNode(`- ${todoInput.value}`))
 
   // Creating the aTag element
   // Link to remove individual tasks.
@@ -148,6 +148,7 @@ function removeTodo(event) {
       removeTodoFromLocalStorage(
         event.target.parentElement.parentElement
       )
+
     }
   }
 }
@@ -182,6 +183,16 @@ function clearAll(event) {
   }
   // This is actually faster... read more below.
   // https://jsperf.com/innerhtml-vs-removechild
+
+  // Clear todos from Local Storage. Calling function.
+  clearTodosFromLocalStorage();
+
+}
+
+// Clear Todos from Local Storage. Defining function.
+function clearTodosFromLocalStorage() {
+  // .clear() method removes all data from local storage.
+  localStorage.clear();
 }
 
 
