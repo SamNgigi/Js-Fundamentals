@@ -79,3 +79,5 @@ if (task_results === null) {
     console.log(task);
   })
 }
+
+// We can actually use localStorage to create bookmarks.

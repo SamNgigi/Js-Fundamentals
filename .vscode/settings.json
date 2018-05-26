@@ -12,5 +12,9 @@
     "**/web/node_modules": true,
     "**/web/build": true, // will change frequently by build command
     "**/admin/node_modules": true
-  }
+  },
+  "cSpell.language": "en,en-GB,en-US",
+  "cSpell.words": [
+    "todos"
+  ]
 }
