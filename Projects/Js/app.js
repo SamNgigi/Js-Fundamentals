@@ -143,8 +143,31 @@ function removeTodo(event) {
         Since we are targeting the whole li we have to move up to the aTag first then the actual to the actual li from our remove icon element.
       */
       event.target.parentElement.parentElement.remove()
+
+      // Remove from todo from local storage.
+      removeTodoFromLocalStorage(
+        event.target.parentElement.parentElement
+      )
     }
   }
+}
+
+// Remove from Local storage
+function removeTodoFromLocalStorage(todoItem) {
+  let todos;
+  if (localStorage.getItem('todos') === null) {
+    todos = []
+  } else {
+    todos = JSON.parse(localStorage.getItem('todos'))
+  }
+
+  todos.forEach(function (todo, index) {
+    if (todoItem.textContent === todo) {
+      todos.splice(index, 1);
+    }
+  })
+
+  localStorage.setItem('todos', JSON.stringify(todos))
 }
 
 // CLEAR ALL
