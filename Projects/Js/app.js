@@ -12,6 +12,9 @@ loadEventListeners();
 
 // LOADING ALL EVENT LISTENERS
 function loadEventListeners() {
+
+  // DOM LOAD EVENT
+  document.addEventListener('DOMContentLoaded', getTodos);
   // ADD TODO EVENT
   todoForm.addEventListener('submit', addTodo);
   // REMOVE TASK EVENT
@@ -20,6 +23,38 @@ function loadEventListeners() {
   clearBtn.addEventListener('click', clearAll);
   // FILTER TASK EVENT
   todoFilter.addEventListener('keyup', filterTodos);
+
+}
+
+// GET TODOS
+function getTodos() {
+  let todos;
+  if (localStorage.getItem('todos') === null) {
+    todos = []
+  } else {
+    todos = JSON.parse(localStorage.getItem('todos'));
+  }
+
+  todos.forEach(function (todo) {
+    // Create li element
+    const li = document.createElement('li');
+    // Add materialize li class
+    li.className = 'collection-item';
+    // Create text node add the todo and append to li.
+    li.appendChild(document.createTextNode(todo))
+    // Create aTag element.
+    aTag = document.createElement('a');
+    // Add class
+    aTag.className = 'delete-item secondary-content';
+    // Add icon 
+    aTag.innerHTML = '<i class="fa fa-remove"></i>'
+    // Add aTag to li
+    li.appendChild(aTag)
+
+    // Append li to ul
+    todoList.appendChild(li);
+  })
+
 }
 
 
@@ -63,10 +98,37 @@ function addTodo(event) {
   // Append li to the ul
   todoList.appendChild(li);
 
+  // Store in Local Storage function call.
+  storeTodosInLocalStorage(todoInput.value)
+
+
   // Clearing input after submission.
   todoInput.value = '';
 
 }
+
+// STORING TO LOCAL STORAGE
+function storeTodosInLocalStorage(todo) {
+  let todos;
+  // Condition to check if we have any todo in Local Storage.
+  if (localStorage.getItem('todos') === null) {
+    // if not we initialize our empty array that will store all our todos.
+    // This is in order to save multiple items in Local Storage 
+    todos = []
+  } else {
+    // If we do have items in the local storage we parse them into our array as Json.
+    todos = JSON.parse(localStorage.getItem('todos'))
+  }
+  // We push new todo items into our array.
+  todos.push(todo)
+  // Set our array into local storage.
+  localStorage.setItem('todos', JSON.stringify(todos))
+
+
+  // So when adding todos to our array we have to convert from string to Json format 
+  // However when setting our array to Local Storage we have to stringify our Json data.
+}
+
 
 // REMOVE TODO
 function removeTodo(event) {
@@ -98,6 +160,8 @@ function clearAll(event) {
   // This is actually faster... read more below.
   // https://jsperf.com/innerhtml-vs-removechild
 }
+
+
 
 // FILTER TODO LIST.
 function filterTodos(event) {
