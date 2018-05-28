@@ -1,6 +1,30 @@
 body {
-  background: #000; }
-  body h1 {
-    color: #fff; }
+  font-family: sans-serif;
+  color: #595959; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-style: inherit; }
+
+p {
+  font-style: inherit; }
+
+a {
+  font-style: inherit; }
+
+#header #main-menu {
+  font-style: inherit; }
+#header #logo {
+  font-style: inherit; }
+
+#main #content {
+  font-style: inherit; }
+#main #sidebar {
+  font-style: inherit; }
+
+#footer {
+  font-style: inherit; }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,6 +1,45 @@
+// Variables definition
+$text-color: #595959;
+$header-height: 60px;
+// Css
 body {
-  background: #000;
-  h1 {
-    color: #fff;
-  }
+    font-family: sans-serif;
+    color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-style: inherit;
+}
+
+p {
+    font-style: inherit;
+}
+
+a {
+    font-style: inherit;
+}
+
+#header {
+    #main-menu {
+        font-style: inherit;
+    }
+    #logo {
+        font-style: inherit;
+    }
+}
+
+#main {
+    #content {
+        font-style: inherit;
+    }
+    #sidebar {
+        font-style: inherit;
+    }
+}
+
+#footer {
+    font-style: inherit;
 }
