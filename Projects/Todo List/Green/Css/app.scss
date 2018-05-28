@@ -1,7 +1,7 @@
 // Variables definition
 $text-color: #595959;
-$header-height: 60px;
-// Css
+$header-height: 90px;
+// Application
 body {
     font-family: sans-serif;
     color: $text-color;
@@ -25,6 +25,7 @@ a {
 #header {
     #main-menu {
         font-style: inherit;
+        height: $header-height;
     }
     #logo {
         font-style: inherit;

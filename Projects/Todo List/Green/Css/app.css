@@ -15,7 +15,8 @@ a {
   font-style: inherit; }
 
 #header #main-menu {
-  font-style: inherit; }
+  font-style: inherit;
+  height: 90px; }
 #header #logo {
   font-style: inherit; }
 
