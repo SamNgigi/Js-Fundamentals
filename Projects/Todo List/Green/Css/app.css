@@ -6,26 +6,37 @@ h1,
 h2,
 h3,
 h4 {
-  font-style: inherit; }
+  font-family: "Palatino Linotype", Georgia, serif; }
 
 p {
-  font-style: inherit; }
+  font-family: Verdana, Arial, sans-serif; }
 
 a {
-  font-style: inherit; }
+  text-decoration: none;
+  color: #f27731; }
 
-#header #main-menu {
-  font-style: inherit;
-  height: 90px; }
-#header #logo {
-  font-style: inherit; }
+#header {
+  height: 90px;
+  background-color: #170a48; }
+  #header #main-menu li {
+    display: inline; }
+  #header #main-menu a {
+    text-decoration: underline;
+    color: white; }
+  #header #logo {
+    font-style: inherit; }
 
-#main #content {
-  font-style: inherit; }
-#main #sidebar {
-  font-style: inherit; }
+#main {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+  #main #content {
+    font-style: inherit; }
+  #main #sidebar ul {
+    list-style-type: none; }
 
 #footer {
-  font-style: inherit; }
+  height: 90px;
+  background: #ccf962; }
 
 /*# sourceMappingURL=app.css.map */
