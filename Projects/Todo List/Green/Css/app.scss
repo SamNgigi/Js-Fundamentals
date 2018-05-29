@@ -1,5 +1,10 @@
+// IMPORTING VARIABLES
 @import "variables";
+// IMPORTING MIXINS
+@import "mixins";
 // DECLARATION
+// We can declare a mixin globally.
+@include fancy-links;
 body {
     font-family: sans-serif;
     color: $text-color;
@@ -12,16 +17,28 @@ h4 {
     font-family: $headline-font;
 }
 
+h2 {
+    // Adding large text mixin to the h2 element.
+    @include large-text;
+}
+
 p {
     font-family: $text-font;
 }
 
 a {
-    text-decoration: none;
     color: $link-color;
 }
 
+//  Button element to add our mixin to.
+.warning-button {
+    // Including our mixin.
+    @include warning;
+    padding: 8px 12px; // Top and bottom...left and right.
+}
+
 #header {
+    @include box;
     height: $header-height;
     background-color: $theme-color;
     #main-menu {

@@ -1,0 +1,28 @@
+// DEFINING MIXINS
+@mixin warning {
+  background-color: orange;
+  color: #fff;
+}
+
+@mixin large-text {
+  font: {
+    size: 50px;
+    weight: bold;
+  }
+}
+
+@mixin rounded {
+  border-radius: 6px;
+}
+
+@mixin box {
+  @include rounded;
+  border: 10px solid rgba(255, 238, 0, 0.658);
+}
+
+@mixin fancy-links {
+  a {
+    font-style: italic;
+    text-decoration: none;
+  }
+}
