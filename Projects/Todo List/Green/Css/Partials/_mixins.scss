@@ -1,4 +1,12 @@
+// // FONTS
+// @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lobster|Sacramento|Open+Sans|Quicksand|Raleway|Lobster+Two|Nanum+Gothic|Ubuntu');
 // DEFINING MIXINS
+// GOOGLE FONTS
+@mixin google-font($fonts) {
+  $fonts: unquote($fonts);
+  @import url(https://fonts.googleapis.com/css?family=#{$fonts});
+}
+
 @mixin warning {
   background-color: orange;
   color: #fff;

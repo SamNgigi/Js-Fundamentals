@@ -11,30 +11,28 @@
   We however can add a default for the border
 
 */
-@import url();
-@import "http://";
-@import url(filename.css);
-@import "style-screen" screen;
+@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 a {
   font-style: italic;
   text-decoration: none; }
 
 body {
-  font-family: sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   color: #595959; }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Palatino Linotype", Georgia, serif; }
+  font-family: "Ubuntu", sans-serif; }
 
 h2 {
   font-size: 50px;
   font-weight: bold; }
 
 p {
-  font-family: Verdana, Arial, sans-serif; }
+  font-family: "Nanum Gothic", sans-serif; }
 
 a {
   color: #f27731; }
