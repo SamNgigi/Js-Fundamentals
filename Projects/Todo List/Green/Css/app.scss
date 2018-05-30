@@ -1,7 +1,12 @@
 // IMPORTING VARIABLES
-@import "variables";
+@import "Partials/variables";
 // IMPORTING MIXINS
-@import "mixins";
+@import "Partials/mixins";
+// NORMAL CSS IMPORTS. CSS CAN ALREADY DO THIS. 
+@import url();
+@import "http://";
+@import "filename.css";
+@import "style-screen" screen;
 // DECLARATION
 // We can declare a mixin globally.
 @include fancy-links;
@@ -37,12 +42,20 @@ a {
     padding: 8px 12px; // Top and bottom...left and right.
 }
 
+// Including our browser specific mixin.
+@include apply-to-ie-6 {
+    body {
+        font-size: 125%;
+    }
+}
+
 #header {
     /* 
         We can now add as many shadow arguments as we need because of
-        how we set up our box-shadow mixin parameters 
+         how we set up our box-shadow mixin parameters 
     */
-    @include box-shadow(2px 0px 4px #999, 1px 1px 6px $secondary-color);
+    @include box-shadow(2px 0px 4px #999,
+    1px 1px 6px $secondary-color);
     /* 
         Below we could leave this box mixin without a default because
         we have already set them.

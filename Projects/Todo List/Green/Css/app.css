@@ -1,6 +1,8 @@
 /* 
   We can use VarArgs. This allows us to enter many arguments of the
-  same type. In this case many shadows.
+  same type and the amount of them is not limited in any way... i.e
+  arbitrary amount of args for the same type. In this case many
+  shadows.
 */
 /* 
   We dont have to specify a default for the radius mixin because it can just inherit from the rounded mixin. 
@@ -9,6 +11,10 @@
   We however can add a default for the border
 
 */
+@import url();
+@import "http://";
+@import url(filename.css);
+@import "style-screen" screen;
 a {
   font-style: italic;
   text-decoration: none; }
@@ -38,10 +44,13 @@ a {
   color: #fff;
   padding: 8px 12px; }
 
+* html body {
+  font-size: 125%; }
+
 #header {
   /* 
       We can now add as many shadow arguments as we need because of
-      how we set up our box-shadow mixin parameters 
+       how we set up our box-shadow mixin parameters 
   */
   box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
   -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;

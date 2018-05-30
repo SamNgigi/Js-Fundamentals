@@ -13,13 +13,23 @@
 
 /* 
   We can use VarArgs. This allows us to enter many arguments of the
-  same type. In this case many shadows.
+  same type and the amount of them is not limited in any way... i.e
+  arbitrary amount of args for the same type. In this case many
+  shadows.
 */
 
 @mixin box-shadow($shadows...) {
   box-shadow: $shadows;
   -moz-box-shadow: $shadows;
   -webkit-box-shadow: $shadows;
+}
+
+// This is a browser specific mixin. I.E 6 in our case.
+@mixin apply-to-ie-6 {
+  // Below syntax is needed.
+  * html {
+    @content;
+  }
 }
 
 // We can pass arguments into our mixins.
