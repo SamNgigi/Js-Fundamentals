@@ -1,3 +1,14 @@
+/* 
+  We can use VarArgs. This allows us to enter many arguments of the
+  same type. In this case many shadows.
+*/
+/* 
+  We dont have to specify a default for the radius mixin because it can just inherit from the rounded mixin. 
+  We could add an alternative default to this box mixin though.
+
+  We however can add a default for the border
+
+*/
 a {
   font-style: italic;
   text-decoration: none; }
@@ -28,8 +39,27 @@ a {
   padding: 8px 12px; }
 
 #header {
-  border-radius: 6px;
-  border: 10px solid rgba(255, 238, 0, 0.658);
+  /* 
+      We can now add as many shadow arguments as we need because of
+      how we set up our box-shadow mixin parameters 
+  */
+  box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
+  -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
+  -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
+    /* 
+        Below we could leave this box mixin without a default because
+        we have already set them.
+
+        However say you wanted to update a either the radius or the
+        border. To target the right parameter we would have to
+        explicitly declare the parameter. So as to not trip them up.
+
+        The advantage to the explicit declaration is that we dont
+        have to worry about the order of the default. So we can begin
+        with the border then declare the radius after.
+    */
+  border-radius: 11px;
+  border: 11px solid #cccc;
   height: 90px;
   background-color: #170a48; }
   #header #main-menu li {

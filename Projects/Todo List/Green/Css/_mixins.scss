@@ -11,13 +11,35 @@
   }
 }
 
-@mixin rounded {
-  border-radius: 6px;
+/* 
+  We can use VarArgs. This allows us to enter many arguments of the
+  same type. In this case many shadows.
+*/
+
+@mixin box-shadow($shadows...) {
+  box-shadow: $shadows;
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
 }
 
-@mixin box {
-  @include rounded;
-  border: 10px solid rgba(255, 238, 0, 0.658);
+// We can pass arguments into our mixins.
+// Also we can assign a default value.
+@mixin rounded($radius: 7px) {
+  border-radius: $radius;
+}
+
+/* 
+  We dont have to specify a default for the radius mixin because it can just inherit from the rounded mixin. 
+  We could add an alternative default to this box mixin though.
+
+  We however can add a default for the border
+
+*/
+
+@mixin box($radius: 11px, $border: 7px solid rgba(255, 238, 0, 0.658)) {
+  // Passing our an argument into our mixin
+  @include rounded($radius);
+  border: $border;
 }
 
 @mixin fancy-links {

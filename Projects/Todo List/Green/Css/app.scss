@@ -38,7 +38,24 @@ a {
 }
 
 #header {
-    @include box;
+    /* 
+        We can now add as many shadow arguments as we need because of
+        how we set up our box-shadow mixin parameters 
+    */
+    @include box-shadow(2px 0px 4px #999, 1px 1px 6px $secondary-color);
+    /* 
+        Below we could leave this box mixin without a default because
+        we have already set them.
+
+        However say you wanted to update a either the radius or the
+        border. To target the right parameter we would have to
+        explicitly declare the parameter. So as to not trip them up.
+
+        The advantage to the explicit declaration is that we dont
+        have to worry about the order of the default. So we can begin
+        with the border then declare the radius after.
+    */
+    @include box($border: 11px solid #cccc);
     height: $header-height;
     background-color: $theme-color;
     #main-menu {
