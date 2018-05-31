@@ -226,6 +226,9 @@ NOTE
 %highlight {
     font-style: italic;
     color: #000;
+    @include dark {
+        color: #fefefe;
+    }
 }
 
 .sub-title {

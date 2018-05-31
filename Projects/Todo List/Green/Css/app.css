@@ -210,7 +210,8 @@ NOTE
 */
 .sub-title {
   font-style: italic;
-  color: #000; }
+  color: #000;
+  color: #fefefe; }
 
 .sub-title {
   font-size: 125%; }
