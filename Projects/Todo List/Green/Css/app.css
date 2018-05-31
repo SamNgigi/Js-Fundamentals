@@ -37,8 +37,29 @@ a {
 
 body {
   font-family: "Nanum Gothic", sans-serif;
+  background-color: #22222a;
+  color: #fff;
   font-size: 1.25em;
-  color: #000; }
+    /* 
+        This conditional would result in the text color being black. This is because we 
+        set our contrast to high.
+
+
+         @if $contrast==high {
+             color: #000;
+         }
+
+         @else if $contrast==low {
+             color: #999;
+         }
+
+         @else {
+             color: $text-color;
+         }
+
+        We have commented this so that we can define conditionals that will generate a
+        light and dark theme. 
+    */ }
   @media only screen and (max-width: 960px) {
     body {
       font-size: 125%; } }
@@ -57,13 +78,13 @@ p {
   font-family: "Nanum Gothic", sans-serif; }
 
 a {
-  color: #f27731; }
+  color: #c24721; }
   a:hover {
     /* 
         The darken() darkens the initial arg by the second arg.
         This is an inbuilt sass function.
     */
-    color: #ca510d; }
+    color: #812f16; }
 
 .warning-button, .cta-button {
   background-color: orange;
@@ -96,9 +117,9 @@ a {
       We can now add as many shadow arguments as we need because of
        how we set up our box-shadow mixin parameters 
   */
-  box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
-  -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
-  -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
+  box-shadow: 2px 0px 4px #999, 1px 1px 6px #c24721;
+  -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #c24721;
+  -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #c24721;
     /* 
         Below we could leave this box mixin without a default because
         we have already set them.
@@ -114,7 +135,7 @@ a {
   border-radius: 11px;
   border: 11px solid unqoute("#cccc");
   height: 90px;
-  background-color: #170a48; }
+  background-color: #42424a; }
   #header #main-menu li {
     display: inline; }
   #header #main-menu a {
@@ -147,12 +168,14 @@ a {
       padding: 1em 1.25em;
       border-bottom: 1px dashed #999; }
       #main #sidebar li:hover {
-        background-color: #efefef; }
+        background-color: #efefef;
+        background-color: #999;
+        color: #000; }
 
 #footer {
   clear: both;
   height: 90px;
-  background: #ccf962; }
+  background: #698932; }
 
 .error, .critical-error, .super-cta-button {
   color: red; }

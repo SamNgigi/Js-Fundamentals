@@ -1,7 +1,20 @@
  // FONTS
  // @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lobster|Sacramento|Open+Sans|Quicksand|Raleway|Lobster+Two|Nanum+Gothic|Ubuntu');
  // DEFINING MIXINS
- //  MEDIA QUERIES
+ // THEMES
+ @mixin dark {
+   @if $theme==Dark {
+     // @content directive allows us to abstract css properties
+     @content;
+   }
+ }
+
+ @mixin light {
+   @if $theme==Light {
+     // @content directive allows us to abstract css properties
+     @content;
+   }
+ } //  MEDIA QUERIES
  // tiny
  @mixin tiny-screens() {
    @media only screen and (max-width: 320px) {
