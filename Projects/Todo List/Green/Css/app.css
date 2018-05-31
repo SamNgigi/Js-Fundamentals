@@ -98,7 +98,8 @@ a {
 
 .cta-button {
   border-radius: 25px;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 0.9375rem; }
 
 .mdl-tooltip {
   background-color: orange;
@@ -197,7 +198,7 @@ a {
   font-weight: bold; }
 
 .super-cta-button {
-  font-size: em(20px); }
+  font-size: 125%; }
 
 /* 
 NOTE

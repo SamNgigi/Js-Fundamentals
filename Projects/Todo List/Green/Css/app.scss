@@ -92,6 +92,7 @@ a {
     @extend .warning-button;
     @include rounded(25px);
     font-weight: bold;
+    margin-bottom: toRem(15px);
 }
 
 .mdl-tooltip {
@@ -210,7 +211,7 @@ a {
 .super-cta-button {
     @extend .critical-error;
     @extend .error;
-    font-size: em(20px);
+    font-size: toPerc(20px);
 }
 
 /* 
