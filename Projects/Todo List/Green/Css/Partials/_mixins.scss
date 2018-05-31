@@ -1,52 +1,75 @@
-// // FONTS
-// @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lobster|Sacramento|Open+Sans|Quicksand|Raleway|Lobster+Two|Nanum+Gothic|Ubuntu');
-// DEFINING MIXINS
-// GOOGLE FONTS
-@mixin google-font($fonts) {
-  $fonts: unquote($fonts);
-  @import url(https://fonts.googleapis.com/css?family=#{$fonts});
-}
+ // FONTS
+ // @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lobster|Sacramento|Open+Sans|Quicksand|Raleway|Lobster+Two|Nanum+Gothic|Ubuntu');
+ // DEFINING MIXINS
+ //  MEDIA QUERIES
+ // tiny
+ @mixin tiny-screens() {
+   @media only screen and (max-width: 320px) {
+     @content;
+   }
+ } // small
+ @mixin small-screens() {
+   @media only screen and (max-width: 480px) {
+     @content;
+   }
+ } // medium
+ @mixin medium-screens() {
+   @media only screen and (max-width: 680px) {
+     @content;
+   }
+ } // large
+ @mixin large-screens() {
+   @media only screen and (max-width: 960px) {
+     @content;
+   }
+ } // GOOGLE FONTS
+ @mixin google-font($fonts) {
+   $fonts: unquote($fonts);
+   @import url(https://fonts.googleapis.com/css?family=#{$fonts});
+ }
 
-@mixin warning {
-  background-color: orange;
-  color: #fff;
-}
+ @mixin warning {
+   background-color: orange;
+   color: #fff;
+   &:hover {
+     /* 
+      The lighten() is the opposite of the darken()
+    */
+     background-color: lighten(orange, 10%)
+   }
+ }
 
-@mixin large-text {
-  font: {
-    size: 50px;
-    weight: bold;
-  }
-}
+ @mixin large-text {
+   font: {
+     size: 50px;
+     weight: bold;
+   }
+ }
 
-/* 
+ /* 
   We can use VarArgs. This allows us to enter many arguments of the
   same type and the amount of them is not limited in any way... i.e
   arbitrary amount of args for the same type. In this case many
   shadows.
 */
 
-@mixin box-shadow($shadows...) {
-  box-shadow: $shadows;
-  -moz-box-shadow: $shadows;
-  -webkit-box-shadow: $shadows;
-}
+ @mixin box-shadow($shadows...) {
+   box-shadow: $shadows;
+   -moz-box-shadow: $shadows;
+   -webkit-box-shadow: $shadows;
+ } // This is a browser specific mixin. I.E 6 in our case.
+ @mixin apply-to-ie-6 {
+   // Below syntax is needed.
+   * html {
+     @content;
+   }
+ } // We can pass arguments into our mixins.
+ // Also we can assign a default value.
+ @mixin rounded($radius: 7px) {
+   border-radius: $radius;
+ }
 
-// This is a browser specific mixin. I.E 6 in our case.
-@mixin apply-to-ie-6 {
-  // Below syntax is needed.
-  * html {
-    @content;
-  }
-}
-
-// We can pass arguments into our mixins.
-// Also we can assign a default value.
-@mixin rounded($radius: 7px) {
-  border-radius: $radius;
-}
-
-/* 
+ /* 
   We dont have to specify a default for the radius mixin because it can just inherit from the rounded mixin. 
   We could add an alternative default to this box mixin though.
 
@@ -54,15 +77,15 @@
 
 */
 
-@mixin box($radius: 11px, $border: 7px solid rgba(255, 238, 0, 0.658)) {
-  // Passing our an argument into our mixin
-  @include rounded($radius);
-  border: $border;
-}
+ @mixin box($radius: 11px, $border: 7px solid rgba(255, 238, 0, 0.658)) {
+   // Passing our an argument into our mixin
+   @include rounded($radius);
+   border: $border;
+ }
 
-@mixin fancy-links {
-  a {
-    font-style: italic;
-    text-decoration: none;
-  }
-}
+ @mixin fancy-links {
+   a {
+     font-style: italic;
+     text-decoration: none;
+   }
+ }

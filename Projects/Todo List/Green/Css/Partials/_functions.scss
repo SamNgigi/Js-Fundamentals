@@ -1,0 +1,55 @@
+// SASS FUNCTIONS
+// Add.
+@function sum($left, $right) {
+  @return $left+$right;
+}
+
+// Function that converts pixels to ems
+@function toEm($pixels, $context: 16px) {
+  @return($pixels/$context) * 1em;
+}
+
+// Function that converts pixels to rems
+@function toRem($pixels, $context: 16px) {
+  @return($pixels/$context) * 1rem;
+}
+
+// Function that converts pixels to %
+@function toPerc($pixels, $context: 16px) {
+  @return($pixels/$context) * 100%;
+}
+
+/* 
+   Function that calculates the width of a single column in a grid
+   layout.
+*/
+
+@function col-width($columns: 12, $page-width: 100%, $gap:1%) {
+  /* 
+    $gap*($columns - 1) calculates the gap for the given number of
+    columns minus the last on. Because the last column will not need
+    one gap.
+
+    $page-width - $gap*($columns - 1)) >> Total width available to use.
+
+    Here we are diving the total available width with the number of
+    columns available to calculate the width of a single column.
+  */
+  @return ($page-width - $gap*($columns - 1)) / $columns;
+}
+
+// Following function strips the unit of measure from a value
+@function strip-unit($value) {
+  @return $value / ($value*0 + 1);
+}
+
+/* 
+  Basically it would seem that
+  1. Pixels are not that flexible
+  2. REM - is best for sizes and spacing because it sizes based on
+          the default root/html size.
+         - It is best for sizing and spacing.
+  3. EM  - is may scale too abruptly.
+         - It is best for media queries.
+  4. %   - Scales gradually so may be a preferable choice. 
+*/

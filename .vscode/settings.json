@@ -18,8 +18,10 @@
     "Artboard",
     "MIXINS",
     "Nanum",
+    "Perc",
     "Tajawal",
-    "todos"
+    "todos",
+    "transparentize"
   ],
   "liveSassCompile.settings.formats": [
     {

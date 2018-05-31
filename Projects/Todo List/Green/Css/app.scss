@@ -1,3 +1,10 @@
+/* 
+    NOTE - The imports should be in the right order or there will be
+    an error.
+*/
+
+// IMPORTING FUNCTIONS
+@import "Partials/functions";
 // IMPORTING VARIABLES
 @import "Partials/variables";
 // IMPORTING MIXINS
@@ -17,7 +24,8 @@
 body {
     font-family: $text-font;
     color: $text-color;
-    @media only screen and (max-width: 960px) {
+    font-size: toEm(20px); // We call our toEm function that converts our px to em.
+    @include large-screens {
         font-size: 125%;
     }
 }
@@ -39,7 +47,14 @@ p {
 }
 
 a {
-    color: $link-color;
+    color: $link-color; // Pseudo selecting
+    &:hover {
+        /* 
+            The darken() darkens the initial arg by the second arg.
+            This is an inbuilt sass function.
+        */
+        color: darken($link-color, 15%)
+    }
 }
 
 //  Button element to add our mixin to.
@@ -47,6 +62,10 @@ a {
     // Including our mixin.
     @include warning;
     padding: 8px 12px; // Top and bottom...left and right.
+}
+
+.mdl-tooltip {
+    @include warning;
 }
 
 // Including our browser specific mixin.
@@ -82,8 +101,14 @@ a {
             display: inline;
         }
         a {
-            text-decoration: underline;
             color: $menu-item-color;
+            padding: 6px 8px;
+            border-bottom: 1px solid transparentize(#fefefe, 1);
+            transition: border-bottom 0.5s;
+            transition-timing-function: ease-in-out;
+            &:hover {
+                border-bottom: 1px solid opacify($color: #fefefe, $amount: .5);
+            }
         }
     }
     #logo {
@@ -93,23 +118,32 @@ a {
 
 #main {
     width: $content-width;
-    @media only screen and (max-width: 960px) {
+    @include medium-screens {
         width: auto;
         max-width: $content-width;
     }
     margin-left: auto;
     margin-right: auto;
     #content {
-        font-style: inherit;
+        float: right;
+        width: 6*$col;
     }
     #sidebar {
-        ul {
+        float: left;
+        width: 2*$col;
+        li {
             list-style-type: none;
+            padding: toEm(16px) toEm(20px);
+            border-bottom: 1px dashed #999;
+            &:hover {
+                background-color: #efefef;
+            }
         }
     }
 }
 
 #footer {
+    clear: both;
     height: $footer-height;
     background: $ternary-color;
 }

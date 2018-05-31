@@ -1,10 +1,28 @@
 /* 
+    NOTE - The imports should be in the right order or there will be
+    an error.
+*/
+/* 
+   Function that calculates the width of a single column in a grid
+   layout.
+*/
+/* 
+  Basically it would seem that
+  1. Pixels are not that flexible
+  2. REM - is best for sizes and spacing because it sizes based on
+          the default root/html size.
+         - It is best for sizing and spacing.
+  3. EM  - is may scale too abruptly.
+         - It is best for media queries.
+  4. %   - Scales gradually so may be a preferable choice. 
+*/
+ /* 
   We can use VarArgs. This allows us to enter many arguments of the
   same type and the amount of them is not limited in any way... i.e
   arbitrary amount of args for the same type. In this case many
   shadows.
 */
-/* 
+ /* 
   We dont have to specify a default for the radius mixin because it can just inherit from the rounded mixin. 
   We could add an alternative default to this box mixin though.
 
@@ -19,7 +37,8 @@ a {
 
 body {
   font-family: "Nanum Gothic", sans-serif;
-  color: #595959; }
+  color: #595959;
+  font-size: 1.25em; }
   @media only screen and (max-width: 960px) {
     body {
       font-size: 125%; } }
@@ -39,11 +58,31 @@ p {
 
 a {
   color: #f27731; }
+  a:hover {
+    /* 
+        The darken() darkens the initial arg by the second arg.
+        This is an inbuilt sass function.
+    */
+    color: #ca510d; }
 
 .warning-button {
   background-color: orange;
   color: #fff;
   padding: 8px 12px; }
+  .warning-button:hover {
+   /* 
+    The lighten() is the opposite of the darken()
+  */
+    background-color: #ffb733; }
+
+.mdl-tooltip {
+  background-color: orange;
+  color: #fff; }
+  .mdl-tooltip:hover {
+   /* 
+    The lighten() is the opposite of the darken()
+  */
+    background-color: #ffb733; }
 
 * html body {
   font-size: 125%; }
@@ -75,8 +114,13 @@ a {
   #header #main-menu li {
     display: inline; }
   #header #main-menu a {
-    text-decoration: underline;
-    color: white; }
+    color: white;
+    padding: 6px 8px;
+    border-bottom: 1px solid rgba(254, 254, 254, 0);
+    transition: border-bottom 0.5s;
+    transition-timing-function: ease-in-out; }
+    #header #main-menu a:hover {
+      border-bottom: 1px solid #fefefe; }
   #header #logo {
     font-style: inherit; }
 
@@ -84,16 +128,25 @@ a {
   width: 960px;
   margin-left: auto;
   margin-right: auto; }
-  @media only screen and (max-width: 960px) {
+  @media only screen and (max-width: 680px) {
     #main {
       width: auto;
       max-width: 960px; } }
   #main #content {
-    font-style: inherit; }
-  #main #sidebar ul {
-    list-style-type: none; }
+    float: right;
+    width: 69.75%; }
+  #main #sidebar {
+    float: left;
+    width: 23.25%; }
+    #main #sidebar li {
+      list-style-type: none;
+      padding: 1em 1.25em;
+      border-bottom: 1px dashed #999; }
+      #main #sidebar li:hover {
+        background-color: #efefef; }
 
 #footer {
+  clear: both;
   height: 90px;
   background: #ccf962; }
 
