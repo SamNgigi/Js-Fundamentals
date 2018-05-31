@@ -199,9 +199,14 @@ NOTE
 %highlight {
     font-style: italic;
     color: #000;
-    font-size: toPerc(20px);
 }
 
 .sub-title {
     @extend %highlight;
+    font-size: toPerc(20px);
 }
+
+/* 
+    We use the !optional to continue with pre processing if some
+    selector does not exist.
+*/

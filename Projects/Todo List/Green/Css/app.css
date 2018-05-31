@@ -2,10 +2,12 @@
     NOTE - The imports should be in the right order or there will be
     an error.
 */
+
 /* 
    Function that calculates the width of a single column in a grid
    layout.
 */
+
 /* 
   Basically it would seem that
   1. Pixels are not that flexible
@@ -16,80 +18,104 @@
          - It is best for media queries.
   4. %   - Scales gradually so may be a preferable choice. 
 */
- /* 
+
+/* 
   We can use VarArgs. This allows us to enter many arguments of the
   same type and the amount of them is not limited in any way... i.e
   arbitrary amount of args for the same type. In this case many
   shadows.
 */
- /* 
+
+/* 
   We dont have to specify a default for the radius mixin because it can just inherit from the rounded mixin. 
   We could add an alternative default to this box mixin though.
 
   We however can add a default for the border
 
 */
+
 @import url(https://fonts.googleapis.com/css?family=Nanum+Gothic);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 a {
   font-style: italic;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 body {
   font-family: "Nanum Gothic", sans-serif;
   color: #595959;
-  font-size: 1.25em; }
-  @media only screen and (max-width: 960px) {
-    body {
-      font-size: 125%; } }
+  font-size: 1.25em;
+}
+
+@media only screen and (max-width: 960px) {
+  body {
+    font-size: 125%;
+  }
+}
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Ubuntu", sans-serif; }
+  font-family: "Ubuntu", sans-serif;
+}
 
 h2 {
   font-size: 50px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 p {
-  font-family: "Nanum Gothic", sans-serif; }
+  font-family: "Nanum Gothic", sans-serif;
+}
 
 a {
-  color: #f27731; }
-  a:hover {
-    /* 
+  color: #f27731;
+}
+
+a:hover {
+  /* 
         The darken() darkens the initial arg by the second arg.
         This is an inbuilt sass function.
     */
-    color: #ca510d; }
+  color: #ca510d;
+}
 
-.warning-button, .cta-button {
+.warning-button,
+.cta-button {
   background-color: orange;
   color: #fff;
-  padding: 8px 12px; }
-  .warning-button:hover, .cta-button:hover {
-   /* 
+  padding: 8px 12px;
+}
+
+.warning-button:hover,
+.cta-button:hover {
+  /* 
     The lighten() is the opposite of the darken()
   */
-    background-color: #ffb733; }
+  background-color: #ffb733;
+}
 
 .cta-button {
   border-radius: 25px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .mdl-tooltip {
   background-color: orange;
-  color: #fff; }
-  .mdl-tooltip:hover {
-   /* 
+  color: #fff;
+}
+
+.mdl-tooltip:hover {
+  /* 
     The lighten() is the opposite of the darken()
   */
-    background-color: #ffb733; }
+  background-color: #ffb733;
+}
 
 * html body {
-  font-size: 125%; }
+  font-size: 125%;
+}
 
 #header {
   /* 
@@ -99,7 +125,7 @@ a {
   box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
   -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
   -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
-    /* 
+  /* 
         Below we could leave this box mixin without a default because
         we have already set them.
 
@@ -114,48 +140,73 @@ a {
   border-radius: 11px;
   border: 11px solid unqoute("#cccc");
   height: 90px;
-  background-color: #170a48; }
-  #header #main-menu li {
-    display: inline; }
-  #header #main-menu a {
-    color: white;
-    padding: 6px 8px;
-    border-bottom: 1px solid rgba(254, 254, 254, 0);
-    transition: border-bottom 0.5s;
-    transition-timing-function: ease-in-out; }
-    #header #main-menu a:hover {
-      border-bottom: 1px solid #fefefe; }
-  #header #logo {
-    font-style: inherit; }
+  background-color: #170a48;
+}
+
+#header #main-menu li {
+  display: inline;
+}
+
+#header #main-menu a {
+  color: white;
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(254, 254, 254, 0);
+  transition: border-bottom 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+#header #main-menu a:hover {
+  border-bottom: 1px solid #fefefe;
+}
+
+#header #logo {
+  font-style: inherit;
+}
 
 #main {
   width: 960px;
   margin-left: auto;
-  margin-right: auto; }
-  @media only screen and (max-width: 680px) {
-    #main {
-      width: auto;
-      max-width: 960px; } }
-  #main #content {
-    float: right;
-    width: 69.75%; }
-  #main #sidebar {
-    float: left;
-    width: 23.25%; }
-    #main #sidebar li {
-      list-style-type: none;
-      padding: 1em 1.25em;
-      border-bottom: 1px dashed #999; }
-      #main #sidebar li:hover {
-        background-color: #efefef; }
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 680px) {
+  #main {
+    width: auto;
+    max-width: 960px;
+  }
+}
+
+#main #content {
+  float: right;
+  width: 69.75%;
+}
+
+#main #sidebar {
+  float: left;
+  width: 23.25%;
+}
+
+#main #sidebar li {
+  list-style-type: none;
+  padding: 1em 1.25em;
+  border-bottom: 1px dashed #999;
+}
+
+#main #sidebar li:hover {
+  background-color: #efefef;
+}
 
 #footer {
   clear: both;
   height: 90px;
-  background: #ccf962; }
+  background: #ccf962;
+}
 
-.error, .critical-error, .super-cta-button {
-  color: red; }
+.error,
+.critical-error,
+.super-cta-button {
+  color: red;
+}
 
 /* 
     The critical error class can inherit styles from error class
@@ -169,12 +220,16 @@ a {
     
 
 */
-.critical-error, .super-cta-button {
+
+.critical-error,
+.super-cta-button {
   bottom: 1px solid red;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .super-cta-button {
-  font-size: em(20px); }
+  font-size: em(20px);
+}
 
 /* 
 NOTE
@@ -185,9 +240,41 @@ NOTE
 3. We also have extend only selectors that use %. No css is generated from these selectors and they are used for extending only.
 
 */
+
 .sub-title {
   font-style: italic;
   color: #000;
-  font-size: 125%; }
+}
+
+.sub-title {
+  font-size: 125%;
+}
+
+/* 
+    We use the !optional to continue with pre processing if some
+    selector does not exist.
+
+
+    NOTE:
+      Mixins and Extends are quite similar with some of the main differences being
+      -Extends generates duplicates selectors but with less duplicated style code.
+      -Extends also allows us to use extend only selectors which reduces file size
+
+      -Mixins do not duplicate the selector instead duplicating a lot of style code. This results in larger file sizes.
+      -However when we gzip and compress a file Mixin code is optimized way better than Extend code. 
+
+      -> Mixin are therefore highly recommended when gzipped.
+
+      So how do we Gzip.
+
+      Glad you asked.
+
+      Here is a very useful link.
+      https: //www.howtoforge.com/linux-gzip-command/
+
+      More on mixin vs extend here
+      https: //tech.bellycard.com/blog/sass-mixins-vs-extends-the-data/
+
+*/
 
 /*# sourceMappingURL=app.css.map */
