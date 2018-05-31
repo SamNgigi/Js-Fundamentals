@@ -64,6 +64,13 @@ a {
     padding: 8px 12px; // Top and bottom...left and right.
 }
 
+// Example on Inheritance
+.cta-button {
+    @extend .warning-button;
+    @include rounded(25px);
+    font-weight: bold;
+}
+
 .mdl-tooltip {
     @include warning;
 }
@@ -93,7 +100,7 @@ a {
         have to worry about the order of the default. So we can begin
         with the border then declare the radius after.
     */
-    @include box($border: 11px solid #cccc);
+    @include box($border: 11px solid unqoute('#cccc'));
     height: $header-height;
     background-color: $theme-color;
     #main-menu {
@@ -146,4 +153,55 @@ a {
     clear: both;
     height: $footer-height;
     background: $ternary-color;
+}
+
+// INHERITANCE
+.error {
+    color: red;
+}
+
+/* 
+    The critical error class can inherit styles from error class
+    using the @extend
+
+    - Note that we can have multiple extends directives allowing our
+    class to inherit from multiple classes.
+
+    - Also we can have chained inheritance whereby we another class
+    can inherit from another class that has inherited attributes.
+    
+
+*/
+
+.critical-error {
+    @extend .error;
+    bottom: 1px solid red;
+    font-weight: bold;
+}
+
+// Chained inheritance. This is similar to inheritance hierarchy.
+.super-cta-button {
+    @extend .critical-error;
+    @extend .error;
+    font-size: em(20px);
+}
+
+/* 
+NOTE
+1. We cannot extend multiple element selector in a single line
+2. We can not extend from a selector that is defined outside the
+    media query only from within it. We can however extend a
+    selector defined within a media query outside it
+3. We also have extend only selectors that use %. No css is generated from these selectors and they are used for extending only.
+
+*/
+
+%highlight {
+    font-style: italic;
+    color: #000;
+    font-size: toPerc(20px);
+}
+
+.sub-title {
+    @extend %highlight;
 }

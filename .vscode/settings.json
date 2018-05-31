@@ -21,7 +21,8 @@
     "Perc",
     "Tajawal",
     "todos",
-    "transparentize"
+    "transparentize",
+    "unqoute"
   ],
   "liveSassCompile.settings.formats": [
     {
