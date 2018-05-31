@@ -16,6 +16,53 @@
 // @import "http://";
 // @import "filename.css";
 // @import "style-screen" screen;
+// LOOPS
+// 'through' would INCLUDE the upper bound i.e 3
+@for $i from 1 through 3 {
+    .col-#{$i} {
+        width: $i * 2rem
+    }
+}
+
+// 'to' would EXCLUDE the upper bound i.e 3
+@for $i from 1 to 3 {
+    .col-#{$i} {
+        width: $i * 2rem
+    }
+}
+
+// FOR EACH
+// In this example we shall use the example of speakers at a conference
+$speakers: phill-damani,
+jed-mel,
+sam-ngigi;
+@each $speaker in $speakers {
+    .#{$speaker}-profile {
+        background-image: url('/img/#{$speaker}.png');
+    }
+}
+
+// Example of the @each directive with  maps --> key: value pairs.
+$font-sizes: (tiny: toPerc(8px),
+small: toPerc(11px),
+medium: toPerc(13px),
+large: toPerc(18px));
+@each $key,
+$value in $font-sizes {
+    .#{$key} {
+        font-size: $value;
+    }
+}
+
+// Loop example with the @while directive
+$counter: 2;
+@while $counter <=8 {
+    .picture-#{$counter} {
+        width: $counter * toRem(16px);
+    }
+    $counter: $counter+2
+}
+
 // DECLARATION
 // We can declare a mixin globally.
 @include google-font("Nanum+Gothic");
@@ -111,7 +158,8 @@ a {
         We can now add as many shadow arguments as we need because of
          how we set up our box-shadow mixin parameters 
     */
-    @include box-shadow(2px 0px 4px #999, 1px 1px 6px $secondary-color);
+    @include box-shadow(2px 0px 4px #999,
+    1px 1px 6px $secondary-color);
     /* 
         Below we could leave this box mixin without a default because
         we have already set them.

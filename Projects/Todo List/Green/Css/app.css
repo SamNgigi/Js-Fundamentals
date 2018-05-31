@@ -31,6 +31,54 @@
 */
 @import url(https://fonts.googleapis.com/css?family=Nanum+Gothic);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
+.col-1 {
+  width: 2rem; }
+
+.col-2 {
+  width: 4rem; }
+
+.col-3 {
+  width: 6rem; }
+
+.col-1 {
+  width: 2rem; }
+
+.col-2 {
+  width: 4rem; }
+
+.phill-damani-profile {
+  background-image: url("/img/phill-damani.png"); }
+
+.jed-mel-profile {
+  background-image: url("/img/jed-mel.png"); }
+
+.sam-ngigi-profile {
+  background-image: url("/img/sam-ngigi.png"); }
+
+.tiny {
+  font-size: 50%; }
+
+.small {
+  font-size: 68.75%; }
+
+.medium {
+  font-size: 81.25%; }
+
+.large {
+  font-size: 112.5%; }
+
+.picture-2 {
+  width: 2rem; }
+
+.picture-4 {
+  width: 4rem; }
+
+.picture-6 {
+  width: 6rem; }
+
+.picture-8 {
+  width: 8rem; }
+
 a {
   font-style: italic;
   text-decoration: none; }
