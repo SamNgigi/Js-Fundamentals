@@ -2,10 +2,12 @@
     NOTE - The imports should be in the right order or there will be
     an error.
 */
+
 /* 
    Function that calculates the width of a single column in a grid
    layout.
 */
+
 /* 
   Basically it would seem that
   1. Pixels are not that flexible
@@ -16,79 +18,99 @@
          - It is best for media queries.
   4. %   - Scales gradually so may be a preferable choice. 
 */
- /* 
+
+/* 
   We can use VarArgs. This allows us to enter many arguments of the
   same type and the amount of them is not limited in any way... i.e
   arbitrary amount of args for the same type. In this case many
   shadows.
 */
- /* 
+
+/* 
   We dont have to specify a default for the radius mixin because it can just inherit from the rounded mixin. 
   We could add an alternative default to this box mixin though.
 
   We however can add a default for the border
 
 */
+
 @import url(https://fonts.googleapis.com/css?family=Nanum+Gothic);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 .col-1 {
-  width: 2rem; }
+  width: 2rem;
+}
 
 .col-2 {
-  width: 4rem; }
+  width: 4rem;
+}
 
 .col-3 {
-  width: 6rem; }
+  width: 6rem;
+}
 
 .col-1 {
-  width: 2rem; }
+  width: 2rem;
+}
 
 .col-2 {
-  width: 4rem; }
+  width: 4rem;
+}
 
 .phill-damani-profile {
-  background-image: url("/img/phill-damani.png"); }
+  background-image: url("/img/phill-damani.png");
+}
 
 .jed-mel-profile {
-  background-image: url("/img/jed-mel.png"); }
+  background-image: url("/img/jed-mel.png");
+}
 
 .sam-ngigi-profile {
-  background-image: url("/img/sam-ngigi.png"); }
+  background-image: url("/img/sam-ngigi.png");
+}
 
 .tiny {
-  font-size: 50%; }
+  font-size: 50%;
+}
 
 .small {
-  font-size: 68.75%; }
+  font-size: 68.75%;
+}
 
 .medium {
-  font-size: 81.25%; }
+  font-size: 81.25%;
+}
 
 .large {
-  font-size: 112.5%; }
+  font-size: 112.5%;
+}
 
 .picture-2 {
-  width: 2rem; }
+  width: 2rem;
+}
 
 .picture-4 {
-  width: 4rem; }
+  width: 4rem;
+}
 
 .picture-6 {
-  width: 6rem; }
+  width: 6rem;
+}
 
 .picture-8 {
-  width: 8rem; }
+  width: 8rem;
+}
 
 a {
   font-style: italic;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 body {
   font-family: "Nanum Gothic", sans-serif;
   background-color: #22222a;
   color: #fff;
   font-size: 1.25em;
-    /* 
+  /* 
         This conditional would result in the text color being black. This is because we 
         set our contrast to high.
 
@@ -107,59 +129,83 @@ body {
 
         We have commented this so that we can define conditionals that will generate a
         light and dark theme. 
-    */ }
-  @media only screen and (max-width: 960px) {
-    body {
-      font-size: 125%; } }
+    */
+}
+
+@media only screen and (max-width: 960px) {
+  body {
+    font-size: 125%;
+  }
+}
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Ubuntu", sans-serif; }
+  font-family: "Ubuntu", sans-serif;
+}
 
 h2 {
   font-size: 50px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 p {
-  font-family: "Nanum Gothic", sans-serif; }
+  font-family: "Nanum Gothic", sans-serif;
+}
 
 a {
-  color: #c24721; }
-  a:hover {
-    /* 
+  color: #c24721;
+}
+
+a:hover {
+  /* 
         The darken() darkens the initial arg by the second arg.
         This is an inbuilt sass function.
     */
-    color: #812f16; }
+  color: #812f16;
+}
 
-.warning-button, .cta-button {
+b {
+  font-size: 30px;
+}
+
+.warning-button,
+.cta-button {
   background-color: orange;
   color: #fff;
-  padding: 8px 12px; }
-  .warning-button:hover, .cta-button:hover {
-   /* 
+  padding: 8px 12px;
+}
+
+.warning-button:hover,
+.cta-button:hover {
+  /* 
     The lighten() is the opposite of the darken()
   */
-    background-color: #ffb733; }
+  background-color: #ffb733;
+}
 
 .cta-button {
   border-radius: 25px;
   font-weight: bold;
-  margin-bottom: 0.9375rem; }
+  margin-bottom: 0.9375rem;
+}
 
 .mdl-tooltip {
   background-color: orange;
-  color: #fff; }
-  .mdl-tooltip:hover {
-   /* 
+  color: #fff;
+}
+
+.mdl-tooltip:hover {
+  /* 
     The lighten() is the opposite of the darken()
   */
-    background-color: #ffb733; }
+  background-color: #ffb733;
+}
 
 * html body {
-  font-size: 125%; }
+  font-size: 125%;
+}
 
 #header {
   /* 
@@ -169,7 +215,7 @@ a {
   box-shadow: 2px 0px 4px #999, 1px 1px 6px #c24721;
   -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #c24721;
   -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #c24721;
-    /* 
+  /* 
         Below we could leave this box mixin without a default because
         we have already set them.
 
@@ -184,50 +230,75 @@ a {
   border-radius: 11px;
   border: 11px solid unqoute("#cccc");
   height: 90px;
-  background-color: #42424a; }
-  #header #main-menu li {
-    display: inline; }
-  #header #main-menu a {
-    color: white;
-    padding: 6px 8px;
-    border-bottom: 1px solid rgba(254, 254, 254, 0);
-    transition: border-bottom 0.5s;
-    transition-timing-function: ease-in-out; }
-    #header #main-menu a:hover {
-      border-bottom: 1px solid #fefefe; }
-  #header #logo {
-    font-style: inherit; }
+  background-color: #42424a;
+}
+
+#header #main-menu li {
+  display: inline;
+}
+
+#header #main-menu a {
+  color: white;
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(254, 254, 254, 0);
+  transition: border-bottom 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+#header #main-menu a:hover {
+  border-bottom: 1px solid #fefefe;
+}
+
+#header #logo {
+  font-style: inherit;
+}
 
 #main {
   width: 960px;
   margin-left: auto;
-  margin-right: auto; }
-  @media only screen and (max-width: 680px) {
-    #main {
-      width: auto;
-      max-width: 960px; } }
-  #main #content {
-    float: right;
-    width: 69.75%; }
-  #main #sidebar {
-    float: left;
-    width: 23.25%; }
-    #main #sidebar li {
-      list-style-type: none;
-      padding: 1em 1.25em;
-      border-bottom: 1px dashed #999; }
-      #main #sidebar li:hover {
-        background-color: #efefef;
-        background-color: #999;
-        color: #000; }
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 680px) {
+  #main {
+    width: auto;
+    max-width: 960px;
+  }
+}
+
+#main #content {
+  float: right;
+  width: 69.75%;
+}
+
+#main #sidebar {
+  float: left;
+  width: 23.25%;
+}
+
+#main #sidebar li {
+  list-style-type: none;
+  padding: 1em 1.25em;
+  border-bottom: 1px dashed #999;
+}
+
+#main #sidebar li:hover {
+  background-color: #efefef;
+  background-color: #999;
+  color: #000;
+}
 
 #footer {
   clear: both;
   height: 90px;
-  background: #698932; }
+  background: #698932;
+}
 
-.error, .critical-error, .super-cta-button {
-  color: red; }
+.error,
+.critical-error,
+.super-cta-button {
+  color: red;
+}
 
 /* 
     The critical error class can inherit styles from error class
@@ -241,12 +312,16 @@ a {
     
 
 */
-.critical-error, .super-cta-button {
+
+.critical-error,
+.super-cta-button {
   bottom: 1px solid red;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .super-cta-button {
-  font-size: 125%; }
+  font-size: 125%;
+}
 
 /* 
 NOTE
@@ -257,13 +332,16 @@ NOTE
 3. We also have extend only selectors that use %. No css is generated from these selectors and they are used for extending only.
 
 */
+
 .sub-title {
   font-style: italic;
   color: #000;
-  color: #fefefe; }
+  color: #fefefe;
+}
 
 .sub-title {
-  font-size: 125%; }
+  font-size: 125%;
+}
 
 /* 
     We use the !optional to continue with pre processing if some
