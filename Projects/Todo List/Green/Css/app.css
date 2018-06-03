@@ -16,7 +16,7 @@ body {
 main#app {
   margin: 4rem auto;
   padding: 2rem 3rem 3rem;
-  max-width: 900px;
+  max-width: 46.875rem;
   background: #06D6A0;
   color: #FFFDF7;
   box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.4); }
@@ -33,7 +33,7 @@ main#app {
   main#app .input-container {
     display: flex;
     width: 100%;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.9);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 25px;
@@ -44,15 +44,16 @@ main#app {
       min-width: 3.125rem;
       text-align: center; }
     main#app .input-container .input-field {
-      width: 100%;
+      width: 110%;
       height: 3.125rem;
       outline: none;
-      padding: 0.3125rem;
+      padding: 0 14px 0 0px;
       border: 0px;
       float: left;
-      background: rgba(255, 255, 255, 0.5);
-      color: #0A2342;
-      font-size: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      color: #004E64;
+      font-size: 125%;
+      text-indent: 0.75em;
       -webkit-appearance: none;
       -moz-appearance: none;
       -ms-appearance: none;
@@ -60,10 +61,22 @@ main#app {
       appearance: none;
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
-      border-top-right-radius: 25px;
-      border-bottom-right-radius: 25px; }
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
       main#app .input-container .input-field::-webkit-input-placeholder {
-        color: #0A2342;
+        color: #004E64;
         opacity: 0.75; }
+      main#app .input-container .input-field:-moz-placeholder {
+        color: #004E64;
+        opacity: 0.75; }
+      main#app .input-container .input-field::-moz-input-placeholder {
+        color: #004E64;
+        opacity: 0.75; }
+      main#app .input-container .input-field:-ms-input-placeholder {
+        color: #004E64;
+        opacity: 0.75; }
+    main#app .input-container .mdl-button {
+      min-width: 3.125rem;
+      background-color: #F46197; }
 
 /*# sourceMappingURL=app.css.map */

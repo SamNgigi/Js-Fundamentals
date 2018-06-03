@@ -25,3 +25,30 @@
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
+
+@mixin input-radius {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+// Browser compatible fixes
+@mixin placeholder-color {
+  &::-webkit-input-placeholder {
+    color: $other-color;
+    opacity: 0.75;
+  }
+  &:-moz-placeholder {
+    color: $other-color;
+    opacity: 0.75;
+  }
+  &::-moz-input-placeholder {
+    color: $other-color;
+    opacity: 0.75;
+  }
+  &:-ms-input-placeholder {
+    color: $other-color;
+    opacity: 0.75;
+  }
+}

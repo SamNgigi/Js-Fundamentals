@@ -19,7 +19,7 @@ body {
 main#app {
   margin: 4rem auto; // 64px
   padding: 2rem 3rem 3rem; // 32px, 48px respectively
-  max-width: 900px; // 56.250ems
+  max-width: toRem(750px); // 56.250ems
   background: $theme-color;
   color: $txt-color;
   box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, .4);
@@ -38,7 +38,7 @@ main#app {
   .input-container {
     display: flex;
     width: 100%;
-    background: rgba(255, 255, 255, .75);
+    background: rgba(255, 255, 255, .9);
     @include form-radius;
     .icon {
       margin-top: toRem(10px);
@@ -47,21 +47,24 @@ main#app {
       text-align: center;
     }
     .input-field {
-      width: 100%;
+      width: 110%;
       height: toRem(50px);
-      outline: none;
-      padding: toRem(5px);
+      outline: none; // padding: toRem(5px);
+      // Makes sure that the text doesn't overflow on the right.
+      padding: 0 14px 0 0px;
       border: 0px;
       float: left;
-      background: rgba(255, 255, 255, .5);
-      color: $secondary-color;
-      font-size: 20px;
+      background: rgba(255, 255, 255, .7);
+      color: $other-color;
+      font-size: toPerc(20px);
+      text-indent: toEm(12px);
       @include no-appearance;
-      @include form-radius;
-      &::-webkit-input-placeholder {
-        color: $secondary-color;
-        opacity: 0.75;
-      }
+      @include input-radius;
+      @include placeholder-color;
+    }
+    .mdl-button {
+      min-width: toRem(50px);
+      background-color: $body-theme-color;
     }
   }
 }
