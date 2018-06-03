@@ -1,0 +1,34 @@
+// IMPORTS
+@import "Partials/functions";
+@import "Partials/variables";
+@import "Partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Raleway|Quicksand');
+// DECLARATIONS
+@include base;
+html,
+body {
+  background: $body-theme-color;
+  font-size: toRem(17px); // approx 1.1rems
+  height: 100%;
+}
+
+main#app {
+  margin: 4rem auto; // 64px
+  padding: 2rem 3rem 3rem; // 32px, 48px respectively
+  max-width: 900px; // 56.250ems
+  background: $theme-color;
+  color: $txt-color;
+  box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, .4);
+  h1 {
+    font-family: $txt-font;
+    font-size: 2.6rem; // 41px
+    letter-spacing: 0.045em; // 0px Works better with ems
+    span {
+      display: block;
+      font-size: 1.15rem; // 18px
+      margin-left: 7px; // 0.438px
+      margin-top: 0.2rem; // 3px
+      border-bottom: 1px solid rgba(255, 255, 255, .7);
+    }
+  }
+}

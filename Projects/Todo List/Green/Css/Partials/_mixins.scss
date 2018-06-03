@@ -1,0 +1,12 @@
+@mixin base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@mixin main-theme {
+  background-color: #06D6A0;
+  color: #D4F4DD;
+}

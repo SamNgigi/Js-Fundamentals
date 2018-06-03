@@ -1,0 +1,14 @@
+// Function that converts pixels to ems
+@function toEm($pixels, $context: 16px) {
+  @return($pixels/$context) * 1em;
+}
+
+// Function that converts pixels to rems
+@function toRem($pixels, $context: 16px) {
+  @return($pixels/$context) * 1rem;
+}
+
+// Function that converts pixels to %
+@function toPerc($pixels, $context: 16px) {
+  @return($pixels/$context) * 100%;
+}
