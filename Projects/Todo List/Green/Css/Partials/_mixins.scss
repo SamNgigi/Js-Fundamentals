@@ -10,3 +10,18 @@
   background-color: #06D6A0;
   color: #D4F4DD;
 }
+
+@mixin no-appearance {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+@mixin form-radius {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
