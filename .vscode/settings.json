@@ -28,7 +28,8 @@
     "phill",
     "todos",
     "transparentize",
-    "unqoute"
+    "unqoute",
+    "xlink"
   ],
   "liveSassCompile.settings.formats": [
     {
