@@ -84,9 +84,9 @@ main#app {
       &:hover {
         background-color: $button-hover-color;
       }
-    } // .mdl-button {
-    //   min-width: toRem(50px);
-    //   background-color: $body-theme-color;
-    // }
+    }
+    .mdl-tooltip {
+      letter-spacing: 0.03rem;
+    }
   }
 }

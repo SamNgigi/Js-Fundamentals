@@ -91,5 +91,7 @@ main#app {
         fill: #FFFDF7; }
       main#app .input-container button#add:hover {
         background-color: #06c669; }
+    main#app .input-container .mdl-tooltip {
+      letter-spacing: 0.03rem; }
 
 /*# sourceMappingURL=app.css.map */
