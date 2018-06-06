@@ -43,7 +43,8 @@ main#app {
       margin-top: 0.625rem;
       padding: 0.3125rem;
       min-width: 3.125rem;
-      text-align: center; }
+      text-align: center;
+      outline: none; }
     main#app .input-container .input-field {
       width: 110%;
       height: 3.125rem;
