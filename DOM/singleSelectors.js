@@ -17,7 +17,7 @@ res = document.gettagById('task-title').className
 // Change styling
 // changes h5 background
 // document.gettagById('task-title').style.background = '#000';
-// // chages h5 font color to white
+// // changes h5 font color to white
 // document.gettagById('task-title').style.color = '#fff';
 // // make the h5 tag have a padding of 25px.
 // document.gettagById('task-title').style.padding = '20px';

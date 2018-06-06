@@ -1,4 +1,12 @@
-// retrieve the element
+const input_field = document.getElementById("task")
+// Clearing the input field
+const clean_slate = document.querySelector('.icon');
+clean_slate.addEventListener("click", function (event) {
+  input_field.value = '';
+}, false)
+
+
+// Submitting task.
 const add_button = document.getElementById("add");
 // Adding event listener to our add_button element.
 add_button.addEventListener("click", submit_task, false);
@@ -26,6 +34,7 @@ function submit_task(event) {
   let task = document.getElementById('task').value;
   if (task) {
     console.log(task);
+    input_field.value = '';
   } else {
     console.log('Give me something.');
   }
