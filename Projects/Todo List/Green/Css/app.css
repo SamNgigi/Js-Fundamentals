@@ -72,26 +72,39 @@ main#app {
       main#app .input-container .input-field:-ms-input-placeholder {
         color: #004E64;
         opacity: 0.75; }
-    main#app .input-container button#add {
-      width: 55px;
-      height: 55px;
-      padding: 0.3125rem;
+    main#app .input-container .added {
       min-width: 3.125rem;
-      border-radius: 25px;
-      background: #06BA63;
-      border: 0px;
-      box-shadow: none;
+      border-radius: 50%;
       z-index: 2;
-      box-shadow: 0px 2px 4px 3px rgba(100, 100, 100, 0.5);
+      box-shadow: 0px 2px 4px 3px rgba(100, 100, 100, 0.8);
       outline: none; }
-      main#app .input-container button#add svg {
-        width: 50%;
-        height: 50%; }
-      main#app .input-container button#add .fill {
-        fill: #FFFDF7; }
-      main#app .input-container button#add:hover {
-        background-color: #06c669; }
+      main#app .input-container .added .circle {
+        stroke-dashoffset: 1000;
+        stroke-dasharray: 1000;
+        animation-name: add;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        animation-duration: .4s;
+        -webkit-animation-duration: .4s;
+        -webkit-animation-timing-function: ease-in;
+        -webkit-animation-fill-mode: forwards; }
+      main#app .input-container .added .plus {
+        stroke-dashoffset: 1000;
+        stroke-dasharray: 1000;
+        animation-name: add;
+        -webkit-animation-duration: .3s;
+        -webkit-animation-timing-function: ease-in;
+        -webkit-animation-delay: .3s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        animation-duration: .3s;
+        animation-timing-function: ease-in;
+        animation-delay: .3s; }
+@keyframes add {
+  to {
+    stroke-dashoffset: 0; } }
     main#app .input-container .mdl-tooltip {
-      letter-spacing: 0.03rem; }
+      letter-spacing: 0.03rem;
+      background-color: rgba(100, 100, 99, 0.6); }
 
 /*# sourceMappingURL=app.css.map */
