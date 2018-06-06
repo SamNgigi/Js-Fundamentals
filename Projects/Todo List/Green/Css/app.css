@@ -77,7 +77,8 @@ main#app {
       border-radius: 50%;
       z-index: 2;
       box-shadow: 0px 2px 4px 3px rgba(100, 100, 100, 0.8);
-      outline: none; }
+      outline: none;
+      cursor: pointer; }
       main#app .input-container .added .circle {
         stroke-dashoffset: 1000;
         stroke-dasharray: 1000;
@@ -96,10 +97,10 @@ main#app {
         -webkit-animation-timing-function: ease-in;
         -webkit-animation-delay: .3s;
         -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
         animation-duration: .3s;
         animation-timing-function: ease-in;
-        animation-delay: .3s; }
+        animation-delay: .3s;
+        animation-fill-mode: forwards; }
 @keyframes add {
   to {
     stroke-dashoffset: 0; } }

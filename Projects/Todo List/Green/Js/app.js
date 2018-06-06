@@ -1,25 +1,23 @@
+// ADD BUTTON ANIMATION AND SUBMITTION
 // retrieve the element
 const add_button = document.getElementById("add");
-console.log();
+// Adding event listener to our add_button element.
+add_button = addEventListener("click", submit_task, false);
 
-
-add_button.addEventListener("click", function (event) {
+function submit_task(event) {
   event.preventDefault;
-  // grabbing svg circle and path
+  // Grabbing svg circle and path
   const circle = document.querySelector('#add circle');
   const path = document.querySelector('#add path');
-  // add_button.childNodes[1].className.baseVal = ''
-  // adding a class to an svg
+  // Adding a class to an svg element
   circle.setAttribute('class', 'circle');
   path.setAttribute('class', 'plus');
-  // console.log(circle);
-
-  // Removing the svg classes after animation ends
-  circle.addEventListener("animationend", function () {
-    console.log('Worked');
+  // Adding event listener to svg circle element to know when the animation ends
+  circle.addEventListener("animationend", circle_animated, false);
+  // Calling function to remove svg element classes to reset animation.
+  function circle_animated(params) {
+    console.log("Worked");
     circle.removeAttribute('class');
     path.removeAttribute('class');
-  }, false)
-
-
-})
+  }
+}
