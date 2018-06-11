@@ -30,6 +30,9 @@ main#app {
       margin-left: 7px;
       margin-top: 0.2rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.7); }
+      main#app h1 span strong {
+        font-size: 30px;
+        font-weight: normal; }
   main#app .input-container {
     display: flex;
     width: 100%;
@@ -94,13 +97,13 @@ main#app {
         stroke-dashoffset: 1000;
         stroke-dasharray: 1000;
         animation-name: add;
-        -webkit-animation-duration: .3s;
+        -webkit-animation-duration: 0.1 0.5s;
         -webkit-animation-timing-function: ease-in;
-        -webkit-animation-delay: .3s;
+        -webkit-animation-delay: 0.1 0.5s;
         -webkit-animation-fill-mode: forwards;
-        animation-duration: .3s;
+        animation-duration: 0.1 0.5s;
         animation-timing-function: ease-in;
-        animation-delay: .3s;
+        animation-delay: 0.1 0.5s;
         animation-fill-mode: forwards; }
 @keyframes add {
   to {
@@ -108,5 +111,27 @@ main#app {
     main#app .input-container .mdl-tooltip {
       letter-spacing: 0.03rem;
       background-color: rgba(100, 100, 99, 0.6); }
+
+.todoList {
+  margin: 4rem auto;
+  padding: 2rem 3rem 3rem;
+  max-width: 46.875rem;
+  background: #06D6A0;
+  color: #FFFDF7;
+  box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.4); }
+
+li#forAnimate {
+  background-color: #06D6A0;
+  color: #FFFDF7;
+  margin: 4rem auto;
+  padding: 2rem 3rem 3rem;
+  max-width: 46.875rem;
+  list-style: none;
+  box-shadow: -20px -20px 0 0 rgba(100, 100, 100, 0.4);
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -ms-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s; }
 
 /*# sourceMappingURL=app.css.map */

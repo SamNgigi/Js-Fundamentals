@@ -33,6 +33,15 @@
   border-bottom-right-radius: 5px;
 }
 
+// Browser compatible animation time
+@mixin animation-duration($duration: 1.5s) {
+  animation-duration: $duration;
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -ms-animation-duration: $duration;
+  -o-animation-duration: $duration;
+}
+
 // Browser compatible fixes
 @mixin placeholder-color {
   &::-webkit-input-placeholder {
