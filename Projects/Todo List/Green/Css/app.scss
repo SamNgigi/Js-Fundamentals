@@ -120,14 +120,102 @@ main#app {
   box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, .4); // border-radius: 5px; 
 }
 
-li#forAnimate {
-  background-color: $theme-color;
-  color: $txt-color;
+li.animated {
+  background-color: $txt-color;
+  color: $secondary-color;
   margin: 4rem auto;
-  padding: 2rem 3rem 3rem;
+  padding: 3rem 3rem 3rem 3rem;
   max-width: toRem(750px);
   list-style: none;
   box-shadow: -20px -20px 0 0 rgba(100, 100, 100, .4);
   @include animation-duration(1.5s);
   font-size: toRem(21px);
+  .todoItem {
+    padding: 0 toRem(100px) 0 0;
+  }
+  .actions {
+    width: toRem(100px);
+    float: right;
+    padding: 30px 0px 0px 10px;
+    span.remove {
+      padding-right: toEm(7px);
+      svg {
+        path.fill {
+          fill: $theme-color;
+        }
+      }
+      &:hover {
+        svg {
+          path.fill {
+            fill: $body-theme-color
+          }
+        }
+      }
+    }
+    span.done {
+      border-left: 2px solid rgb(219, 215, 215);
+      padding-left: toEm(10px);
+      svg {
+        background-color: $theme-color;
+        border-radius: 50%;
+        border: 1.5px solid $theme-color;
+        transition: background 0.2s ease;
+        path.fill {
+          fill: #fff;
+        }
+      }
+      &:hover {
+        svg {
+          background-color: #fff;
+          path.fill {
+            fill: rgba(6, 214, 160, .5)
+          }
+        }
+      }
+    }
+  }
 }
+
+// li#completed {
+//   background-color: $txt-color;
+//   color: $secondary-color;
+//   margin: 4rem auto;
+//   padding: 3rem 3rem 3rem 3rem;
+//   max-width: toRem(750px);
+//   list-style: none;
+//   box-shadow: -20px -20px 0 0 rgba(100, 100, 100, .4);
+//   @include animation-duration(1.5s);
+//   font-size: toRem(21px);
+//   .todoItem {
+//     padding: 0 toRem(100px) 0 0;
+//   }
+//   .actions {
+//     width: toRem(100px);
+//     float: right;
+//     padding: 30px 0px 0px 10px;
+//     span.remove {
+//       padding-right: toEm(7px);
+//       svg {
+//         path.fill {
+//           fill: $theme-color;
+//         }
+//       }
+//       &:hover {
+//         svg {
+//           path.fill {
+//             fill: $body-theme-color
+//           }
+//         }
+//       }
+//     }
+//     span.done {
+//       border-left: 2px solid rgb(219, 215, 215);
+//       padding-left: toEm(10px);
+//       svg {
+//         path.fill {
+//           fill: $theme-color;
+//         }
+//       }
+//     }
+//   }
+// }

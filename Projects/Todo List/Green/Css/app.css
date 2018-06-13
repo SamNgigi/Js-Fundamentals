@@ -17,7 +17,7 @@ main#app {
   margin: 4rem auto;
   padding: 2rem 3rem 3rem;
   max-width: 46.875rem;
-  background: #06D6A0;
+  background: #06d6a0;
   color: #FFFDF7;
   box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.4); }
   main#app h1 {
@@ -116,15 +116,15 @@ main#app {
   margin: 4rem auto;
   padding: 2rem 3rem 3rem;
   max-width: 46.875rem;
-  background: #06D6A0;
+  background: #06d6a0;
   color: #FFFDF7;
   box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.4); }
 
-li#forAnimate {
-  background-color: #06D6A0;
-  color: #FFFDF7;
+li.animated {
+  background-color: #FFFDF7;
+  color: #0A2342;
   margin: 4rem auto;
-  padding: 2rem 3rem 3rem;
+  padding: 3rem 3rem 3rem 3rem;
   max-width: 46.875rem;
   list-style: none;
   box-shadow: -20px -20px 0 0 rgba(100, 100, 100, 0.4);
@@ -134,5 +134,31 @@ li#forAnimate {
   -ms-animation-duration: 1.5s;
   -o-animation-duration: 1.5s;
   font-size: 1.3125rem; }
+  li.animated .todoItem {
+    padding: 0 6.25rem 0 0; }
+  li.animated .actions {
+    width: 6.25rem;
+    float: right;
+    padding: 30px 0px 0px 10px; }
+    li.animated .actions span.remove {
+      padding-right: 0.4375em; }
+      li.animated .actions span.remove svg path.fill {
+        fill: #06d6a0; }
+      li.animated .actions span.remove:hover svg path.fill {
+        fill: #F46197; }
+    li.animated .actions span.done {
+      border-left: 2px solid #dbd7d7;
+      padding-left: 0.625em; }
+      li.animated .actions span.done svg {
+        background-color: #06d6a0;
+        border-radius: 50%;
+        border: 1.5px solid #06d6a0;
+        transition: background 0.2s ease; }
+        li.animated .actions span.done svg path.fill {
+          fill: #fff; }
+      li.animated .actions span.done:hover svg {
+        background-color: #fff; }
+        li.animated .actions span.done:hover svg path.fill {
+          fill: rgba(6, 214, 160, 0.5); }
 
 /*# sourceMappingURL=app.css.map */
