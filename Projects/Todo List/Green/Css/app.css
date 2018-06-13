@@ -121,7 +121,7 @@ main#app {
   box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.4); }
 
 li.animated {
-  background-color: #FFFDF7;
+  background-color: #e6fef8;
   color: #0A2342;
   margin: 4rem auto;
   padding: 3rem 3rem 3rem 3rem;
@@ -134,8 +134,9 @@ li.animated {
   -ms-animation-duration: 1.5s;
   -o-animation-duration: 1.5s;
   font-size: 1.3125rem; }
-  li.animated .todoItem {
-    padding: 0 6.25rem 0 0; }
+  li.animated span.todoItem {
+    padding: 0 6.25rem 0 0;
+    text-shadow: -5px 5px 5px rgba(100, 100, 100, 0.5); }
   li.animated .actions {
     width: 6.25rem;
     float: right;
@@ -155,9 +156,9 @@ li.animated {
         border: 1.5px solid #06d6a0;
         transition: background 0.2s ease; }
         li.animated .actions span.done svg path.fill {
-          fill: #fff; }
+          fill: #e6fef8; }
       li.animated .actions span.done:hover svg {
-        background-color: #fff; }
+        background-color: #e6fef8; }
         li.animated .actions span.done:hover svg path.fill {
           fill: rgba(6, 214, 160, 0.5); }
 

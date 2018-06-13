@@ -121,7 +121,7 @@ main#app {
 }
 
 li.animated {
-  background-color: $txt-color;
+  background-color: $list-feel;
   color: $secondary-color;
   margin: 4rem auto;
   padding: 3rem 3rem 3rem 3rem;
@@ -130,8 +130,9 @@ li.animated {
   box-shadow: -20px -20px 0 0 rgba(100, 100, 100, .4);
   @include animation-duration(1.5s);
   font-size: toRem(21px);
-  .todoItem {
+  span.todoItem {
     padding: 0 toRem(100px) 0 0;
+    text-shadow: -5px 5px 5px rgba(100, 100, 100, .5);
   }
   .actions {
     width: toRem(100px);
@@ -161,12 +162,12 @@ li.animated {
         border: 1.5px solid $theme-color;
         transition: background 0.2s ease;
         path.fill {
-          fill: #fff;
+          fill: $list-feel;
         }
       }
       &:hover {
         svg {
-          background-color: #fff;
+          background-color: $list-feel;
           path.fill {
             fill: rgba(6, 214, 160, .5)
           }
