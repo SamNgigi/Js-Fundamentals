@@ -97,13 +97,13 @@ main#app {
         stroke-dashoffset: 1000;
         stroke-dasharray: 1000;
         animation-name: add;
-        -webkit-animation-duration: 0.1 0.5s;
+        -webkit-animation-duration: .3s;
         -webkit-animation-timing-function: ease-in;
-        -webkit-animation-delay: 0.1 0.5s;
+        -webkit-animation-delay: .3s;
         -webkit-animation-fill-mode: forwards;
-        animation-duration: 0.1 0.5s;
+        animation-duration: .3s;
         animation-timing-function: ease-in;
-        animation-delay: 0.1 0.5s;
+        animation-delay: .3s;
         animation-fill-mode: forwards; }
 @keyframes add {
   to {
