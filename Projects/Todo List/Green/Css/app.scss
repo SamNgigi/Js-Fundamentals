@@ -121,41 +121,28 @@ main#app {
 }
 
 li.animated {
-  background-color: $list-feel;
-  color: $secondary-color;
+  background-color: rgba(6, 214, 160, .9);
+  color: $txt-color;
   margin: 4rem auto;
-  padding: 3rem 3rem 3rem 3rem;
+  padding: 1rem;
   max-width: toRem(750px);
   list-style: none;
   box-shadow: -20px -20px 0 0 rgba(100, 100, 100, .4);
   @include animation-duration(1.5s);
   font-size: toRem(21px);
+  .back {
+    background: #06e0a6;
+    padding: toRem(50px);
+  }
   span.todoItem {
     padding: 0 toRem(100px) 0 0;
-    text-shadow: -5px 5px 5px rgba(100, 100, 100, .5);
   }
   .actions {
     width: toRem(100px);
     float: right;
     padding: 30px 0px 0px 10px;
-    span.remove {
-      padding-right: toEm(7px);
-      svg {
-        path.fill {
-          fill: $theme-color;
-        }
-      }
-      &:hover {
-        svg {
-          path.fill {
-            fill: $body-theme-color
-          }
-        }
-      }
-    }
     span.done {
-      border-left: 2px solid rgb(219, 215, 215);
-      padding-left: toEm(10px);
+      padding-right: toEm(5px);
       svg {
         background-color: $theme-color;
         border-radius: 50%;
@@ -167,9 +154,32 @@ li.animated {
       }
       &:hover {
         svg {
+          box-shadow: 0px 2px 4px 3px rgba(100, 100, 100, .3);
           background-color: $list-feel;
           path.fill {
             fill: rgba(6, 214, 160, .5)
+          }
+        }
+      }
+    }
+    span.remove {
+      border-left: 2px solid rgb(255, 255, 255);
+      padding-left: toEm(10px);
+      svg {
+        path.fill {
+          fill: #FFF;
+        }
+      }
+      &:hover {
+        svg {
+          box-shadow: 0px 2px 4px 3px rgba(100, 100, 100, .3);
+          padding: 2px;
+          transition: box-shadow 0.17s ease;
+          border-radius: 45%;
+          background: #b4fdea;
+          border: 1.5px solid $body-theme-color;
+          path.fill {
+            fill: #ee1162;
           }
         }
       }
