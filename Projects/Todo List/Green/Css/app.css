@@ -163,11 +163,11 @@ li.animated {
       li.animated .actions span.remove svg path.fill {
         fill: #FFF; }
       li.animated .actions span.remove:hover svg {
-        box-shadow: 0px 2px 4px 3px rgba(100, 100, 100, 0.3);
+        box-shadow: 0px 2px 4px 3px rgba(238, 17, 98, 0.7);
         padding: 2px;
         transition: box-shadow 0.17s ease;
         border-radius: 45%;
-        background: #b4fdea;
+        background: #cdfef1;
         border: 1.5px solid #F46197; }
         li.animated .actions span.remove:hover svg path.fill {
           fill: #ee1162; }
