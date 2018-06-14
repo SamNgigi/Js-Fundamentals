@@ -164,7 +164,7 @@ li.animated {
     }
     span.remove {
       border-left: 2px solid rgb(255, 255, 255);
-      padding-left: toEm(10px);
+      padding-left: toEm(9px);
       svg {
         path.fill {
           fill: #FFF;
@@ -172,14 +172,14 @@ li.animated {
       }
       &:hover {
         svg {
-          box-shadow: 0px 2px 4px 3px rgba(238, 17, 98, .7);
-          padding: 2px;
+          box-shadow: 0px 2px 4px 3px rgba(100, 100, 100, .3);
+          padding: 1px;
           transition: box-shadow 0.17s ease;
           border-radius: 45%;
           background: #cdfef1;
-          border: 1.5px solid $body-theme-color;
+          border: 1.5px solid $theme-color;
           path.fill {
-            fill: #ee1162;
+            fill: $body-theme-color;
           }
         }
       }
