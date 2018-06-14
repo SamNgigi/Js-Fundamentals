@@ -134,7 +134,7 @@ li.animated {
     background: #06e0a6;
     padding: toRem(50px);
   }
-  span.todoItem {
+  span.todo-item {
     padding: 0 toRem(100px) 0 0;
   }
   .actions {
@@ -142,7 +142,7 @@ li.animated {
     float: right;
     padding: 30px 0px 0px 10px;
     span.done {
-      padding-right: toEm(5px);
+      padding-right: toEm(9px);
       svg {
         background-color: $theme-color;
         border-radius: 50%;
@@ -176,10 +176,10 @@ li.animated {
           padding: 1px;
           transition: box-shadow 0.17s ease;
           border-radius: 45%;
-          background: #cdfef1;
+          background: #e6fef8;
           border: 1.5px solid $theme-color;
           path.fill {
-            fill: $body-theme-color;
+            fill: #f788b0;
           }
         }
       }
@@ -197,7 +197,7 @@ li.animated {
 //   box-shadow: -20px -20px 0 0 rgba(100, 100, 100, .4);
 //   @include animation-duration(1.5s);
 //   font-size: toRem(21px);
-//   .todoItem {
+//   .todo-item {
 //     padding: 0 toRem(100px) 0 0;
 //   }
 //   .actions {

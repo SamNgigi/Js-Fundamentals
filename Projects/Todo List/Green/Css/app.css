@@ -137,14 +137,14 @@ li.animated {
   li.animated .back {
     background: #06e0a6;
     padding: 3.125rem; }
-  li.animated span.todoItem {
+  li.animated span.todo-item {
     padding: 0 6.25rem 0 0; }
   li.animated .actions {
     width: 6.25rem;
     float: right;
     padding: 30px 0px 0px 10px; }
     li.animated .actions span.done {
-      padding-right: 0.3125em; }
+      padding-right: 0.5625em; }
       li.animated .actions span.done svg {
         background-color: #06d6a0;
         border-radius: 50%;
@@ -167,9 +167,9 @@ li.animated {
         padding: 1px;
         transition: box-shadow 0.17s ease;
         border-radius: 45%;
-        background: #cdfef1;
+        background: #e6fef8;
         border: 1.5px solid #06d6a0; }
         li.animated .actions span.remove:hover svg path.fill {
-          fill: #F46197; }
+          fill: #f788b0; }
 
 /*# sourceMappingURL=app.css.map */
