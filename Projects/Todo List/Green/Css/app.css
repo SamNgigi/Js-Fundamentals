@@ -142,7 +142,7 @@ li.animated {
   li.animated .actions {
     width: 6.25rem;
     float: right;
-    padding: 30px 0px 0px 10px; }
+    padding: 30px 0px 0px 0px; }
     li.animated .actions span.done {
       padding-right: 0.5625em; }
       li.animated .actions span.done svg {
