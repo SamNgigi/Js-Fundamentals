@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MDN DOC</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+  <style>
+    p {
+      /* */
+      font-family: 'Tajawal', sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      border: 2px solid rgba(50, 0, 200, 0.6);
+      background: rgba(50, 0, 200, 0.3);
+      color: rgba(50, 0, 200, 0.6);
+      box-shadow: 1px 1px 2px rgba(50, 0, 200, 0.6);
+      border-radius: 10px;
+      padding: 3px 10px;
+      display: inline-block;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn btn-primary">Click me for new paragraph</button>
+  <p>Player 1: Chris</p>
+
+  <script>
+    const p = document.querySelector('p');
+    const button = document.querySelectorAll('button');
+    let name = 'Default';
+    p.addEventListener('click', updateName);
+
+    function updateName() {
+      var name = prompt('Enter a new name');
+      p.textContent = `Player 1: ${name}`;
+    }
+
+    function createParagraph() {
+
+      const p = document.createElement('p');
+      p.textContent = `Player1: ${name}`;
+      p.addEventListener('click', updateName);
+
+      function updateName() {
+        var name = prompt('Enter a new name');
+        p.textContent = `Player 1: ${name}`;
+      }
+
+      document.body.appendChild(p);
+    }
+
+    for (let i = 0; i < button.length; i++) {
+      button[i].addEventListener('click', createParagraph);
+    }
+  </script>
+</body>
+
+</html>
