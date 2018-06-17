@@ -30,37 +30,10 @@
 </head>
 
 <body>
-  <button class="btn btn-primary">Click me for new paragraph</button>
-  <p>Player 1: Chris</p>
-
+  <button class="btn btn-primary">Click me for new player</button>
+  <p>Player: Chris</p>
+  <script src="mdn.js"></script>
   <script>
-    const p = document.querySelector('p');
-    const button = document.querySelectorAll('button');
-    let name = 'Default';
-    p.addEventListener('click', updateName);
-
-    function updateName() {
-      var name = prompt('Enter a new name');
-      p.textContent = `Player 1: ${name}`;
-    }
-
-    function createParagraph() {
-
-      const p = document.createElement('p');
-      p.textContent = `Player1: ${name}`;
-      p.addEventListener('click', updateName);
-
-      function updateName() {
-        var name = prompt('Enter a new name');
-        p.textContent = `Player 1: ${name}`;
-      }
-
-      document.body.appendChild(p);
-    }
-
-    for (let i = 0; i < button.length; i++) {
-      button[i].addEventListener('click', createParagraph);
-    }
   </script>
 </body>
 
