@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic|Comfortaa");
+.container {
+  margin: auto;
+  max-width: 960px;
+  padding: 20px; }
+  .container .mdl-button {
+    background-color: #0303a5; }
+    .container .mdl-button:hover {
+      background-color: blue; }
+  .container .reset {
+    background-color: #c52e47; }
+    .container .reset:hover {
+      background-color: #e7526b; }
+  .container h1,
+  .container h2,
+  .container h3,
+  .container h4,
+  .container h5 {
+    font-family: 'Nanum Gothic', sans-serif; }
+  .container p {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px; }
+  .container .game-over {
+    padding: 10px; }
+
+/*# sourceMappingURL=guess.css.map */

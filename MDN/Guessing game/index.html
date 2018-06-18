@@ -8,12 +8,36 @@
   <title>Guessing Game</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="css/guess.css">
 </head>
 
 <body>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-    <i class="material-icons">add</i>
-  </button>
+  <div class="container">
+    <h2>Js number guessing game.</h2>
+    <p>We have selected a random number between 1 - 100. See if you can guess it in less than 10 turns. We'll tell you if your
+      guess was too high or low.</p>
+
+    <!-- Numeric Textfield with Floating Label -->
+    <form class="form">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input guess-input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+        <label class="mdl-textfield__label guess-label" for="sample4">Guess</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+
+      </div>
+      <!-- Colored FAB button with ripple -->
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored submit" type="submit">
+        <i class="material-icons">add</i>
+      </button>
+    </form>
+    <div class="result-paragraphs">
+      <p class="guesses"></p>
+      <p class="game-over"></p>
+      <p class="low-or-hi"></p>
+    </div>
+  </div>
+
+
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <script src="guess.js"></script>
 </body>
