@@ -181,9 +181,13 @@ console.log(a_banana) // Banana
 // It returns 'i am a Banana and my color is Yellow'
 console.log(a_banana.show_name_and_color())
 
-/* 
-  NOTE:
-    Prototypes is the principal manner in which inheritance is implemented in JS as shown in example above.
+/*
+  What is the prototype used for?
+  I. Prototypes (prototype property) is the principal manner in which inheritance is implemented in JS as shown in example above.
 
+  II. Prototype (prototype attribute) is also used for accessing an objects properties and methods.
+  This is where by using the prototype attribute where can return properties and objects from the parent they were defined in.
+
+  NOTE:
     We cannot mix up the way constructors are build. If we do we get wierd syntax errors.
 */
