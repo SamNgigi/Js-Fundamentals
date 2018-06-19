@@ -1,4 +1,25 @@
 /* 
+  The 'new' key word tell Javascript to execute a regular function as a
+  constructor function in that is defining a class.
+  
+  The old way of writing a defining a constructor was 
+
+    function Something () {
+      this.data = 'some data'
+    }
+    var info = new Something();
+
+  Looks like the new way of doing things is more familiar to o.o.p
+  languages like c and java.
+
+    class NewWay {
+      constructor () {
+        this.news = 'fresh'
+      }
+    }
+
+    const knew = new NewWay;
+
   When 'this' keyword is defined in the global scope it pertains to the
   window object.
   i.e console.log(this)
