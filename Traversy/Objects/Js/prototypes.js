@@ -182,12 +182,44 @@ console.log(a_banana) // Banana
 console.log(a_banana.show_name_and_color())
 
 /*
+
+  NOTE:
+    We cannot mix up the way constructors are build.If we do we get wierd syntax errors.
+
   What is the prototype used for?
   I. Prototypes (prototype property) is the principal manner in which inheritance is implemented in JS as shown in example above.
 
   II. Prototype (prototype attribute) is also used for accessing an objects properties and methods.
   This is where by using the prototype attribute where can return properties and objects from the parent they were defined in.
 
-  NOTE:
-    We cannot mix up the way constructors are build. If we do we get wierd syntax errors.
+  For example;
+*/
+
+const myFriends = {
+  name: "Ruach Ha-Kodesh",
+  age: 1
+}
+/* 
+  To find the name property above, the search will begin directly on the
+  myFriends object and it will be found immediately because there is
+  where it is found.
+
+  This could be thought of as a prototype chain with one link.
+
+  Lets say we want to call the toString() on the age. The search begins
+  on the object itself. Since we did not define it here we move up to the
+  parent prototype from with the myFriends object inherited from.
+
+  Now this is where we find out that all object originate, inherit, are
+  parented by the Object constructor. And that is where all other objects
+  inherit their properties and methods from. Therefore here is where we
+  would find the toString method. 
+
+  That would be a prototype chain with two links.
+
+  So winding up according the the ES8 Docs a
+  - constructor
+    A function object that creates and initializes objects (through the new key word.)
+  - prototype
+    Is an objects that provides shared properties for other objects.
 */
