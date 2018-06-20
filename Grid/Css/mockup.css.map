@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACU,iEAAyD;AACjE;IACK;EACH,gBAAgB,EAAE,OAAO;EACzB,WAAW,EAAE,wBAAwB;EACrC,MAAM,EAAE,IAAI;EAEV;qBAAI;IACF,OAAO,EAAE,IAAI;IACb,eAAe,EAAE,MAAM;IACvB,WAAW,EAAE,MAAM;IACnB,SAAS,EAAE,GAAG;IACd,KAAK,EAAE,OAAO",
+"sources": ["Partials/_mixins.scss"],
+"names": [],
+"file": "mockup.css"
+}
