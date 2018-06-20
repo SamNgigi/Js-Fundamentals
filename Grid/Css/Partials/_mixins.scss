@@ -1,8 +1,9 @@
+@import "Partials/variables";
 @mixin base {
   @import url('https://fonts.googleapis.com/css?family=Montserrat');
   html,
   body {
-    background-color: #EFD9CE;
+    background-color: $main_theme;
     font-family: 'Montserrat', sans-serif;
     margin: 10px;
     .container {
@@ -11,7 +12,7 @@
         justify-content: center;
         align-items: center;
         font-size: 2em;
-        color: #EFD9CE;
+        color: $main_theme;
       }
     }
   }

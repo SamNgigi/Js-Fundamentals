@@ -12,4 +12,10 @@ body {
     font-size: 2em;
     color: #EFD9CE; }
 
+.container {
+  display: grid;
+  grid-template: repeat(2, 40px)/repeat(2, 1fr); }
+  .container div:nth-child(1n) {
+    background-color: #fff; }
+
 /*# sourceMappingURL=mockup.css.map */

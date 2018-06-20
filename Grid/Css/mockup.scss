@@ -1,2 +1,12 @@
+@import "Partials/variables";
 @import "Partials/mixins";
 @include base;
+.container {
+  display: grid;
+  grid-template: repeat(2, 40px) / repeat(2, 1fr);
+  div {
+    &:nth-child(1n) {
+      background-color: #fff;
+    }
+  }
+}

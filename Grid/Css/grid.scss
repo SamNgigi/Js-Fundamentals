@@ -1,3 +1,4 @@
+@import "Partials/variables";
 @import "Partials/mixins";
 @include base;
 .container {
@@ -34,16 +35,16 @@
   grid-gap: 3px;
   div {
     &:nth-child(1n) {
-      background-color: #8F3985;
+      background-color: $secondary_theme;
     }
     &:nth-child(3n) {
-      background-color: #A675A1;
+      background-color: $pop_theme;
     }
     &:nth-child(2n) {
-      background-color: #25283D;
+      background-color: $tertiary_theme;
     }
     &:nth-child(4n) {
-      background-color: #CEA2AC;
+      background-color: $splash_theme;
     }
   }
 }
