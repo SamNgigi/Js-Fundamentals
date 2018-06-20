@@ -1,32 +1,47 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-html,
-body {
-  background-color: #EFD9CE;
-  font-family: 'Montserrat', sans-serif;
-  margin: 10px;
-  .container {
-    display: grid;
-    grid-template-columns: 100px auto 100px;
-    grid-template-rows: 50px 50px;
-    grid-gap: 3px;
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2em;
-      color: #EFD9CE;
-      &:nth-child(1n) {
-        background-color: #A675A1;
-      }
-      &:nth-child(3n) {
-        background-color: #25283D;
-      }
-      &:nth-child(2n) {
-        background-color: #8F3985;
-      }
-      &:nth-child(4n) {
-        background-color: #CEA2AC;
-      }
+@import "Partials/mixins";
+@include base;
+.container {
+  display: grid;
+  /* 
+      Setting column width.
+      1st & 3rs col = 100px
+      middle col = responsive.
+
+      --> grid-template-columns: 100px auto 100px;
+
+      Css grid comes with a new fraction unit that makes all the cols
+      responsive.
+
+      --> grid-template-columns: 1fr 1fr 1fr;
+
+      This can be written simply as;
+
+      --> grid-template-column: repeat(3, 1fr);
+
+      We can also do the same for rows and say
+
+      --> grid-template-row: repeat(2, 50px);
+
+      In fact we can do a compressed version and all the above and say
+
+      --> grid-template: repeat(2, 50) / repeat(3, 50);
+
+      Start with the row first. How we write letter L should help us remember the format.
+    */
+  grid-template: repeat(2, 100px) / repeat(3, 1fr);
+  grid-gap: 3px;
+  div {
+    &:nth-child(1n) {
+      background-color: #8F3985;
+    }
+    &:nth-child(3n) {
+      background-color: #A675A1;
+    }
+    &:nth-child(2n) {
+      background-color: #25283D;
+    }
+    &:nth-child(4n) {
+      background-color: #CEA2AC;
     }
   }
 }
