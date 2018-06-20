@@ -3,10 +3,20 @@
 @include base;
 .container {
   display: grid;
-  grid-template: repeat(2, 40px) / repeat(2, 1fr);
+  grid-template: repeat(2, 60px) / repeat(2, 1fr);
+  grid-gap: 5px;
   div {
     &:nth-child(1n) {
-      background-color: #fff;
+      background-color: $pop_theme;
+    }
+    &:nth-child(3n) {
+      background-color: $secondary_theme;
+    }
+    &:nth-child(2n) {
+      background-color: $tertiary_theme;
+    }
+    &:nth-child(4n) {
+      background-color: $splash_theme;
     }
   }
 }

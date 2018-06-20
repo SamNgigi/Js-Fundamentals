@@ -14,8 +14,15 @@ body {
 
 .container {
   display: grid;
-  grid-template: repeat(2, 40px)/repeat(2, 1fr); }
+  grid-template: repeat(2, 60px)/repeat(2, 1fr);
+  grid-gap: 5px; }
   .container div:nth-child(1n) {
-    background-color: #fff; }
+    background-color: #A675A1; }
+  .container div:nth-child(3n) {
+    background-color: #8F3985; }
+  .container div:nth-child(2n) {
+    background-color: #25283D; }
+  .container div:nth-child(4n) {
+    background-color: #CEA2AC; }
 
 /*# sourceMappingURL=mockup.css.map */
