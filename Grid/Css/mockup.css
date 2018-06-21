@@ -1,21 +1,31 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 html,
 body {
+  /* 
+    Had to add 100% height to both html/body and container for the grid rows to be responsive
+   */
+  box-sizing: border-box;
   background-color: #EFD9CE;
   font-family: 'Montserrat', sans-serif;
-  margin: 10px; }
-  html .container div,
-  body .container div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: #EFD9CE; }
+  height: 100%;
+  margin: 0;
+  padding: 10px; }
+  html .container,
+  body .container {
+    height: 100%; }
+    html .container div,
+    body .container div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      color: #EFD9CE; }
 
 .container {
   display: grid;
-  grid-template: 60px 200px 60px/repeat(12, 1fr);
-  grid-gap: 5px; }
+  grid-template: 60px auto 60px/repeat(12, 1fr);
+  grid-gap: 5px;
+  grid-template-areas: "h h h h h h h h h h h h" "m c c c c c c c c c c c" "f f f f f f f f f f f f"; }
   .container div:nth-child(1n) {
     background-color: #A675A1; }
   .container div:nth-child(3n) {
@@ -43,10 +53,12 @@ body {
       If we don't and we basically want to a column to span from left to right we can use;
         grid-column: 1 /-1;
         */
-    grid-column: 1 / span 11; }
+    grid-area: h; }
+  .container .menu {
+    grid-area: m; }
   .container .content {
-    grid-column: 1 / span 11; }
+    grid-area: c; }
   .container .footer {
-    grid-column: 1 / -1; }
+    grid-area: f; }
 
 /*# sourceMappingURL=mockup.css.map */

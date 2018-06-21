@@ -3,10 +3,17 @@
   @import url('https://fonts.googleapis.com/css?family=Montserrat');
   html,
   body {
+    /* 
+      Had to add 100% height to both html/body and container for the grid rows to be responsive
+     */
+    box-sizing: border-box;
     background-color: $main_theme;
     font-family: 'Montserrat', sans-serif;
-    margin: 10px;
+    height: 100%;
+    margin: 0;
+    padding: 10px;
     .container {
+      height: 100%;
       div {
         display: flex;
         justify-content: center;

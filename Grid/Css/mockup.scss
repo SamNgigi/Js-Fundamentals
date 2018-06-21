@@ -2,9 +2,10 @@
 @import "Partials/mixins";
 @include base;
 .container {
-  display: grid;
-  grid-template: 60px 200px 60px / repeat(12, 1fr); // Had to add third row
+  display: grid; // grid-template: 60px auto 60px / repeat(12, 1fr); // Had to add third row
+  grid-template: 60px auto 60px / repeat(12, 1fr);
   grid-gap: 5px;
+  grid-template-areas: "h h h h h h h h h h h h" "m c c c c c c c c c c c" "f f f f f f f f f f f f";
   @include mockup_color_scheme;
   .header {
     /* 
@@ -25,13 +26,15 @@
       If we don't and we basically want to a column to span from left to right we can use;
         grid-column: 1 /-1;
         */
-    grid-column: 1 / span 11;
+    grid-area: h;
   }
-  .menu {}
+  .menu {
+    grid-area: m;
+  }
   .content {
-    grid-column: 1 / span 11;
+    grid-area: c;
   }
   .footer {
-    grid-column: 1 / -1;
+    grid-area: f;
   }
 }
