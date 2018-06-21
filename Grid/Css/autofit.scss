@@ -1,0 +1,16 @@
+@import "Partials/variables";
+@import "Partials/mixins";
+@include base;
+.container {
+  display: grid;
+  grid-gap: 10px;
+  /*
+    We put 1fr so that a div can span a column responsively.
+
+    We will use 100px and use auto fit and minmax attribute.
+    
+    Had to make it 4 rows for it to be able to adjust responsively row-wise
+  */
+  grid-template: repeat(4, 100px) / repeat(auto-fit, minmax(100px, 1fr));
+  @include grid_base_color_scheme;
+}
