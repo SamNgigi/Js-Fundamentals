@@ -14,7 +14,7 @@ body {
 
 .container {
   display: grid;
-  grid-template: repeat(2, 60px)/repeat(2, 1fr);
+  grid-template: 60px 200px 60px/repeat(12, 1fr);
   grid-gap: 5px; }
   .container div:nth-child(1n) {
     background-color: #A675A1; }
@@ -24,5 +24,29 @@ body {
     background-color: #25283D; }
   .container div:nth-child(4n) {
     background-color: #CEA2AC; }
+  .container .header {
+    /* 
+      Here we define where we want our header column to start which is 1.
+
+      We have to include the space in-between which is the second col.
+      
+      Lastly we have the far right space and specify that we want our
+      header to start at 1 and end at 3.
+
+      grid_column_start: 1;
+      grid_column_end: 3;
+
+      The short hand would be as follows.
+        grid-column: 1 / 3; 
+        grid-column: 1/ span 2;
+      When we know the number of columns we are working with. 
+      If we don't and we basically want to a column to span from left to right we can use;
+        grid-column: 1 /-1;
+        */
+    grid-column: 1 / span 11; }
+  .container .content {
+    grid-column: 1 / span 11; }
+  .container .footer {
+    grid-column: 1 / -1; }
 
 /*# sourceMappingURL=mockup.css.map */

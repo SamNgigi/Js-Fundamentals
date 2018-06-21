@@ -17,3 +17,37 @@
     }
   }
 }
+
+@mixin grid_base_color_scheme {
+  div {
+    &:nth-child(1n) {
+      background-color: $secondary_theme;
+    }
+    &:nth-child(3n) {
+      background-color: $pop_theme;
+    }
+    &:nth-child(2n) {
+      background-color: $tertiary_theme;
+    }
+    &:nth-child(4n) {
+      background-color: $splash_theme;
+    }
+  }
+}
+
+@mixin mockup_color_scheme {
+  div {
+    &:nth-child(1n) {
+      background-color: $pop_theme;
+    }
+    &:nth-child(3n) {
+      background-color: $secondary_theme;
+    }
+    &:nth-child(2n) {
+      background-color: $tertiary_theme;
+    }
+    &:nth-child(4n) {
+      background-color: $splash_theme;
+    }
+  }
+}
