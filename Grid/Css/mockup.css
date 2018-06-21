@@ -25,7 +25,7 @@ body {
   display: grid;
   grid-template: 60px auto 60px/repeat(12, 1fr);
   grid-gap: 5px;
-  grid-template-areas: "h h h h h h h h h h h h" "m c c c c c c c c c c c" "f f f f f f f f f f f f"; }
+  grid-template-areas: "m h h h h h h h h h h h" "m . c c c c c c c c c ." "m f f f f f f f f f f f"; }
   .container div:nth-child(1n) {
     background-color: #A675A1; }
   .container div:nth-child(3n) {

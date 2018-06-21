@@ -4,8 +4,8 @@
 .container {
   display: grid; // grid-template: 60px auto 60px / repeat(12, 1fr); // Had to add third row
   grid-template: 60px auto 60px / repeat(12, 1fr);
-  grid-gap: 5px;
-  grid-template-areas: "h h h h h h h h h h h h" "m c c c c c c c c c c c" "f f f f f f f f f f f f";
+  grid-gap: 5px; // We use  a dot '.' to indicate an unoccupied space.
+  grid-template-areas: "m h h h h h h h h h h h" "m . c c c c c c c c c ." "m f f f f f f f f f f f";
   @include mockup_color_scheme;
   .header {
     /* 
