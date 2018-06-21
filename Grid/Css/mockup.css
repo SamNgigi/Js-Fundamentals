@@ -4,22 +4,16 @@ body {
   /* 
     Had to add 100% height to both html/body and container for the grid rows to be responsive
    */
-  box-sizing: border-box;
   background-color: #EFD9CE;
   font-family: 'Montserrat', sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 10px; }
-  html .container,
-  body .container {
-    height: 100%; }
-    html .container div,
-    body .container div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2em;
-      color: #EFD9CE; }
+  margin: 10px; }
+  html .container div,
+  body .container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #EFD9CE; }
 
 .container {
   display: grid;
