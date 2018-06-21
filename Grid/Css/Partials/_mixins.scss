@@ -56,3 +56,24 @@
     }
   }
 }
+
+@mixin image-grid-base {
+  html,
+  body {
+    margin: 10px;
+    .container {
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        color: #fff;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

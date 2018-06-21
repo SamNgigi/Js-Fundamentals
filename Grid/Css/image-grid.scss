@@ -1,0 +1,26 @@
+@import "Partials/mixins";
+@include image-grid-base;
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 100px;
+  /* 
+    By default the attribute below is set to row. we set it to dense so
+    that all spaces are filled left empty due to aligning the vertically big, horizontally big or both.
+
+    This dense property/feature is an example of source order independence.
+    This basically means that we can style elements despite which order they appear in the html.
+  */
+  grid-auto-flow: dense;
+  .horizontal {
+    grid-column: span 2;
+  }
+  .vertical {
+    grid-row: span 2;
+  }
+  .big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
