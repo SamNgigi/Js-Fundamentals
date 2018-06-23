@@ -4,22 +4,34 @@ body {
   /* 
     Had to add 100% height to both html/body and container for the grid rows to be responsive
    */
+  box-sizing: border-box;
   background-color: #EFD9CE;
   font-family: 'Montserrat', sans-serif;
-  margin: 10px; }
-  html .container div,
-  body .container div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: #EFD9CE; }
+  height: 100%;
+  margin: 10px;
+  padding: 10px; }
+  html .container,
+  body .container {
+    height: 100%; }
+    html .container div,
+    body .container div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      color: #EFD9CE; }
 
 .container {
   display: grid;
-  grid-template: 60px auto 60px/repeat(12, 1fr);
+  grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+  grid-template-rows: [main-start] 40px [content-start] auto [content-end] 40px [main-end];
   grid-gap: 5px;
-  grid-template-areas: "m h h h h h h h h h h h" "m . c c c c c c c c c ." "m f f f f f f f f f f f"; }
+  /* 
+  We can also use grid template areas
+  
+    We use a dot '.' to indicate an unoccupied space. grid-template-areas: "m h h h h h h h h h h h" "m . c c c c c c c c c ." "m f f f f f f f f f f f";
+
+  */ }
   .container div:nth-child(1n) {
     background-color: #A675A1; }
   .container div:nth-child(3n) {
@@ -47,12 +59,10 @@ body {
       If we don't and we basically want to a column to span from left to right we can use;
         grid-column: 1 /-1;
         */
-    grid-area: h; }
-  .container .menu {
-    grid-area: m; }
+    grid-column: main; }
   .container .content {
-    grid-area: c; }
+    grid-area: content; }
   .container .footer {
-    grid-area: f; }
+    grid-column: main; }
 
 /*# sourceMappingURL=mockup.css.map */

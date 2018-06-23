@@ -1,11 +1,20 @@
 @import "Partials/variables";
 @import "Partials/mixins";
-@include base;
+@include mock-base;
 .container {
   display: grid; // grid-template: 60px auto 60px / repeat(12, 1fr); // Had to add third row
-  grid-template: 60px auto 60px / repeat(12, 1fr);
-  grid-gap: 5px; // We use  a dot '.' to indicate an unoccupied space.
-  grid-template-areas: "m h h h h h h h h h h h" "m . c c c c c c c c c ." "m f f f f f f f f f f f";
+  // Making way for named lines 
+  // grid-template: 60px auto 60px / repeat(12, 1fr);
+  // The - in named lines allows to call the prefix as a key word.
+  grid-template-columns: [main-start] 1fr [content-start] 5fr[content-end main-end];
+  grid-template-rows: [main-start] 40px [content-start] auto [content-end] 40px [main-end];
+  grid-gap: 5px;
+  /* 
+  We can also use grid template areas
+  
+    We use a dot '.' to indicate an unoccupied space. grid-template-areas: "m h h h h h h h h h h h" "m . c c c c c c c c c ." "m f f f f f f f f f f f";
+
+  */
   @include mockup_color_scheme;
   .header {
     /* 
@@ -26,15 +35,18 @@
       If we don't and we basically want to a column to span from left to right we can use;
         grid-column: 1 /-1;
         */
-    grid-area: h;
+    // grid-area: h; // make way for Named lines below.
+    grid-column: main;
   }
   .menu {
-    grid-area: m;
+    // grid-area: m;
   }
   .content {
-    grid-area: c;
+    // grid-area: c;
+    grid-area: content;
   }
   .footer {
-    grid-area: f;
+    // grid-area: f;
+    grid-column: main;
   }
 }

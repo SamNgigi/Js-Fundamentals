@@ -55,4 +55,11 @@ body {
   .container div:nth-child(4n) {
     background-color: #CEA2AC; }
 
+/* 
+  Note that 
+  justify-content ---> positions contents within a div horizontally.
+  align-content ---> positions contents within a div vertically.
+
+*/
+
 /*# sourceMappingURL=grid.css.map */

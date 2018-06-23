@@ -23,6 +23,32 @@
   }
 }
 
+@mixin mock-base {
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+  html,
+  body {
+    /* 
+      Had to add 100% height to both html/body and container for the grid rows to be responsive
+     */
+    box-sizing: border-box; // For responsive rows for mockup.html
+    background-color: $main_theme;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%; // For responsive rows for mockup.html
+    margin: 10px;
+    padding: 10px; // For responsive rows for mockup.html
+    .container {
+      height: 100%; // For responsive rows for mockup.html
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        color: $main_theme;
+      }
+    }
+  }
+}
+
 @mixin grid_base_color_scheme {
   div {
     &:nth-child(1n) {

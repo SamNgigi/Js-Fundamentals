@@ -34,3 +34,10 @@
   grid-gap: 3px;
   @include grid_base_color_scheme;
 }
+
+/* 
+  Note that 
+  justify-content ---> positions contents within a div horizontally.
+  align-content ---> positions contents within a div vertically.
+
+*/
