@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 10px;
+  color: #272727;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07); }
+
+  /*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  background-image: url("../imgs/topography.svg"), linear-gradient(110deg, #f93d66, #6d47d9);
+  background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  /* background: white; */
+  background-attachment: fixed;
+  letter-spacing: -1px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0; }
+
+/* Each item in our grid will contain numbers */
+.item {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgba(0, 0, 0, 0.03);
+  border-radius: 3px;
+  font-size: 35px;
+  background-color: #ffc600;
+  /* best colour */ }
+
+.item p {
+  margin: 0 0 5px 0; }
+
+body {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif; }
+
+button {
+  background: #ffc600;
+  border: 0;
+  padding: 10px 20px; }
+
+img {
+  max-width: 100px; }
+
+.top {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-areas: "hero hero cta1" "hero hero cta2"; }
+  .top .hero {
+    grid-area: hero;
+    min-height: 400px;
+    background: white url(https://bzfd.it/2MUekaV);
+    background-size: cover;
+    background-position: bottom right;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center; }
+    .top .hero > * {
+      background: #ffc600;
+      padding: 15px; }
+  .top .cta {
+    background: #ffc600;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center; }
+    .top .cta p {
+      margin: 0; }
+  .top .price {
+    font-size: 60px;
+    font-weight: 300; }
+  .top .cta1 {
+    grid-area: cta1; }
+  .top .cta2 {
+    grid-area: cta2; }
+
+/* Navigation */
+.menu ul {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+
+a {
+  background: #ffc600;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  color: #272727;
+  text-transform: uppercase;
+  font-size: 20px; }
+
+.toggle {
+  display: block; }
+
+.toggle.show {
+  display: none; }
+
+/*# sourceMappingURL=grid-web.css.map */

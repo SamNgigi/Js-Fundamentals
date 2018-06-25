@@ -1,0 +1,91 @@
+@import "Partials/variables";
+@import "Partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@include wes-base;
+body {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  background: $yellow;
+  border: 0;
+  padding: 10px 20px;
+}
+
+img {
+  max-width: 100px;
+}
+
+.top {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-areas: "hero hero cta1" "hero hero cta2";
+  .hero {
+    grid-area: hero;
+    min-height: 400px;
+    background: white url(https://bzfd.it/2MUekaV);
+    background-size: cover;
+    background-position: bottom right;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    >* {
+      background: $yellow;
+      padding: 15px;
+    }
+  }
+  .cta {
+    background: $yellow;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    p {
+      margin: 0;
+    }
+  }
+  .price {
+    font-size: 60px;
+    font-weight: 300;
+  }
+  .cta1 {
+    grid-area: cta1;
+  }
+  .cta2 {
+    grid-area: cta2;
+  }
+}
+
+/* Navigation */
+
+.menu ul {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+a {
+  background: $yellow;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  color: $black;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.toggle {
+  display: block;
+}
+
+.toggle.show {
+  display: none;
+}
