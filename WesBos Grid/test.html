@@ -29,6 +29,11 @@
     </div>
 
     <nav class="menu">
+      <!-- 
+        aria stands for - Accessible Rich Internet Applications.
+        
+        It is a set of attributes to help enhance the semantics of a web site or web app to help assistive technologies, such as screen readers for the blind.
+      -->
       <button aria-expanded="false" aria-controls="menu-list">
         <span class="open">☰</span>
         <span class="close">×</span>
@@ -84,7 +89,7 @@
       </div>
       <div class="feature">
         <span class="icon">
-          <i class="em em-musical_note toggle"></i>
+          <i class="em em-musical_note"></i>
         </span>
         <h3 id="test">Music</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
@@ -92,37 +97,35 @@
     </section>
 
     <section class="about">
-      <img src="https://bit.ly/2lxNA3t" alt="" class="about_mockup">
+      <!--  
+        Delicious emoji pic
+        
+        <img src="https://bit.ly/2lxNA3t" alt="" class="about_mockup">
+      -->
+      <img src="https://bit.ly/2IDmJMH" alt="" class="about_mockup">
       <div class="about_details">
         <h2>Featured Fries</h2>
         <p>Really the best you've ever had.</p>
-        <p>This one is waiting for you.</p>
+        <p>What you've been waiting for.</p>
         <button>Learn More</button>
       </div>
     </section>
 
     <section class="gallery">
       <h2>Delicious stuff</h2>
-      <img src="https://bit.ly/2tvnBOA" alt="">
+      <img class="horizontal" src="https://bit.ly/2tvnBOA" alt="">
       <img src="https://bit.ly/2sdU0sA" alt="">
-      <img src="https://bit.ly/2MXMv1F" alt="">
+      <img class="horizontal" src="https://bit.ly/2MXMv1F" alt="">
       <img src="https://bit.ly/2Kk1L7c" alt="">
       <img src="https://bit.ly/2yHWLbg" alt="">
-      <img src="https://bit.ly/2lw5e7K" alt="">
-      <img src="https://bit.ly/2MlVnwH" alt="">
-      <img src="https://bzfd.it/2tCXhBk" alt="">
-      <img src="https://bit.ly/2MYaC04" alt="">
+      <img class="vertical" src="https://bit.ly/2lw5e7K" alt="">
+      <img class="vertical" src="https://bit.ly/2MlVnwH" alt="">
+      <img class="big" src="https://bzfd.it/2tCXhBk" alt="">
+      <img class="vertical" src="https://bit.ly/2MYaC04" alt="">
     </section>
 
-    <script>
-      display = document.getElementById('test');
-      shawarma = document.querySelector('.toggle');
-      display.addEventListener('click', function () {
-        shawarma.classList.toggle('show')
-
-      })
+    <script src="Js/test.js">
     </script>
-
   </div>
 </body>
 
