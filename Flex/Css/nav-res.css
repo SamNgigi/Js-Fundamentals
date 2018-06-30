@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Lobster|Sacramento|Open+Sans|Quicksand|Raleway|Lobster+Two|Nanum+Gothic|Ubuntu");
+html,
+body {
+  background-color: #F3FFB9;
+  font-family: 'Raleway', sans-serif;
+  margin: 10px; }
+  html .container,
+  body .container {
+    padding: 0; }
+    html .container > li,
+    body .container > li {
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      color: #F3FFB9;
+      font-size: 2em;
+      list-style-type: none;
+      background-color: #561643; }
+    html .container .search-input,
+    body .container .search-input {
+      border: 0;
+      outline: 0;
+      width: 100%;
+      font-size: 1em;
+      font-family: "Quicksand", sans-serif;
+      text-align: center;
+      background: transparent;
+      border-bottom: 1px solid #F3FFB9;
+      color: #F3FFB9; }
+      html .container .search-input:focus,
+      body .container .search-input:focus {
+        outline: none; }
+    html .container ::placeholder,
+    body .container ::placeholder {
+      color: #F3FFB9; }
+
+.container {
+  border: 5px solid #C42021;
+  display: flex; }
+  .container .search {
+    flex: 1; }
+
+@media all and (max-width: 600px) {
+  .container {
+    flex-wrap: wrap; }
+
+  .container > li {
+    flex: 1 1 50%; } }
+@media all and (max-width: 400px) {
+  .container {
+    flex-wrap: wrap; }
+
+  .container > li {
+    flex: 1 1 100%; } }
+
+/*# sourceMappingURL=nav-res.css.map */

@@ -54,3 +54,29 @@
     margin: 0 0 5px 0;
   }
 }
+
+@mixin blog-base {
+  @import url('https://fonts.googleapis.com/css?family=Quicksand|Lobster');
+  html {
+    color: #444;
+    font-family: 'Quicksand', sans-serif;
+    font-style: 20px;
+  }
+  p {
+    line-height: 1.8; // space between new lines.
+  }
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: black;
+    text-decoration: underline wavy $yellow;
+  }
+  h1,
+  h2 {
+    font-family: "Lobster", cursive;
+    font-size: 80px;
+    font-weight: 100;
+    margin: 0;
+  }
+}

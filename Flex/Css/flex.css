@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Lobster|Sacramento|Open+Sans|Quicksand|Raleway|Lobster+Two|Nanum+Gothic|Ubuntu");
+html,
+body {
+  background-color: #561643;
+  font-family: 'Quicksand', sans-serif;
+  margin: 10px;
+  height: 100%; }
+
+.container > div {
+  padding: 10px;
+  text-align: center;
+  font-size: 2em;
+  color: #F3FFB9; }
+
+.container > div:nth-child(1) {
+  background-color: #6C0E23; }
+
+.container > div:nth-child(2) {
+  background-color: #3C1742; }
+
+.container > div:nth-child(3) {
+  background-color: #C42021; }
+
+.container > div:nth-child(4) {
+  background-color: #3C1742; }
+
+.container {
+  border: 5px solid #F3FFB9;
+  display: flex;
+  /* 
+    By default flex direction is row. Meaning the main axis flows
+    from left to right row-wise and the cross axis from top to
+    bottom.
+
+    We can change this  and make the flex direction column-wise by;
+
+    flex-direction: column;
+
+    This means that the main axis would now be from top to bottom &
+    the cross axis left to right.
+  */
+  /* 
+  By default the justify content is set to flex-start.
+  Meaning that all the content will be squeezed at the start of the main axis. 
+  
+  We can set it to flex-end and all of the content will be pushed to the end of the main axis. We can do this by,
+
+  justify-content: flex-end;
+
+  We also have space-around, space-between and space-evenly as flex
+  values. 
+
+  center -> content will be set to the center.
+
+  space-around -> allocates the available space left around the contents of the container.
+
+  space-between -> allocates the available space left between the contents of the container.
+
+  space-evenly -> allocates the available space evenly between the contents of the container and the space itself.
+
+    Making grid more like flex.
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  */
+  /* 
+    We the margin property to position items or a group of items  horizontally in a container.
+
+    For example if we want the logout button to the extreme right we
+    can do the following.
+    .logout {
+      margin-right: auto;
+    }
+  */
+  /* 
+    To make the content with the container responsive;
+    -flex is shorthand for;
+      flex-grow, flex-shrink and flex basis
+     >div {
+       flex: 1;
+     }
+    
+  */
+  /* 
+     making the specific content bigger and responsive while others are fixed.
+
+      >div:nth-child(odd) {
+        flex: 1;
+      }
+  */
+  /* 
+      Positioning a group or individual items vertically.
+
+      height: 100%;
+      align-items: center;
+      .logout {
+        align-self: start;
+      }
+
+      .home {
+        align-self: end;
+      }
+
+      .search {
+        justify-self: end;
+      }
+  */
+  /* 
+      Positioning items when flex-direction is column.
+
+      This means that justify content will now work vertically
+      instead of horizontally because the main axis in top to bottom.
+
+      Also align items will now position items horizontally because the cross axis is now left to right. Example case 
+
+      height: 100%;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: end;
+  */
+  /* 
+      Messing around with the flex-grow, flex-shrink and flex-base
+      shorthand.
+       .home {
+         flex: 1 1 200px;
+       }
+
+       .logout {
+         flex: 10 1 200px;
+       }
+  */
+  /* 
+       Ordering in flex.
+       .logout {
+         order: -1; // negative order goes first.
+       }
+
+       .search {
+         order: 0;
+       }
+
+       .home {
+         order: 1; // positive order goes last.
+       }
+  */ }
+
+/*# sourceMappingURL=flex.css.map */
