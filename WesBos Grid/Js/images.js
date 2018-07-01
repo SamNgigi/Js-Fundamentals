@@ -6,8 +6,8 @@ const overlay_close = document.querySelector(".close");
 function generateHtml([column_span, row_span]) {
   // const element = array[index];
   return `
-    <div class="col-${column_span} v${row_span}">
-      <img src="https://source.unsplash.com/">
+    <div class="col-${column_span} row-${row_span}">
+      < img src = "https://source.unsplash.com/${randomSize(600, 1200)}x${randomSize(500, 1000)}" >
       <div class ="item-overlay">
         <button>View</button>
       </div>
@@ -25,6 +25,7 @@ function randomSize(min, max) {
   let size = Math.floor(Math.random() * (max - min)) + min;
   return Math.ceil(size / 100) * 100;
 }
+
 // Generates an array of image span.
 const digits = Array.from({
   length: 50
