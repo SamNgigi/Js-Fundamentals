@@ -7,7 +7,7 @@ function generateHtml([column_span, row_span]) {
   // const element = array[index];
   return `
     <div class="col-${column_span} row-${row_span}">
-      < img src = "https://source.unsplash.com/${randomSize(600, 1200)}x${randomSize(500, 1000)}" >
+      <img src="https://source.unsplash.com/${randomSize(600, 1200)}x${randomSize(500, 1000)}" >
       <div class ="item-overlay">
         <button>View</button>
       </div>
@@ -33,4 +33,6 @@ const digits = Array.from({
 // console.log(digits);
 
 const html = digits.map(generateHtml).join('');
-console.log(html);
+// console.log(html);
+
+gallery.innerHTML = html;
