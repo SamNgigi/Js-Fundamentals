@@ -116,20 +116,18 @@ console.log(alice.full_name()); // Alice Whodat.
 
   So something that is see is emerging is that JavaScript mainly deals with objects and not with classes.
 
-  With Es6 the constructor is meant to accommodate people familiar with
-  classes but it seems it is not. 
+  With Es6 the constructor is meant to accommodate people familiar with classes but it seems in and of itself it is not. 
 
   In Js objects are created by other objects. And in this case a special kind of function a constructor whereby we use the key word 'new' to indicate that this is a special function. A constructor.
 
-  And because of this JavaScript does not use a class based inheritance
-  system. It uses a prototype-base inheritance system
+  And because of this JavaScript does not use a class based inheritance system. It uses a prototype-base inheritance system
   
   So what are prototypes?
 
   So in my very vague definition prototype is where all an
   objects methods are stored.
 
-  To put it another way a an objects delegates everything to do with functionality to the prototype.
+  To put it another way an objects delegates everything to do with functionality to the prototype.
 
   To add it is where inheritable functionality is located.
 
@@ -147,7 +145,7 @@ Plant.prototype.show_name_and_color = function () {
   /* 
     We do not need to add name and color params to a prototype since the are defined in the constructor.
   */
-  console.log(`i am a ${this.name} and my color is ${this.color}`);
+  console.log(`I am a ${this.name} and my color is ${this.color}`);
 }
 
 // We add the i am organic method to the Plant prototype property.
@@ -222,4 +220,9 @@ const myFriends = {
     A function object that creates and initializes objects (through the new key word.)
   - prototype
     Is an objects that provides shared properties for other objects.
+
+
+    So think of prototype as a shared kitchen when living in a hostel.
 */
+
+console.log(myFriends);
