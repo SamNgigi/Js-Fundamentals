@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Lobster|Montserrat|Raleway');
+@mixin base {
+  html,
+  body {
+    font-family: 'Quicksand', sans-serif;
+    height: 100%;
+    margin: 0;
+  }
+}

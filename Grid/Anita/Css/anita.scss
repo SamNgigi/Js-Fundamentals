@@ -1,0 +1,62 @@
+@import "Partials/variables";
+@import "Partials/mixins";
+@include base;
+.container {
+  height: 100%;
+  display: grid;
+}
+
+.banner {
+  display: grid;
+  background-color: $aero-blue;
+}
+
+.food-time {
+  display: grid;
+  background-color: $mauve;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  .time {
+    display: grid;
+    background-color: $pale-goldenrod;
+  }
+  .happy {
+    background-color: $pale-goldenrod;
+  }
+  .party {
+    background-color: $non-photo-blue;
+  }
+  .breakfast {
+    background-color: $pullman-green;
+  }
+  .lunch {
+    background-color: $isabelline;
+  }
+  .dinner {
+    background-color: $mountbatten-pink;
+  }
+}
+
+.gallery {
+  display: grid;
+  background-color: $pastel-magenta;
+}
+
+.yummy {
+  display: grid;
+  background-color: $pale-goldenrod;
+}
+
+.testimonials {
+  display: grid;
+  background-color: $non-photo-blue;
+}
+
+.holla {
+  display: grid;
+  background-color: $verdigris;
+}
+
+.footer {
+  display: grid;
+  background-color: $magnolia;
+}

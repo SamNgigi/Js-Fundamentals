@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand|Lobster|Montserrat|Raleway");
+html,
+body {
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+  margin: 0; }
+
+.container {
+  height: 100%;
+  display: grid; }
+
+.banner {
+  display: grid;
+  background-color: #D3F8E2; }
+
+.food-time {
+  display: grid;
+  background-color: #E4C1F9;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+  .food-time .time {
+    display: grid;
+    background-color: #EDE7B1; }
+  .food-time .happy {
+    background-color: #EDE7B1; }
+  .food-time .party {
+    background-color: #A9DEF9; }
+  .food-time .breakfast {
+    background-color: #393A10; }
+  .food-time .lunch {
+    background-color: #EFEFEF; }
+  .food-time .dinner {
+    background-color: #957186; }
+
+.gallery {
+  display: grid;
+  background-color: #F694C1; }
+
+.yummy {
+  display: grid;
+  background-color: #EDE7B1; }
+
+.testimonials {
+  display: grid;
+  background-color: #A9DEF9; }
+
+.holla {
+  display: grid;
+  background-color: #48A9A6; }
+
+.footer {
+  display: grid;
+  background-color: #F4E9D8; }
+
+/*# sourceMappingURL=anita.css.map */
