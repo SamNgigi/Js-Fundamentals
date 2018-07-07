@@ -2,13 +2,32 @@
 @import "Partials/mixins";
 @include base;
 .container {
-  height: 100%;
+  height: calc(100vh - 100px);
   display: grid;
 }
 
 .banner {
   display: grid;
-  background-color: $aero-blue;
+  background: url("../assets/backgrounds/landing.jpg") no-repeat;
+  background-position: bottom left;
+  /* 
+    Note that to center both the text and the icon we use
+    1. Justify items to center horizontally 
+      - We use justify-items instead of justify-content so that
+      we dont mess up centering when we increase the txt size.
+    2. Align content.
+      - We use align-content instead of align-items here so that we do no have a lot space between icon and text
+  */
+  justify-items: center;
+  align-content: center;
+  /* 
+    Allows background image to cove whole landing area without extra 100px margin bottom.
+  */
+  height: calc(100vh - 100px);
+  .banner-text {
+    font-size: 30px;
+    color: $white;
+  }
 }
 
 .food-time {
@@ -18,12 +37,12 @@
   .time {
     display: grid;
     background-color: $pale-goldenrod;
-  }
-  .happy {
-    background-color: $pale-goldenrod;
-  }
-  .party {
-    background-color: $non-photo-blue;
+    .happy {
+      background-color: $pale-goldenrod;
+    }
+    .party {
+      background-color: $non-photo-blue;
+    }
   }
   .breakfast {
     background-color: $pullman-green;
@@ -38,17 +57,70 @@
 
 .gallery {
   display: grid;
-  background-color: $pastel-magenta;
+  grid-template-columns: repeat(2, minmax(300px, 1fr)); // background-color: $pastel-magenta;
+  .food-images {
+    background-color: $halaya-ube;
+  }
+  .food-text {
+    background-color: $aero-blue;
+  }
+  .drinks-images {
+    background-color: $verdigris;
+  }
+  .drinks-text {
+    background-color: $glossy-grape;
+  }
 }
 
 .yummy {
   display: grid;
   background-color: $pale-goldenrod;
+  padding: 10px;
+  .tabs {
+    display: grid;
+    text-align: center;
+    vertical-align: text-bottom;
+    background-color: $white;
+    grid-template-columns: repeat(4, 1fr);
+    .yum {
+      border: 1px solid $isabelline;
+    }
+  }
+  .menu-images {
+    display: grid;
+    text-align: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .testimonials {
   display: grid;
-  background-color: $non-photo-blue;
+  background-color: $isabelline;
+  border: 1px solid $pale-silver;
+  padding: 40px;
+  .testimony {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: $white;
+    grid-gap: 7px;
+    padding: 10px;
+    text-align: center;
+    .customers {
+      display: grid;
+      grid-column: 1 / span 2;
+      border-right: 1px solid $pale-silver;
+      .profiles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      }
+    }
+    .about {
+      padding: 10px;
+      margin-left: 15px;
+      grid-column: span 1;
+    }
+  }
 }
 
 .holla {
