@@ -30,9 +30,9 @@ body {
   height: calc(100vh - 100px); }
   .banner svg {
     fill: #ffffff;
-    position: relative;
-    right: 42%;
-    bottom: 30%; }
+    position: absolute;
+    right: 89%;
+    bottom: 90%; }
   .banner .banner-text {
     font-size: 30px;
     color: #ffffff; }

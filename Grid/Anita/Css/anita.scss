@@ -27,9 +27,9 @@
   height: calc(100vh - 100px);
   svg {
     fill: $white;
-    position: relative;
-    right: 42%;
-    bottom: 30%;
+    position: absolute;
+    right: 89%;
+    bottom: 90%;
   }
   .banner-text {
     font-size: 30px;
