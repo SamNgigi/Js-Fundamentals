@@ -45,15 +45,23 @@ body {
     display: grid;
     background-color: #EDE7B1; }
     .food-time .time .happy {
-      background-color: #EDE7B1; }
+      background-color: #ffffff;
+      text-align: center;
+      padding-top: 15%; }
     .food-time .time .party {
-      background-color: #A9DEF9; }
+      background-color: #F15A29;
+      text-align: center;
+      padding-top: 10%;
+      color: #ffffff; }
   .food-time .breakfast {
-    background-color: #393A10; }
+    width: 100%;
+    object-fit: cover; }
   .food-time .lunch {
-    background-color: #EFEFEF; }
+    width: 100%;
+    object-fit: cover; }
   .food-time .dinner {
-    background-color: #957186; }
+    width: 100%;
+    object-fit: cover; }
 
 .gallery {
   display: grid;

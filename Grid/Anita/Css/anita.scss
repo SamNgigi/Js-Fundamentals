@@ -45,20 +45,28 @@
     display: grid;
     background-color: $pale-goldenrod;
     .happy {
-      background-color: $pale-goldenrod;
+      background-color: $white;
+      text-align: center;
+      padding-top: 15%;
     }
     .party {
-      background-color: $non-photo-blue;
+      background-color: $outrageous-orange;
+      text-align: center;
+      padding-top: 10%;
+      color: $white;
     }
-  }
+  } // Meet object-fit --> Cover or fill.
   .breakfast {
-    background-color: $pullman-green;
+    width: 100%;
+    object-fit: cover;
   }
   .lunch {
-    background-color: $isabelline;
+    width: 100%;
+    object-fit: cover;
   }
   .dinner {
-    background-color: $mountbatten-pink;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
