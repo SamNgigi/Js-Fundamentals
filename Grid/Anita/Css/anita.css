@@ -47,7 +47,7 @@ body {
     .food-time .time .happy {
       background-color: #ffffff;
       text-align: center;
-      padding-top: 15%; }
+      padding-top: 10%; }
     .food-time .time .party {
       background-color: #F15A29;
       text-align: center;
@@ -65,11 +65,52 @@ body {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr)); }
+  grid-template-columns: repeat(2, 1fr); }
   .gallery .food-images {
-    background-color: #703D57; }
-  .gallery .food-text {
-    background-color: #D3F8E2; }
+    display: grid;
+    padding: 50px;
+    justify-content: end; }
+    .gallery .food-images .fastFood {
+      padding: 20px;
+      border: 2px solid #EFEFEF;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      width: 100%; }
+      .gallery .food-images .fastFood .f-food {
+        display: block;
+        object-fit: cover;
+        width: 100%; }
+  .gallery .text-col {
+    display: grid;
+    text-align: start;
+    margin-top: 10%;
+    margin-left: 10%;
+    align-content: start;
+    width: 100%; }
+    .gallery .text-col .food-text {
+      margin-right: 30%;
+      /* 
+        This here removes the inner firefox focus box/outline.
+      */ }
+      .gallery .text-col .food-text button::-moz-focus-inner {
+        border: 0; }
+      .gallery .text-col .food-text .view-gallery {
+        cursor: pointer;
+        background: #ffffff;
+        border: 1px solid #F15A29;
+        background-color: linear-gradient(to left, transparent, transparent 50%, #F15A29 50%, #F15A29);
+        background-position: 100% 0;
+        background-size: 200% 100%;
+        transition: all 0.5s ease-in;
+        color: #F15A29;
+        font-size: 1.1em;
+        padding: 10px;
+        font-family: "Montserrat", sans-serif; }
+        .gallery .text-col .food-text .view-gallery:hover {
+          background: #F15A29;
+          background-position: 10% 0;
+          color: #ffffff; }
   .gallery .drinks-images {
     background-color: #48A9A6; }
   .gallery .drinks-text {
