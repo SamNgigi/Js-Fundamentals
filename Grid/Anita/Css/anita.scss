@@ -78,17 +78,12 @@
     padding: 50px;
     justify-content: end;
     .fastFood {
-      padding: 20px;
-      border: 2px solid $isabelline;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-      width: 75vh;
+      @include gallery-images;
       .f-food {
         // Removes the space between the images
         display: block;
         object-fit: cover;
-        width: 100%;
+        max-width: 100%;
       }
     }
   }
@@ -101,30 +96,7 @@
     margin-bottom: 10%;
     .food-text {
       margin-right: 30%;
-      /* 
-        This here removes the inner firefox focus box/outline.
-      */
-      button::-moz-focus-inner {
-        border: 0;
-      }
-      .view-gallery {
-        cursor: pointer;
-        background: $white;
-        border: 1px solid $outrageous-orange;
-        background-color: linear-gradient(to left, transparent, transparent 50%, $outrageous-orange 50%, $outrageous-orange);
-        background-position: 100% 0;
-        background-size: 200% 100%;
-        transition: all 0.5s ease-in;
-        color: $outrageous-orange;
-        font-size: 1.1em;
-        padding: 10px;
-        font-family: "Montserrat", sans-serif;
-        &:hover {
-          background: $outrageous-orange;
-          background-position: 10% 0;
-          color: $white;
-        }
-      }
+      @include gallery-button;
     }
   }
   .drinks-text-col {
@@ -136,45 +108,18 @@
     margin-bottom: 10%;
     .drink-text {
       margin-left: 30%;
-      /* 
-        This here removes the inner firefox focus box/outline.
-      */
-      button::-moz-focus-inner {
-        border: 0;
-      }
-      .view-gallery {
-        cursor: pointer;
-        background: $white;
-        border: 1px solid $outrageous-orange;
-        background-color: linear-gradient(to left, transparent, transparent 50%, $outrageous-orange 50%, $outrageous-orange);
-        background-position: 100% 0;
-        background-size: 200% 100%;
-        transition: all 0.5s ease-in;
-        color: $outrageous-orange;
-        font-size: 1.1em;
-        padding: 10px;
-        font-family: "Montserrat", sans-serif;
-        &:hover {
-          background: $outrageous-orange;
-          background-position: 10% 0;
-          color: $white;
-        }
-      }
+      @include gallery-button;
     }
   }
   .drinks-images {
     padding: 50px;
+    width: 100%;
     .drinks {
       display: flex;
-      padding: 20px;
-      width: 75vh;
-      border: 2px solid $isabelline;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-      .dr {
-        display: block;
+      @include gallery-images;
+      .dr-imgs {
         object-fit: cover;
+        max-width: 100%;
       }
     }
   }

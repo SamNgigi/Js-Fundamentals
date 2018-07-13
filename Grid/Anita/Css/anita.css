@@ -76,11 +76,11 @@ body {
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      width: 75vh; }
+      /* Large devices (laptops/desktops, 992px and up) */ }
       .gallery .food-images .fastFood .f-food {
         display: block;
         object-fit: cover;
-        width: 100%; }
+        max-width: 100%; }
   .gallery .food-text-col {
     display: grid;
     text-align: start;
@@ -91,8 +91,8 @@ body {
     .gallery .food-text-col .food-text {
       margin-right: 30%;
       /* 
-        This here removes the inner firefox focus box/outline.
-      */ }
+            This here removes the inner firefox focus box/outline.
+          */ }
       .gallery .food-text-col .food-text button::-moz-focus-inner {
         border: 0; }
       .gallery .food-text-col .food-text .view-gallery {
@@ -121,8 +121,8 @@ body {
     .gallery .drinks-text-col .drink-text {
       margin-left: 30%;
       /* 
-        This here removes the inner firefox focus box/outline.
-      */ }
+            This here removes the inner firefox focus box/outline.
+          */ }
       .gallery .drinks-text-col .drink-text button::-moz-focus-inner {
         border: 0; }
       .gallery .drinks-text-col .drink-text .view-gallery {
@@ -142,18 +142,19 @@ body {
           background-position: 10% 0;
           color: #ffffff; }
   .gallery .drinks-images {
-    padding: 50px; }
+    padding: 50px;
+    width: 100%; }
     .gallery .drinks-images .drinks {
       display: flex;
       padding: 20px;
-      width: 75vh;
       border: 2px solid #EFEFEF;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
-      .gallery .drinks-images .drinks .dr {
-        display: block;
-        object-fit: cover; }
+      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      /* Large devices (laptops/desktops, 992px and up) */ }
+      .gallery .drinks-images .drinks .dr-imgs {
+        object-fit: cover;
+        max-width: 100%; }
 
 .yummy {
   display: grid;
