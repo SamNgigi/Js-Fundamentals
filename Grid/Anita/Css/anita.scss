@@ -83,7 +83,7 @@
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-      width: 100%;
+      width: 75vh;
       .f-food {
         // Removes the space between the images
         display: block;
@@ -92,13 +92,13 @@
       }
     }
   }
-  .text-col {
+  .food-text-col {
     display: grid;
     text-align: start;
     margin-top: 10%;
     margin-left: 10%;
     align-content: start;
-    width: 100%;
+    margin-bottom: 10%;
     .food-text {
       margin-right: 30%;
       /* 
@@ -127,11 +127,56 @@
       }
     }
   }
-  .drinks-images {
-    background-color: $verdigris;
+  .drinks-text-col {
+    display: grid;
+    text-align: end;
+    margin-top: 10%;
+    margin-right: 10%;
+    align-content: end;
+    margin-bottom: 10%;
+    .drink-text {
+      margin-left: 30%;
+      /* 
+        This here removes the inner firefox focus box/outline.
+      */
+      button::-moz-focus-inner {
+        border: 0;
+      }
+      .view-gallery {
+        cursor: pointer;
+        background: $white;
+        border: 1px solid $outrageous-orange;
+        background-color: linear-gradient(to left, transparent, transparent 50%, $outrageous-orange 50%, $outrageous-orange);
+        background-position: 100% 0;
+        background-size: 200% 100%;
+        transition: all 0.5s ease-in;
+        color: $outrageous-orange;
+        font-size: 1.1em;
+        padding: 10px;
+        font-family: "Montserrat", sans-serif;
+        &:hover {
+          background: $outrageous-orange;
+          background-position: 10% 0;
+          color: $white;
+        }
+      }
+    }
   }
-  .drinks-text {
-    background-color: $glossy-grape;
+  .drinks-images {
+    padding: 50px;
+    .drinks {
+      display: flex;
+      padding: 20px;
+      width: 75vh;
+      border: 2px solid $isabelline;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+      .dr {
+        display: block;
+        object-fit: cover;
+      }
+    }
   }
 }
 

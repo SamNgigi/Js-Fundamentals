@@ -76,26 +76,26 @@ body {
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      width: 100%; }
+      width: 75vh; }
       .gallery .food-images .fastFood .f-food {
         display: block;
         object-fit: cover;
         width: 100%; }
-  .gallery .text-col {
+  .gallery .food-text-col {
     display: grid;
     text-align: start;
     margin-top: 10%;
     margin-left: 10%;
     align-content: start;
-    width: 100%; }
-    .gallery .text-col .food-text {
+    margin-bottom: 10%; }
+    .gallery .food-text-col .food-text {
       margin-right: 30%;
       /* 
         This here removes the inner firefox focus box/outline.
       */ }
-      .gallery .text-col .food-text button::-moz-focus-inner {
+      .gallery .food-text-col .food-text button::-moz-focus-inner {
         border: 0; }
-      .gallery .text-col .food-text .view-gallery {
+      .gallery .food-text-col .food-text .view-gallery {
         cursor: pointer;
         background: #ffffff;
         border: 1px solid #F15A29;
@@ -107,14 +107,53 @@ body {
         font-size: 1.1em;
         padding: 10px;
         font-family: "Montserrat", sans-serif; }
-        .gallery .text-col .food-text .view-gallery:hover {
+        .gallery .food-text-col .food-text .view-gallery:hover {
+          background: #F15A29;
+          background-position: 10% 0;
+          color: #ffffff; }
+  .gallery .drinks-text-col {
+    display: grid;
+    text-align: end;
+    margin-top: 10%;
+    margin-right: 10%;
+    align-content: end;
+    margin-bottom: 10%; }
+    .gallery .drinks-text-col .drink-text {
+      margin-left: 30%;
+      /* 
+        This here removes the inner firefox focus box/outline.
+      */ }
+      .gallery .drinks-text-col .drink-text button::-moz-focus-inner {
+        border: 0; }
+      .gallery .drinks-text-col .drink-text .view-gallery {
+        cursor: pointer;
+        background: #ffffff;
+        border: 1px solid #F15A29;
+        background-color: linear-gradient(to left, transparent, transparent 50%, #F15A29 50%, #F15A29);
+        background-position: 100% 0;
+        background-size: 200% 100%;
+        transition: all 0.5s ease-in;
+        color: #F15A29;
+        font-size: 1.1em;
+        padding: 10px;
+        font-family: "Montserrat", sans-serif; }
+        .gallery .drinks-text-col .drink-text .view-gallery:hover {
           background: #F15A29;
           background-position: 10% 0;
           color: #ffffff; }
   .gallery .drinks-images {
-    background-color: #48A9A6; }
-  .gallery .drinks-text {
-    background-color: #AA9ABA; }
+    padding: 50px; }
+    .gallery .drinks-images .drinks {
+      display: flex;
+      padding: 20px;
+      width: 75vh;
+      border: 2px solid #EFEFEF;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
+      .gallery .drinks-images .drinks .dr {
+        display: block;
+        object-fit: cover; }
 
 .yummy {
   display: grid;
