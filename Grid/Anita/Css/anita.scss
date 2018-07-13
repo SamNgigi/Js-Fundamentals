@@ -73,53 +73,67 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr); // background-color: $pastel-magenta;
-  .food-images {
+  .food {
     display: grid;
-    padding: 50px;
-    justify-content: end;
-    .fastFood {
-      @include gallery-images;
-      .f-food {
-        // Removes the space between the images
-        display: block;
-        object-fit: cover;
-        max-width: 100%;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+    .food-images {
+      display: grid;
+      padding: 50px;
+      justify-content: end;
+      .fastFood {
+        @include gallery-image;
+        @media only screen and (max-width: 950px) {
+          height: 16.3em;
+        }
+        .f-food {
+          // Removes the space between the images
+          display: block;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    }
+    .food-text-col {
+      display: grid;
+      text-align: start;
+      margin-top: 10%;
+      margin-left: 10%;
+      align-content: start; // width: 100%;
+      .food-text {
+        margin-right: 30%;
+        @include gallery-button;
       }
     }
   }
-  .food-text-col {
+  .drinks {
     display: grid;
-    text-align: start;
-    margin-top: 10%;
-    margin-left: 10%;
-    align-content: start;
-    margin-bottom: 10%;
-    .food-text {
-      margin-right: 30%;
-      @include gallery-button;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+    .drinks-text-col {
+      display: grid;
+      text-align: end; // margin-top: 10%;
+      margin-left: 20%;
+      padding: 20px;
+      align-content: start;
+      width: 100%;
+      .drink-text {
+        margin-right: 30%;
+        @include gallery-button;
+      }
     }
-  }
-  .drinks-text-col {
-    display: grid;
-    text-align: end;
-    margin-top: 10%;
-    margin-right: 10%;
-    align-content: end;
-    margin-bottom: 10%;
-    .drink-text {
-      margin-left: 30%;
-      @include gallery-button;
-    }
-  }
-  .drinks-images {
-    padding: 50px;
-    width: 100%;
-    .drinks {
-      display: flex;
-      @include gallery-images;
-      .dr-imgs {
-        object-fit: cover;
-        max-width: 100%;
+    .drinks-images {
+      padding: 30px;
+      .imgs {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 0;
+        @include gallery-image;
+        .d-drink {
+          display: block;
+          object-fit: cover;
+          max-width: 100%;
+        }
       }
     }
   }

@@ -66,95 +66,107 @@ body {
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
-  .gallery .food-images {
+  .gallery .food {
     display: grid;
-    padding: 50px;
-    justify-content: end; }
-    .gallery .food-images .fastFood {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr; }
+    .gallery .food .food-images {
+      display: grid;
+      padding: 50px;
+      justify-content: end; }
+      .gallery .food .food-images .fastFood {
+        padding: 20px;
+        border: 2px solid #EFEFEF;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        max-width: 30rem; }
+        @media only screen and (max-width: 950px) {
+          .gallery .food .food-images .fastFood {
+            height: 16.3em; } }
+        .gallery .food .food-images .fastFood .f-food {
+          display: block;
+          object-fit: cover;
+          width: 100%; }
+    .gallery .food .food-text-col {
+      display: grid;
+      text-align: start;
+      margin-top: 10%;
+      margin-left: 10%;
+      align-content: start; }
+      .gallery .food .food-text-col .food-text {
+        margin-right: 30%;
+        /* 
+              This here removes the inner firefox focus box/outline.
+            */ }
+        .gallery .food .food-text-col .food-text button::-moz-focus-inner {
+          border: 0; }
+        .gallery .food .food-text-col .food-text .view-gallery {
+          cursor: pointer;
+          background: #ffffff;
+          border: 1px solid #F15A29;
+          background-color: linear-gradient(to left, transparent, transparent 50%, #F15A29 50%, #F15A29);
+          background-position: 100% 0;
+          background-size: 200% 100%;
+          transition: all 0.5s ease-in;
+          color: #F15A29;
+          font-size: 1.1em;
+          padding: 10px;
+          font-family: "Montserrat", sans-serif; }
+          .gallery .food .food-text-col .food-text .view-gallery:hover {
+            background: #F15A29;
+            background-position: 10% 0;
+            color: #ffffff; }
+  .gallery .drinks {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr; }
+    .gallery .drinks .drinks-text-col {
+      display: grid;
+      text-align: end;
+      margin-left: 20%;
       padding: 20px;
-      border: 2px solid #EFEFEF;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      /* Large devices (laptops/desktops, 992px and up) */ }
-      .gallery .food-images .fastFood .f-food {
-        display: block;
-        object-fit: cover;
-        max-width: 100%; }
-  .gallery .food-text-col {
-    display: grid;
-    text-align: start;
-    margin-top: 10%;
-    margin-left: 10%;
-    align-content: start;
-    margin-bottom: 10%; }
-    .gallery .food-text-col .food-text {
-      margin-right: 30%;
-      /* 
-            This here removes the inner firefox focus box/outline.
-          */ }
-      .gallery .food-text-col .food-text button::-moz-focus-inner {
-        border: 0; }
-      .gallery .food-text-col .food-text .view-gallery {
-        cursor: pointer;
-        background: #ffffff;
-        border: 1px solid #F15A29;
-        background-color: linear-gradient(to left, transparent, transparent 50%, #F15A29 50%, #F15A29);
-        background-position: 100% 0;
-        background-size: 200% 100%;
-        transition: all 0.5s ease-in;
-        color: #F15A29;
-        font-size: 1.1em;
-        padding: 10px;
-        font-family: "Montserrat", sans-serif; }
-        .gallery .food-text-col .food-text .view-gallery:hover {
-          background: #F15A29;
-          background-position: 10% 0;
-          color: #ffffff; }
-  .gallery .drinks-text-col {
-    display: grid;
-    text-align: end;
-    margin-top: 10%;
-    margin-right: 10%;
-    align-content: end;
-    margin-bottom: 10%; }
-    .gallery .drinks-text-col .drink-text {
-      margin-left: 30%;
-      /* 
-            This here removes the inner firefox focus box/outline.
-          */ }
-      .gallery .drinks-text-col .drink-text button::-moz-focus-inner {
-        border: 0; }
-      .gallery .drinks-text-col .drink-text .view-gallery {
-        cursor: pointer;
-        background: #ffffff;
-        border: 1px solid #F15A29;
-        background-color: linear-gradient(to left, transparent, transparent 50%, #F15A29 50%, #F15A29);
-        background-position: 100% 0;
-        background-size: 200% 100%;
-        transition: all 0.5s ease-in;
-        color: #F15A29;
-        font-size: 1.1em;
-        padding: 10px;
-        font-family: "Montserrat", sans-serif; }
-        .gallery .drinks-text-col .drink-text .view-gallery:hover {
-          background: #F15A29;
-          background-position: 10% 0;
-          color: #ffffff; }
-  .gallery .drinks-images {
-    padding: 50px;
-    width: 100%; }
-    .gallery .drinks-images .drinks {
-      display: flex;
-      padding: 20px;
-      border: 2px solid #EFEFEF;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      /* Large devices (laptops/desktops, 992px and up) */ }
-      .gallery .drinks-images .drinks .dr-imgs {
-        object-fit: cover;
-        max-width: 100%; }
+      align-content: start;
+      width: 100%; }
+      .gallery .drinks .drinks-text-col .drink-text {
+        margin-right: 30%;
+        /* 
+              This here removes the inner firefox focus box/outline.
+            */ }
+        .gallery .drinks .drinks-text-col .drink-text button::-moz-focus-inner {
+          border: 0; }
+        .gallery .drinks .drinks-text-col .drink-text .view-gallery {
+          cursor: pointer;
+          background: #ffffff;
+          border: 1px solid #F15A29;
+          background-color: linear-gradient(to left, transparent, transparent 50%, #F15A29 50%, #F15A29);
+          background-position: 100% 0;
+          background-size: 200% 100%;
+          transition: all 0.5s ease-in;
+          color: #F15A29;
+          font-size: 1.1em;
+          padding: 10px;
+          font-family: "Montserrat", sans-serif; }
+          .gallery .drinks .drinks-text-col .drink-text .view-gallery:hover {
+            background: #F15A29;
+            background-position: 10% 0;
+            color: #ffffff; }
+    .gallery .drinks .drinks-images {
+      padding: 30px; }
+      .gallery .drinks .drinks-images .imgs {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 0;
+        padding: 20px;
+        border: 2px solid #EFEFEF;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        max-width: 30rem; }
+        .gallery .drinks .drinks-images .imgs .d-drink {
+          display: block;
+          object-fit: cover;
+          max-width: 100%; }
 
 .yummy {
   display: grid;

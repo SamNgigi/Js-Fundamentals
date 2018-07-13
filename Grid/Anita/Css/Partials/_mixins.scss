@@ -8,17 +8,6 @@
   }
 }
 
-@mixin gallery-images {
-  padding: 20px;
-  border: 2px solid $isabelline;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .5); // Ems works better in-terms of sizing things. Better than vh.
-  // width: 30.7em;
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (max-width: 992px) {}
-}
-
 @mixin gallery-button {
   /* 
         This here removes the inner firefox focus box/outline.
@@ -44,4 +33,13 @@
       color: $white;
     }
   }
+}
+
+@mixin gallery-image {
+  padding: 20px;
+  border: 2px solid $isabelline;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  max-width: 30rem;
 }
