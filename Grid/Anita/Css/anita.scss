@@ -82,10 +82,9 @@
       padding: 50px;
       justify-content: end;
       .fastFood {
+        display: grid;
+        grid-template-rows: auto auto;
         @include gallery-image;
-        @media only screen and (max-width: 950px) {
-          height: 16.3em;
-        }
         .f-food {
           // Removes the space between the images
           display: block;
@@ -198,4 +197,11 @@
 .footer {
   display: grid;
   background-color: $magnolia;
+}
+
+// This works with chrome but not firefox. Don't know why.
+@media screen and (max-width: 950px) {
+  .gallery .food .food-images .fastFood {
+    height: 16.1rem;
+  }
 }
