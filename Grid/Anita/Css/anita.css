@@ -65,6 +65,7 @@ body {
 
 .gallery {
   display: grid;
+  font-size: 1em;
   grid-template-columns: repeat(2, 1fr); }
   .gallery .food {
     display: grid;
@@ -169,21 +170,44 @@ body {
 
 .yummy {
   display: grid;
-  background-color: #EDE7B1;
-  padding: 10px; }
+  background: url("../assets/backgrounds/foodsBg.jpg") no-repeat;
+  background-size: cover;
+  padding: 10rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr; }
   .yummy .tabs {
     display: grid;
+    height: 4rem;
     text-align: center;
+    font-weight: bold;
     vertical-align: text-bottom;
+    align-content: center;
     background-color: #ffffff;
     grid-template-columns: repeat(4, 1fr); }
     .yummy .tabs .yum {
-      border: 1px solid #EFEFEF; }
+      border-bottom: 2px solid #EFEFEF;
+      border-left: 2px solid #EFEFEF;
+      padding: 20px; }
   .yummy .menu-images {
-    display: grid;
+    padding: 3.5em;
+    background-color: #ffffff;
+    display: flex;
     text-align: center;
-    grid-gap: 10px;
-    grid-template-columns: repeat(5, 1fr); }
+    justify-content: space-evenly;
+    align-items: center; }
+    .yummy .menu-images .symbol {
+      font-size: 4rem;
+      color: #F15A29;
+      padding-bottom: 30px;
+      margin: 0 10px 0;
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
+    .yummy .menu-images .m-imgs {
+      display: block;
+      object-fit: cover;
+      max-width: 100%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
 
 .testimonials {
   display: grid;
@@ -218,7 +242,24 @@ body {
   background-color: #F4E9D8; }
 
 @media screen and (max-width: 950px) {
+  .gallery {
+    font-size: 0.8em; }
+
   .gallery .food .food-images .fastFood {
-    height: 16.1rem; } }
+    height: 16.1rem; }
+
+  .yummy .menu-images {
+    display: grid;
+    grid-gap: 10px;
+    padding: 2.5em;
+    grid-template-columns: auto 1fr 1fr 1fr auto; }
+    .yummy .menu-images .symbol {
+      font-size: 2rem;
+      color: #F15A29;
+      padding-bottom: 17px; }
+    .yummy .menu-images .m-imgs {
+      display: block;
+      object-fit: cover;
+      max-width: 100%; } }
 
 /*# sourceMappingURL=anita.css.map */

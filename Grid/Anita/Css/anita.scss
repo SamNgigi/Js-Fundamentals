@@ -72,6 +72,7 @@
 
 .gallery {
   display: grid;
+  font-size: 1em;
   grid-template-columns: repeat(2, 1fr); // background-color: $pastel-magenta;
   .food {
     display: grid;
@@ -140,23 +141,48 @@
 
 .yummy {
   display: grid;
-  background-color: $pale-goldenrod;
-  padding: 10px;
+  background: url("../assets/backgrounds/foodsBg.jpg") no-repeat;
+  background-size: cover; // padding: 7em;
+  padding: 10rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr; // width: 100%;
   .tabs {
     display: grid;
+    height: 4rem;
     text-align: center;
+    font-weight: bold;
     vertical-align: text-bottom;
+    align-content: center;
     background-color: $white;
     grid-template-columns: repeat(4, 1fr);
     .yum {
-      border: 1px solid $isabelline;
+      border-bottom: 2px solid $isabelline;
+      border-left: 2px solid $isabelline;
+      padding: 20px;
     }
   }
   .menu-images {
-    display: grid;
-    text-align: center;
-    grid-gap: 10px;
-    grid-template-columns: repeat(5, 1fr);
+    padding: 3.5em;
+    background-color: $white;
+    display: flex;
+    text-align: center; // grid-template-columns: auto 1fr 1fr 1fr auto;
+    justify-content: space-evenly;
+    align-items: center;
+    .symbol {
+      font-size: 4rem;
+      color: $outrageous-orange;
+      padding-bottom: 30px;
+      margin: 0 10px 0;
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    .m-imgs {
+      display: block;
+      object-fit: cover;
+      max-width: 100%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    }
   }
 }
 
@@ -201,7 +227,26 @@
 
 // This works with chrome but not firefox. Don't know why.
 @media screen and (max-width: 950px) {
+  .gallery {
+    font-size: 0.8em;
+  }
   .gallery .food .food-images .fastFood {
     height: 16.1rem;
+  }
+  .yummy .menu-images {
+    display: grid;
+    grid-gap: 10px;
+    padding: 2.5em;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
+    .symbol {
+      font-size: 2rem;
+      color: $outrageous-orange;
+      padding-bottom: 17px;
+    }
+    .m-imgs {
+      display: block;
+      object-fit: cover;
+      max-width: 100%;
+    }
   }
 }
