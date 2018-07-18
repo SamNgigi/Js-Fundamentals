@@ -33,10 +33,28 @@ UI.prototype.addBookToList = function (book) {
   </td>
   
   `;
-  console.log(table_row);
+  // console.log(table_row);
   book_list.appendChild(table_row);
 }
 
+// Show the alerts.
+UI.prototype.showAlert = function (message, className) {
+  // Create div
+  const alert_div = document.createElement('div');
+  alert_div.className = `alert ${className}`;
+  alert_div.appendChild(document.createTextNode(message));
+  // Get parent
+  const container = document.querySelector(".container");
+  const form = document.querySelector("#bookForm");
+  // Insert alert before form
+  container.insertBefore(alert_div, form);
+  // Time out after 3seconds
+  setTimeout(function () {
+    document.querySelector('.alert').remove();
+  }, 3000);
+}
+
+// Clear the inputs.
 UI.prototype.clearFields = function () {
   document.getElementById('title').value = '';
   document.getElementById('author').value = '';
@@ -66,14 +84,20 @@ document.getElementById('bookForm').addEventListener('submit', function (event) 
   // Test to see our addBookToList prototype.
   // console.log(ui);
 
+  // Validate forms
+  if (title === '' || author === '' || isbn === '') {
+    // console.log('Empty');
+    ui.showAlert('Please fill in all the empty fields', 'error');
+  }
+
   // Add book to list
   ui.addBookToList(book);
+
+  // Show success alert
+  ui.showAlert("Book Added!", "success");
+
+
+  // Clears field inputs.
   ui.clearFields();
 
 })
-
-function newFunction(input_fields) {
-  input_fields.forEach(function (field) {
-    field.classList.remove("is-focused");
-  });
-}
