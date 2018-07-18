@@ -20,4 +20,48 @@ h6 {
   margin: 0 0 5px 0;
   font-family: "Raleway", sans-serif; }
 
+.container {
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  max-width: 960px;
+  padding: 0 10px;
+  background-color: #EFEFEF; }
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(0, 1fr);
+  padding: 50px; }
+  .form .mdl-textfield {
+    width: 100%; }
+
+#myTable {
+  margin: auto; }
+
+.success,
+.error {
+  color: #ffffff;
+  padding: 5px;
+  margin: 5px 0 15px; }
+
+.success {
+  background: #48A9A6; }
+
+.error {
+  background: #957186; }
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised,
+.mdl-button--accent.mdl-button--accent.mdl-button--fab {
+  background-color: #F694C1; }
+
+.mdl-data-table th {
+  font-size: 0.8em; }
+
+.mdl-data-table th,
+.mdl-data-table td {
+  padding: 8px 70px; }
+
+.mdl-data-table {
+  font-size: 1.3em; }
+
 /*# sourceMappingURL=app.css.map */

@@ -22,3 +22,14 @@
     font-family: "Raleway", sans-serif;
   }
 }
+
+@mixin container {
+  .container {
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    max-width: 960px;
+    padding: 0 10px;
+    background-color: $isabelline;
+  }
+}

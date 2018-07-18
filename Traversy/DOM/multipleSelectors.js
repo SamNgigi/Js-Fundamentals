@@ -66,7 +66,7 @@ listItem = document.querySelectorAll('ul.collection li.collection-item');
 listItem.forEach(function (li, index) {
   li.textContent = `${index}: Node listed loop edit.`
   // returns edited list items without having to convert into array
-  // Returns unreversed list.
+  // Returns un-reversed list.
 });
 
 const li_odd = document.querySelectorAll('li:nth-child(odd)')

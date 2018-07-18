@@ -1,3 +1,49 @@
 @import "Partials/mixins";
 @import "Partials/variables";
 @include base;
+@include container;
+.form {
+  display: grid;
+  grid-template-columns: repeat(0, 1fr);
+  padding: 50px;
+  .mdl-textfield {
+    width: 100%;
+  }
+}
+
+#myTable {
+  margin: auto;
+}
+
+.success,
+.error {
+  color: $white;
+  padding: 5px;
+  margin: 5px 0 15px;
+}
+
+.success {
+  background: $verdigris;
+}
+
+.error {
+  background: $mountbatten-pink;
+}
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised,
+.mdl-button--accent.mdl-button--accent.mdl-button--fab {
+  background-color: $pastel-magenta;
+}
+
+.mdl-data-table th {
+  font-size: 0.8em;
+}
+
+.mdl-data-table th,
+.mdl-data-table td {
+  padding: 8px 70px;
+}
+
+.mdl-data-table {
+  font-size: 1.3em;
+}
