@@ -2,4 +2,4 @@
 
 Herein lies the first steps to genius.
 
-Just adding some text to push to my fork.
+So i just removed some  text and added some new text.
