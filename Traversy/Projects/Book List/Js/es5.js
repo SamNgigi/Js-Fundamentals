@@ -92,14 +92,15 @@ document.getElementById('bookForm').addEventListener('submit', function (event) 
   // Instantiate UI
   const ui = new UI();
 
-  // Test to see our addBookToList prototype.
-  // console.log(ui);
 
   // Validate forms
   if (title === '' || author === '' || isbn === '') {
     // console.log('Empty');
     ui.showAlert('Please fill in all the empty fields', 'error');
   }
+
+  // Test to see our addBookToList prototype.
+  // console.log(ui);
 
   // Add book to list
   ui.addBookToList(book);
