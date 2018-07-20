@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+html,
+body {
+  /* 
+    Had to add 100% height to both html/body and container for the grid rows to be responsive
+   */
+  background-color: #EFD9CE;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px; }
+  html .container div,
+  body .container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #EFD9CE; }
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  /*
+    We put 1fr so that a div can span a column responsively.
+
+    We will use 100px and use auto fit and minmax attribute.
+
+    Had to make it 4 rows for it to be able to adjust responsively row-wise
+
+    To make it dynamically responsive row wise we can use grid-auto-rows.
+
+    This;
+    grid-template: repeat(4, 100px) / repeat(auto-fit, minmax(100px, 1fr));
+    now becomes
+  */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 100px; }
+  .container div:nth-child(1n) {
+    background-color: #8F3985; }
+  .container div:nth-child(3n) {
+    background-color: #A675A1; }
+  .container div:nth-child(2n) {
+    background-color: #25283D; }
+  .container div:nth-child(4n) {
+    background-color: #CEA2AC; }
+
+/*# sourceMappingURL=autofit.css.map */

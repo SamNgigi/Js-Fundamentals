@@ -1,0 +1,232 @@
+// IMPORTS
+@import "Partials/functions";
+@import "Partials/variables";
+@import "Partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand');
+// DECLARATIONS
+@include base;
+html,
+body {
+  background: $body-theme-color;
+  font-size: toRem(17px); // approx 1.1rems
+  height: 100%;
+}
+
+* {
+  font-family: $general-font;
+}
+
+main#app {
+  margin: 4rem auto; // 64px
+  padding: 2rem 3rem 3rem; // 32px, 48px respectively
+  max-width: toRem(750px); // 56.250ems
+  background: $theme-color;
+  color: $txt-color;
+  box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, .4); // border-radius: 5px;
+  h1 {
+    font-family: $heading-font;
+    font-size: 2.6rem; // 41px
+    letter-spacing: 0.045em; // 0px Works better with ems
+    span {
+      display: block;
+      font-size: 1.15rem; // 18px
+      margin-left: 7px; // 0.438px
+      margin-top: 0.2rem; // 3px
+      border-bottom: 1px solid rgba(255, 255, 255, .7);
+      strong {
+        font-size: 30px;
+        font-weight: normal;
+      }
+    }
+  }
+  .input-container {
+    display: flex;
+    width: 100%;
+    background: rgba(255, 255, 255, .9);
+    box-shadow: -5px 2px 4px 3px rgba(100, 100, 100, .3);
+    @include form-radius;
+    .icon {
+      margin-top: toRem(10px);
+      padding: toRem(5px);
+      min-width: toRem(50px);
+      text-align: center;
+      outline: none;
+    }
+    .input-field {
+      width: 110%;
+      height: toRem(50px);
+      outline: none; // padding: toRem(5px);
+      // Makes sure that the text doesn't overflow on the right.
+      padding: 0 14px 0 0px;
+      border: 0px;
+      float: left;
+      background: rgba(255, 255, 255, .7);
+      color: $other-color;
+      font-size: toPerc(20px);
+      text-indent: toEm(12px);
+      @include no-appearance; // @include form-radius;
+      @include placeholder-color;
+    }
+    .added {
+      min-width: toRem(50px);
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0px 2px 4px 3px rgba(100, 100, 100, .8);
+      outline: none;
+      cursor: pointer;
+      .circle {
+        stroke-dashoffset: 1000;
+        stroke-dasharray: 1000;
+        animation-name: add;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        animation-duration: .4s;
+        -webkit-animation-duration: .4s;
+        -webkit-animation-timing-function: ease-in;
+        -webkit-animation-fill-mode: forwards;
+      }
+      .plus {
+        stroke-dashoffset: 1000;
+        stroke-dasharray: 1000;
+        animation-name: add;
+        -webkit-animation-duration: .3s;
+        -webkit-animation-timing-function: ease-in;
+        -webkit-animation-delay: .3s;
+        -webkit-animation-fill-mode: forwards;
+        animation-duration: .3s;
+        animation-timing-function: ease-in;
+        animation-delay: .3s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes add {
+        to {
+          stroke-dashoffset: 0
+        }
+      }
+    }
+    .mdl-tooltip {
+      letter-spacing: 0.03rem;
+      background-color: rgba(100, 100, 99, .6);
+    }
+  }
+}
+
+.todoList {
+  margin: 4rem auto; // 64px
+  padding: 2rem 3rem 3rem; // 32px, 48px respectively
+  max-width: toRem(750px); // 56.250ems
+  background: $theme-color;
+  color: $txt-color;
+  box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, .4); // border-radius: 5px; 
+}
+
+li.animated {
+  background-color: rgba(6, 214, 160, .9);
+  color: $txt-color;
+  margin: 4rem auto;
+  padding: 1rem;
+  max-width: toRem(750px);
+  list-style: none;
+  box-shadow: -20px -20px 0 0 rgba(100, 100, 100, .4);
+  @include animation-duration(1.5s);
+  font-size: toRem(21px);
+  .back {
+    background: #06e0a6;
+    padding: toRem(50px);
+  }
+  span.todo-item {
+    padding: 0 toRem(100px) 0 0;
+  }
+  .actions {
+    width: toRem(100px);
+    float: right;
+    padding: 30px 0px 0px 0px;
+    span.done {
+      padding-right: toEm(9px);
+      svg {
+        background-color: $theme-color;
+        border-radius: 50%;
+        border: 1.5px solid $theme-color;
+        transition: background 0.2s ease;
+        path.fill {
+          fill: $list-feel;
+        }
+      }
+      &:hover {
+        svg {
+          box-shadow: 0px 2px 4px 3px rgba(100, 100, 100, .3);
+          background-color: $list-feel;
+          path.fill {
+            fill: rgba(6, 214, 160, .5)
+          }
+        }
+      }
+    }
+    span.remove {
+      border-left: 2px solid rgb(255, 255, 255);
+      padding-left: toEm(9px);
+      svg {
+        path.fill {
+          fill: #FFF;
+        }
+      }
+      &:hover {
+        svg {
+          box-shadow: 0px 2px 4px 3px rgba(100, 100, 100, .3);
+          padding: 1px;
+          transition: box-shadow 0.17s ease;
+          border-radius: 45%;
+          background: #e6fef8;
+          border: 1.5px solid $theme-color;
+          path.fill {
+            fill: #f788b0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// li#completed {
+//   background-color: $txt-color;
+//   color: $secondary-color;
+//   margin: 4rem auto;
+//   padding: 3rem 3rem 3rem 3rem;
+//   max-width: toRem(750px);
+//   list-style: none;
+//   box-shadow: -20px -20px 0 0 rgba(100, 100, 100, .4);
+//   @include animation-duration(1.5s);
+//   font-size: toRem(21px);
+//   .todo-item {
+//     padding: 0 toRem(100px) 0 0;
+//   }
+//   .actions {
+//     width: toRem(100px);
+//     float: right;
+//     padding: 30px 0px 0px 10px;
+//     span.remove {
+//       padding-right: toEm(7px);
+//       svg {
+//         path.fill {
+//           fill: $theme-color;
+//         }
+//       }
+//       &:hover {
+//         svg {
+//           path.fill {
+//             fill: $body-theme-color
+//           }
+//         }
+//       }
+//     }
+//     span.done {
+//       border-left: 2px solid rgb(219, 215, 215);
+//       padding-left: toEm(10px);
+//       svg {
+//         path.fill {
+//           fill: $theme-color;
+//         }
+//       }
+//     }
+//   }
+// }

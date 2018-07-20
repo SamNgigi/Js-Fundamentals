@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand|Lobster|Montserrat|Raleway");
+html,
+body {
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+  margin: 0; }
+
+.container {
+  height: calc(100vh - 100px); }
+
+.banner {
+  display: grid;
+  background: url("../assets/backgrounds/landing.jpg") no-repeat;
+  background-size: cover;
+  background-position: bottom left;
+  /* 
+    Note that to center both the text and the icon we use
+    1. Justify items to center horizontally 
+      - We use justify-items instead of justify-content so that
+      we dont mess up centering when we increase the txt size.
+    2. Align content.
+      - We use align-content instead of align-items here so that we do no have a lot space between icon and text.
+  */
+  justify-items: center;
+  align-content: center;
+  /* 
+    Allows background image to cove whole landing area without extra 100px margin bottom.
+  */
+  width: 100%;
+  height: calc(100vh - 100px); }
+  .banner svg {
+    fill: #ffffff;
+    position: absolute;
+    right: 89%;
+    bottom: 90%; }
+  .banner .banner-text {
+    font-size: 30px;
+    color: #ffffff; }
+
+.food-time {
+  display: grid;
+  background-color: #E4C1F9;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+  .food-time .time {
+    display: grid;
+    background-color: #EDE7B1; }
+    .food-time .time .happy {
+      background-color: #ffffff;
+      text-align: center;
+      padding-top: 10%; }
+    .food-time .time .party {
+      background-color: #F15A29;
+      text-align: center;
+      padding-top: 10%;
+      color: #ffffff; }
+  .food-time .breakfast {
+    width: 100%;
+    object-fit: cover; }
+  .food-time .lunch {
+    width: 100%;
+    object-fit: cover; }
+  .food-time .dinner {
+    width: 100%;
+    object-fit: cover; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .gallery .food {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr; }
+    .gallery .food .food-images {
+      display: grid;
+      padding: 50px;
+      justify-content: end; }
+      .gallery .food .food-images .fastFood {
+        padding: 20px;
+        border: 2px solid #EFEFEF;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        max-width: 30rem; }
+        @media only screen and (max-width: 950px) {
+          .gallery .food .food-images .fastFood {
+            height: 16.3em; } }
+        .gallery .food .food-images .fastFood .f-food {
+          display: block;
+          object-fit: cover;
+          width: 100%; }
+    .gallery .food .food-text-col {
+      display: grid;
+      text-align: start;
+      margin-top: 10%;
+      margin-left: 10%;
+      align-content: start; }
+      .gallery .food .food-text-col .food-text {
+        margin-right: 30%;
+        /* 
+              This here removes the inner firefox focus box/outline.
+            */ }
+        .gallery .food .food-text-col .food-text button::-moz-focus-inner {
+          border: 0; }
+        .gallery .food .food-text-col .food-text .view-gallery {
+          cursor: pointer;
+          background: #ffffff;
+          border: 1px solid #F15A29;
+          background-color: linear-gradient(to left, transparent, transparent 50%, #F15A29 50%, #F15A29);
+          background-position: 100% 0;
+          background-size: 200% 100%;
+          transition: all 0.5s ease-in;
+          color: #F15A29;
+          font-size: 1.1em;
+          padding: 10px;
+          font-family: "Montserrat", sans-serif; }
+          .gallery .food .food-text-col .food-text .view-gallery:hover {
+            background: #F15A29;
+            background-position: 10% 0;
+            color: #ffffff; }
+  .gallery .drinks {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr; }
+    .gallery .drinks .drinks-text-col {
+      display: grid;
+      text-align: end;
+      margin-left: 20%;
+      padding: 20px;
+      align-content: start;
+      width: 100%; }
+      .gallery .drinks .drinks-text-col .drink-text {
+        margin-right: 30%;
+        /* 
+              This here removes the inner firefox focus box/outline.
+            */ }
+        .gallery .drinks .drinks-text-col .drink-text button::-moz-focus-inner {
+          border: 0; }
+        .gallery .drinks .drinks-text-col .drink-text .view-gallery {
+          cursor: pointer;
+          background: #ffffff;
+          border: 1px solid #F15A29;
+          background-color: linear-gradient(to left, transparent, transparent 50%, #F15A29 50%, #F15A29);
+          background-position: 100% 0;
+          background-size: 200% 100%;
+          transition: all 0.5s ease-in;
+          color: #F15A29;
+          font-size: 1.1em;
+          padding: 10px;
+          font-family: "Montserrat", sans-serif; }
+          .gallery .drinks .drinks-text-col .drink-text .view-gallery:hover {
+            background: #F15A29;
+            background-position: 10% 0;
+            color: #ffffff; }
+    .gallery .drinks .drinks-images {
+      padding: 30px; }
+      .gallery .drinks .drinks-images .imgs {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 0;
+        padding: 20px;
+        border: 2px solid #EFEFEF;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        max-width: 30rem; }
+        .gallery .drinks .drinks-images .imgs .d-drink {
+          display: block;
+          object-fit: cover;
+          max-width: 100%; }
+
+.yummy {
+  display: grid;
+  background-color: #EDE7B1;
+  padding: 10px; }
+  .yummy .tabs {
+    display: grid;
+    text-align: center;
+    vertical-align: text-bottom;
+    background-color: #ffffff;
+    grid-template-columns: repeat(4, 1fr); }
+    .yummy .tabs .yum {
+      border: 1px solid #EFEFEF; }
+  .yummy .menu-images {
+    display: grid;
+    text-align: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr); }
+
+.testimonials {
+  display: grid;
+  background-color: #EFEFEF;
+  border: 1px solid #C6C5B9;
+  padding: 40px; }
+  .testimonials .testimony {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #ffffff;
+    grid-gap: 7px;
+    padding: 10px;
+    text-align: center; }
+    .testimonials .testimony .customers {
+      display: grid;
+      grid-column: 1 / span 2;
+      border-right: 1px solid #C6C5B9; }
+      .testimonials .testimony .customers .profiles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); }
+    .testimonials .testimony .about {
+      padding: 10px;
+      margin-left: 15px;
+      grid-column: span 1; }
+
+.holla {
+  display: grid;
+  background-color: #48A9A6; }
+
+.footer {
+  display: grid;
+  background-color: #F4E9D8; }
+
+/*# sourceMappingURL=anita.css.map */

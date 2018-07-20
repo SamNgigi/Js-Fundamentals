@@ -1,0 +1,67 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lobster|Sacramento|Open+Sans|Quicksand|Raleway|Lobster+Two|Nanum+Gothic|Ubuntu');
+@mixin base {
+  html,
+  body {
+    background-color: $tryian-purple;
+    font-family: 'Quicksand', sans-serif;
+    margin: 10px; //Adding this would make the container height responsive.
+    height: 100%;
+  }
+  .container>div {
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: $very-pale-yellow;
+  }
+  .container>div:nth-child(1) {
+    background-color: $prune;
+  }
+  .container>div:nth-child(2) {
+    background-color: $russian-violet;
+  }
+  .container>div:nth-child(3) {
+    background-color: $fire-engine-red;
+  }
+  .container>div:nth-child(4) {
+    background-color: $russian-violet;
+  }
+}
+
+@mixin res-base {
+  html,
+  body {
+    background-color: $very-pale-yellow;
+    font-family: 'Raleway', sans-serif;
+    margin: 10px; // height: 100%;
+    .container {
+      padding: 0;
+      >li {
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: center;
+        color: $very-pale-yellow;
+        font-size: 2em;
+        list-style-type: none;
+        background-color: $tryian-purple;
+      }
+      .search-input {
+        border: 0;
+        outline: 0;
+        width: 100%;
+        font-size: 1em;
+        font-family: "Quicksand", sans-serif;
+        text-align: center;
+        background: transparent;
+        border-bottom: 1px solid $very-pale-yellow;
+        color: $very-pale-yellow;
+        &:focus {
+          outline: none;
+        }
+      }
+      ::placeholder {
+        color: $very-pale-yellow
+      }
+    }
+  }
+}

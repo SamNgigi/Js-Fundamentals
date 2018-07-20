@@ -1,0 +1,128 @@
+@import "variables";
+@mixin wes-base {
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+  html {
+    /* border-box box model allows us to add padding and border to our elements without increasing their size */
+    box-sizing: border-box;
+    /* A system font stack so things load nice and quick! */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 10px;
+    color: $black;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  }
+  /*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  body {
+    background-image: url("../imgs/topography.svg"), linear-gradient(110deg, #f93d66, #6d47d9);
+    background-size: 340px, auto;
+    min-height: calc(100vh - 100px);
+    margin: 50px;
+    /* background: white; */
+    background-attachment: fixed;
+    letter-spacing: -1px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 5px 0;
+  }
+  /* Each item in our grid will contain numbers */
+  .item {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgba(0, 0, 0, 0.03);
+    border-radius: 3px;
+    font-size: 35px;
+    background-color: $yellow;
+    /* best colour */
+  }
+  .item p {
+    margin: 0 0 5px 0;
+  }
+}
+
+@mixin blog-base {
+  @import url('https://fonts.googleapis.com/css?family=Quicksand|Lobster');
+  html {
+    color: #444;
+    font-family: 'Quicksand', sans-serif;
+    font-style: 20px;
+  }
+  p {
+    line-height: 1.8; // space between new lines.
+  }
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: black;
+    text-decoration: underline wavy $yellow;
+  }
+  h1,
+  h2 {
+    font-family: "Lobster", cursive;
+    font-size: 80px;
+    font-weight: 100;
+    margin: 0;
+  }
+}
+
+@mixin image-base {
+  @import url('https://fonts.googleapis.com/css?family=Quicksand|Lobster|Montserrat');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+    {
+    margin: 0 0 5px 0;
+  }
+  p {
+    margin: 0 0 20px 0;
+  }
+  .close {
+    border: 0;
+  }
+  .overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+  }
+  .overlay .open {
+    display: grid;
+  }
+  .overlay figure {
+    width: 700px;
+    padding: 20px;
+  }
+  .overlay img {
+    width: 100%;
+  }
+}

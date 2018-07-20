@@ -1,0 +1,21 @@
+@import "Partials/variables";
+@import "Partials/mixins";
+@include wes-base;
+p {
+  font-size: 50px;
+  border-bottom: 10px solid $yellow;
+  color: $black;
+}
+
+a {
+  font-size: 30px;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto 1fr; // grid-template-rows: 75px 100px;
+  grid-auto-rows: 500px; // Multiple auto row only chrome supported 
+  // We can decide the implicit flow to be column or row-wise;
+  // grid-auto-flow: column; // By default this is row.
+}

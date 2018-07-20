@@ -16,42 +16,41 @@
   "cSpell.language": "en,en-GB,en-US",
   "cSpell.words": [
     "Artboard",
+    "Kodesh",
     "MIXINS",
+    "Makmende",
+    "Mclaren",
     "Nanum",
     "Perc",
+    "Ruach",
+    "SUBMITTION",
+    "SVGs",
+    "Shawarma",
     "Tajawal",
+    "Textfield",
+    "Whodat",
     "animationend",
+    "assistive",
     "bellycard",
+    "bgcolor",
     "damani",
+    "flexbox",
+    "gettag",
     "gzipped",
+    "halaya",
+    "holla",
     "howtoforge",
+    "imgs",
+    "isabelline",
     "keyframes",
+    "minmax",
     "ngigi",
     "phill",
     "todos",
     "transparentize",
+    "tryian",
     "unqoute",
-    "xlink"
+    "xlink",
+    "yako"
   ],
-  "liveSassCompile.settings.formats": [
-    {
-      "format": "expanded",
-      "extensionName": ".css",
-      "savePath": "/css"
-    },
-    {
-      "extensionName": ".min.css",
-      "format": "compressed",
-      "savePath": "/dist/css"
-    }
-  ],
-  "liveSassCompile.settings.excludeList": [
-    "**/node_modules/**",
-    ".vscode/**"
-  ],
-  "liveSassCompile.settings.generateMap": true,
-  "liveSassCompile.settings.autoprefix": [
-    "> 1%",
-    "last 2 versions"
-  ]
 }

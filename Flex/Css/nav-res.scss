@@ -1,0 +1,28 @@
+@import "Partials/variables";
+@import "Partials/mixins";
+@include res-base;
+.container {
+  border: 5px solid $fire-engine-red;
+  display: flex;
+  .search {
+    flex: 1;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .container>li {
+    flex: 1 1 50%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .container>li {
+    flex: 1 1 100%;
+  }
+}

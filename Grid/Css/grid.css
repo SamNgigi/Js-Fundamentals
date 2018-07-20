@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+html,
+body {
+  /* 
+    Had to add 100% height to both html/body and container for the grid rows to be responsive
+   */
+  background-color: #EFD9CE;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px; }
+  html .container div,
+  body .container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #EFD9CE; }
+
+.container {
+  display: grid;
+  margin-top: 10px;
+  /* 
+      Setting column width.
+      1st & 3rs col = 100px
+      middle col = responsive.
+
+      --> grid-template-columns: 100px auto 100px;
+
+      Css grid comes with a new fraction unit that makes all the cols
+      responsive.
+
+      --> grid-template-columns: 1fr 1fr 1fr;
+
+      This can be written simply as;
+
+      --> grid-template-column: repeat(3, 1fr);
+
+      We can also do the same for rows and say
+
+      --> grid-template-row: repeat(2, 50px);
+
+      In fact we can do a compressed version and all the above and say
+
+      --> grid-template: repeat(2, 50) / repeat(3, 50);
+
+      Start with the row first. How we write letter L should help us remember the format.
+    */
+  grid-template: repeat(2, 100px)/repeat(3, 1fr);
+  grid-gap: 3px; }
+  .container div:nth-child(1n) {
+    background-color: #8F3985; }
+  .container div:nth-child(3n) {
+    background-color: #A675A1; }
+  .container div:nth-child(2n) {
+    background-color: #25283D; }
+  .container div:nth-child(4n) {
+    background-color: #CEA2AC; }
+
+/* 
+  Note that 
+  justify-content ---> positions contents within a div horizontally.
+  align-content ---> positions contents within a div vertically.
+
+*/
+
+/*# sourceMappingURL=grid.css.map */

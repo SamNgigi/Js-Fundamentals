@@ -1,0 +1,43 @@
+@import "Partials/variables";
+@import "Partials/mixins";
+@include base;
+.container {
+  display: grid;
+  margin-top: 10px;
+  /* 
+      Setting column width.
+      1st & 3rs col = 100px
+      middle col = responsive.
+
+      --> grid-template-columns: 100px auto 100px;
+
+      Css grid comes with a new fraction unit that makes all the cols
+      responsive.
+
+      --> grid-template-columns: 1fr 1fr 1fr;
+
+      This can be written simply as;
+
+      --> grid-template-column: repeat(3, 1fr);
+
+      We can also do the same for rows and say
+
+      --> grid-template-row: repeat(2, 50px);
+
+      In fact we can do a compressed version and all the above and say
+
+      --> grid-template: repeat(2, 50) / repeat(3, 50);
+
+      Start with the row first. How we write letter L should help us remember the format.
+    */
+  grid-template: repeat(2, 100px) / repeat(3, 1fr);
+  grid-gap: 3px;
+  @include grid_base_color_scheme;
+}
+
+/* 
+  Note that 
+  justify-content ---> positions contents within a div horizontally.
+  align-content ---> positions contents within a div vertically.
+
+*/
