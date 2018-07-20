@@ -16,10 +16,11 @@
 }
 
 .success,
-.error {
+.error,
+.removed {
   color: $white;
   padding: 5px;
-  margin: 5px 0 15px;
+  margin: 10px 0 15px;
 }
 
 .success {
@@ -28,6 +29,10 @@
 
 .error {
   background: $mountbatten-pink;
+}
+
+.removed {
+  background: $halaya-ube;
 }
 
 .mdl-button--accent.mdl-button--accent.mdl-button--raised,

@@ -25,7 +25,7 @@ h6 {
   margin-top: 3rem;
   margin-bottom: 3rem;
   max-width: 960px;
-  padding: 0 10px;
+  padding: 5px 10px;
   background-color: #EFEFEF; }
 
 .form {
@@ -39,16 +39,20 @@ h6 {
   margin: auto; }
 
 .success,
-.error {
+.error,
+.removed {
   color: #ffffff;
   padding: 5px;
-  margin: 5px 0 15px; }
+  margin: 10px 0 15px; }
 
 .success {
   background: #48A9A6; }
 
 .error {
   background: #957186; }
+
+.removed {
+  background: #703D57; }
 
 .mdl-button--accent.mdl-button--accent.mdl-button--raised,
 .mdl-button--accent.mdl-button--accent.mdl-button--fab {
