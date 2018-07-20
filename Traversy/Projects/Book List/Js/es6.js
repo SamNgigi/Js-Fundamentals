@@ -24,14 +24,26 @@ class UI {
     // Testing prototype.
     // console.log(book);
 
-    // Grab the table body where we will display our book-list
-    const book_list = document.getElementById("book-list");
+    // Grab the table body where we will display our bookList
+    const book_list = document.getElementById("bookList");
 
     // Create tr element
     const table_row = document.createElement("tr");
 
     // Add td to tr.
     table_row.innerHTML = `
+      <td>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple">
+          <input type="checkbox" class="mdl-checkbox__input">
+          <span class="mdl-checkbox__focus-helper"></span>
+          <span class="mdl-checkbox__box-outline">
+            <span class="mdl-checkbox__tick-outline"></span>
+          </span>
+          <span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple">
+            <span class="mdl-ripple"></span>
+          </span>
+        </label>
+      </td>
       <td class="mdl-data-table__cell--non-numeric" >${book.title}</td> 
       <td class="mdl-data-table__cell--non-numeric">${book.author}</td>
       <td>${book.isbn}</td>
@@ -129,7 +141,7 @@ document.getElementById('bookForm').addEventListener(
 
 
 // Delete Event Listener
-document.getElementById("book-list").addEventListener(
+document.getElementById("bookList").addEventListener(
   "click",
   function (event) {
     event.preventDefault();

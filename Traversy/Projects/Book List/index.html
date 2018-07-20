@@ -41,8 +41,23 @@
     </form>
     <hr>
 
-    <!-- Table -->
-    <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp" id="myTable">
+    <!-- 
+      Table 
+      
+      <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp" id="myTable">
+        <thead>
+          <tr>
+            <th class="mdl-data-table__cell--non-numeric">Title</th>
+            <th class="mdl-data-table__cell--non-numeric">Author</th>
+            <th>ISBN</th>
+          </tr>
+        </thead>
+        <tbody id="book-list">
+        </tbody>
+      </table>
+
+    -->
+    <table id="myTable" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
       <thead>
         <tr>
           <th class="mdl-data-table__cell--non-numeric">Title</th>
@@ -50,7 +65,8 @@
           <th>ISBN</th>
         </tr>
       </thead>
-      <tbody id="book-list">
+      <tbody id="bookList">
+
       </tbody>
     </table>
   </div>
