@@ -65,6 +65,7 @@ class UI {
     if (target.className === "delete") {
       console.log("Here");
       console.log(target.parentElement.parentElement);
+      // Removes the whole table row based on the target.
       target.parentElement.parentElement.remove();
     }
   }
