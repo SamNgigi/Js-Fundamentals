@@ -113,17 +113,17 @@ document.getElementById('bookForm').addEventListener(
     if (title === "" || author === '' || isbn === '') {
       // console.log("Empty");
       ui.showAlert("Please fill in all empty fields", "error");
+    } else {
+      // Add book to table.
+      ui.addBookList(book);
+      // console.log(ui);
+
+      // Show success message on adding book
+      ui.showAlert("Book added!", "success");
+
+      // Clear input fields
+      ui.clearFields();
     }
-
-    // Add book to table.
-    ui.addBookList(book);
-    // console.log(ui);
-
-    // Show success message on adding book
-    ui.showAlert("Book added!", "success");
-
-    // Clear input fields
-    ui.clearFields();
 
   })
 
