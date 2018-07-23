@@ -51,6 +51,7 @@ class UI {
         <a href="#"class ="delete">${trashSVG}</a> 
       </td>
     `;
+
     console.log(table_row);
     book_list.appendChild(table_row);
   }
@@ -129,6 +130,7 @@ document.getElementById('bookForm').addEventListener(
 
     // Add book to table.
     ui.addBookList(book);
+    componentHandler.upgradeAllRegistered("MaterialCheckbox", "mdl-js-checkbox");
     // console.log(ui);
 
     // Show success message on adding book
