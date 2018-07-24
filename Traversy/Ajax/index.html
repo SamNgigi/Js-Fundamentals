@@ -15,13 +15,16 @@
 
 <body>
   <div class="uk-container uk-flex uk-flex-center uk-margin-large-top">
-    <button id="getData" class="uk-button uk-button-default uk-width-1-1">Get Data</button>
-    <br>
-
-    <br>
+    <button id="oneCustomer" class="uk-button uk-button-default uk-width-1-1 uk-margin-small-right">Get One Customer</button>
+    <button id="manyCustomers" class="uk-button uk-button-default uk-width-1-1">Get Many Customers</button>
   </div>
   <div class="uk-container uk-margin-large-top">
-    <div id="output" class="uk-margin uk-card uk-card-default uk-card-body output"></div>
+    <div id="customerOutput" class="uk-margin uk-card uk-card-default uk-card-body output">
+      <h1>Singular Customer</h1>
+    </div>
+    <div id="customersOutput" class="uk-margin uk-card uk-card-default uk-card-body output">
+      <h1>Plural Customers</h1>
+    </div>
   </div>
   <!-- UIkit JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.9/js/uikit.min.js"></script>
