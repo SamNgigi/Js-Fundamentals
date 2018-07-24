@@ -20,7 +20,7 @@ class Book {
 
 class UI {
   // Adding book
-  addBookList(book) {
+  addBookToList(book) {
     // Testing prototype.
     // console.log(book);
 
@@ -91,6 +91,63 @@ class UI {
   }
 }
 
+
+// Persisting books to local storage.
+class Store {
+  static getBooks() {
+    let books;
+    if (localStorage.getItem("books") === null) {
+      books = [];
+    } else {
+      /* 
+        When receiving data from the server/local Storage it always
+        comes as a JSON string object. We use the JSON.parse()
+        method to convert this string into a Js Object when
+        retrieving the data.
+      */
+      books = JSON.parse(localStorage.getItem("books"));
+    }
+
+    return books;
+  }
+  static displayBooks() {
+    const books = Store.getBooks();
+    books.forEach(function (b) {
+      const ui = new UI();
+
+      // Add book to ui.
+      ui.addBookToList(b);
+    })
+  }
+  static addBook(book) {
+    const books = Store.getBooks();
+    // Pushing our book object into the books local Storage array.
+    books.push(book);
+    /* 
+      When pushing / sending data to a web server, the data has to be a string.
+
+      We use the JSON.stringify method to convert a Js Object to a Js string object so a send it to our local Storage.
+    */
+    localStorage.setItem("books", JSON.stringify(books));
+  }
+  static removeBook(isbn) {
+    console.log(isbn);
+    const books = Store.getBooks();
+
+    books.forEach(function (b, index) {
+      if (b.isbn === isbn.textContent) {
+        books.splice(index, 1);
+      }
+    });
+    localStorage.setItem("books", JSON.stringify(books));
+  }
+}
+
+
+// DOM Load Event to call the Store.displayBooks on window load
+document.addEventListener("DOMContentLoaded", Store.displayBooks);
+
+
 // Add Book Event Listener
 document.getElementById('bookForm').addEventListener(
   'submit',
@@ -108,6 +165,7 @@ document.getElementById('bookForm').addEventListener(
     // console.log(book);
 
     const ui = new UI();
+    console.log(ui);
 
     // Validate forms.
     if (title === "" || author === '' || isbn === '') {
@@ -115,8 +173,18 @@ document.getElementById('bookForm').addEventListener(
       ui.showAlert("Please fill in all empty fields", "error");
     } else {
       // Add book to table.
-      ui.addBookList(book);
+      ui.addBookToList(book);
       // console.log(ui);
+
+      /* 
+        Persisting the book object to local storage.
+
+        We use our Store class which we don't have to instantiate
+        because it is static.
+      */
+
+      Store.addBook(book);
+
 
       // Show success message on adding book
       ui.showAlert("Book added!", "success");
@@ -137,5 +205,7 @@ document.getElementById("book-list").addEventListener(
     ui = new UI();
     // Targeting the a-tag element.
     ui.deleteBook(event.target.parentElement.parentElement);
+    // Below we should be able to target the isbn number.
+    Store.removeBook(event.target.parentElement.parentElement.parentElement.previousElementSibling);
     ui.showAlert("Book removed!", "removed")
   })
