@@ -33,8 +33,7 @@ function getJokes(event) {
       let output = "";
       if (response.type === "success") {
         the_jokes.forEach(function (tell_me_the) {
-          if (tell_me_the.categories.length !== 0) {
-            output += `
+          output += `
           <div class="uk-child-width-1-1 uk-grid-match" uk-grid>
             <div id="test">
               <div class="uk-card uk-card-hover uk-card-body">
@@ -44,7 +43,6 @@ function getJokes(event) {
             </div>
           </div>
         `
-          }
         })
       } else {
         output += `
