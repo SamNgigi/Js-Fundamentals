@@ -15,19 +15,37 @@
 </head>
 
 <body>
-  <form class="uk-flex uk-flex-center uk-margin-medium-top">
-    <div class="uk-margin uk-margin-small-right">
-      <label class="uk-form-label" for="form-stacked-text">Number of jokes</label>
-      <div class="uk-inline uk-form-width-large">
-        <a class="uk-form-icon" href="#" uk-icon="icon: pencil"></a>
-        <input class="uk-input" type="number" id="number" autocomplete="off">
+  <div class="uk-container uk-margin-medium-top">
+    <div>
+      <div class="uk-background-muted uk-padding uk-panel">
+        <h2 class="uk-text-center">Chuck me some Norris jokes.</h2>
       </div>
     </div>
-    <div>
-      <button class="uk-button uk-button-default">Button</button>
-    </div>
-  </form>
+    <form class="uk-flex uk-flex-center uk-margin-medium-top">
+      <div class="uk-margin uk-margin-small-right">
+        <label class="uk-form-label" for="form-stacked-text">Number of jokes</label>
+        <div class="uk-inline uk-form-width-large">
+          <a class="uk-form-icon" href="#" uk-icon="icon: pencil"></a>
+          <input class="uk-input" type="number" id="number" autocomplete="off">
+        </div>
+      </div>
+      <div class="uk-flex uk-flex-middle">
+        <button class="uk-button uk-button-default chuck-btn">Chuck</button>
+      </div>
+    </form>
+  </div>
 
+  <!-- Displaying Jokes -->
+  <div class="uk-container uk-margin-medium-top">
+    <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+      <div>
+        <div class="uk-card uk-card-hover uk-card-body">
+          <h3 class="uk-card-title">Hover</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- UIkit JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.9/js/uikit.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.9/js/uikit-icons.min.js"></script>
