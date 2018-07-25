@@ -9,5 +9,10 @@ function getJokes(event) {
   event.preventDefault();
   // console.log("Wohoo!");
   const joke_number = jokes_input.value;
-  console.log(joke_number);
+  // console.log(joke_number);
+
+  // Creating the Ajax object
+  const xhr = new XMLHttpRequest();
+
+  xhr.open(`http://api.icndb.com/jokes/random/${joke_number}`, true)
 }
