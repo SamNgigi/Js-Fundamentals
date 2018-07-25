@@ -29,7 +29,7 @@ function getJokes(event) {
       */
       const response = JSON.parse(this.responseText);
       const the_jokes = response.value;
-      console.log(the_jokes);
+      // console.log(the_jokes);
       let output = "";
       if (response.type === "success") {
         the_jokes.forEach(function (tell_me_the) {
