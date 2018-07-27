@@ -31,7 +31,9 @@ function getPosts() {
 
 /* 
   What happens here is that we pass in our getPosts function as a callBack enabling it to execute asynchronously.
-  This allows us to be able to fetch the third post after it is created even if the getPost executes faster than our createPosts 
+  This allows us to be able to fetch the third post after it is created even if the getPost executes faster than our createPosts.
+
+  I think this takes like 3sec.
 */
 
 createPosts({
