@@ -5,8 +5,14 @@ function CustomHttpLib() {
 
 /* 
   Our HTTP GET Request
+
+  Args
+    url:
+      We pass in a url parameter that will allow us to pass in any url as an arg.
+    callBack:
+      We allow a call back function that allow for an asynchronous request.
 */
-CustomHttpLib.prototype.get = function (url) {
+CustomHttpLib.prototype.get = function (url, callBack) {
   this.http.open("GET", url, true);
 
   /* 
@@ -35,7 +41,11 @@ CustomHttpLib.prototype.get = function (url) {
   this.http.onload = function () {
     if (self.http.status === 200) {
 
-      console.log(self.http.responseText);
+      // console.log(self.http.responseText);
+
+      callBack(null, self.http.responseText);
+    } else {
+      callBack(`Error: ${self.http.status}`);
     }
   }
   this.http.send();
