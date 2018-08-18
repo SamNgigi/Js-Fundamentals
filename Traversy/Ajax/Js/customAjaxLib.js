@@ -53,9 +53,61 @@ CustomHttpLib.prototype.get = function (url, callBack) {
 /* 
   Our HTTP POST Request 
 */
+CustomHttpLib.prototype.post = function (url, data, callBack) {
+  this.http.open("POST", url, true);
+
+  this.http.setRequestHeader(
+    'Content-type',
+    'application/json'
+  );
+
+  let self = this;
+
+  this.http.onload = function () {
+    callBack(null, self.http.responseText);
+  }
+
+  /* 
+    The data we want to send is a javascript object. We have to convert the object into a json string in-order to send it successfully.
+  */
+  this.http.send(JSON.stringify(data))
+}
 /* 
   Our HTTP PUT Request
 */
+CustomHttpLib.prototype.put = function (url, data, callBack) {
+  this.http.open("PUT", url, true);
+
+  this.http.setRequestHeader(
+    'Content-type',
+    'application/json'
+  );
+
+  let self = this;
+
+  this.http.onload = function () {
+    callBack(null, self.http.responseText);
+  }
+
+  /* 
+    The data we want to send is a javascript object. We have to convert the object into a json string in-order to send it successfully.
+  */
+  this.http.send(JSON.stringify(data))
+}
+
 /* 
   Our HTTP DELETE Request
 */
+CustomHttpLib.prototype.delete = function (url, callBack) {
+  this.http.open('DELETE', url, true);
+
+  let self = this
+  this.http.onload = function () {
+    if (self.http.status === 200) {
+      callBack(null, "Post Deleted");
+    } else {
+      callBack(`Error: ${self.help.status}`);
+    }
+  }
+  this.http.send()
+}
