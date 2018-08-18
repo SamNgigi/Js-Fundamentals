@@ -14,7 +14,16 @@ function getJokes(event) {
   console.log(joke_number);
 
   // Creating the Ajax object
+  // xhr is used to represent the Ajax object
   const xhr = new XMLHttpRequest();
+  /* 
+    FYI-
+      XML stand for eXtensible Markup Language.
+
+      It  is a markup language like HTML and was designed to
+      store and transport data. XML  was designed to be self
+      descriptive.
+  */
 
   // The open method takes in 3 parameters GET, THE FILE/CONTENT, IF ASYNC
   xhr.open("GET", `http://api.icndb.com/jokes/random/${joke_number}`, true);
@@ -24,8 +33,11 @@ function getJokes(event) {
     if (this.status === 200) {
       // console.log(this.responseText);
       /* 
-        Converting the JSON string object into an object using the parse
-        method
+        Converting the JSON string object into an object using
+        the parse method.
+
+        I think storing objects as strings reduces the size of
+        the data stored.
       */
       const response = JSON.parse(this.responseText);
       const the_jokes = response.value;
