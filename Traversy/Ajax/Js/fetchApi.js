@@ -53,7 +53,7 @@ function getApiData() {
       return api_response.json();
     })
     .then(function (responses) {
-      output.innerHTML += `Api Response <hr>`
+      output.innerHTML += `Api Response <hr> GitHub Users <br><br>`
       responses.forEach(function (res) {
         output.innerHTML += `${res.login} <br>`
       })
