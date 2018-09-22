@@ -37,7 +37,12 @@ http_req.post("https://jsonplaceholder.typicode.com/users", user_data)
   .catch(error => console.log(error));
 
 
-// Using the put request. We want to update user with id of say 5.
+// Using the PUT request. We want to update user with id of say 5.
 http_req.put("https://jsonplaceholder.typicode.com/users/5", user_data)
+  .then(data => console.log(data))
+  .catch(error => console.log(error));
+
+// Deleting a user
+http_req.delete("https://jsonplaceholder.typicode.com/users/5", user_data)
   .then(data => console.log(data))
   .catch(error => console.log(error));

@@ -80,4 +80,13 @@ class CustomHttp {
     })
   }
 
+  delete(url, data) {
+    return new Promise((resolve, reject) => {
+      fetch(url, this.content("DELETE", data))
+        .then(res => res.json())
+        .then(data => resolve(`Resource Deleted!`))
+        .catch(error => reject(error))
+    })
+  }
+
 }
