@@ -33,16 +33,16 @@
 class CustomHttp {
 
   // Defining the headers/content that will be part of a post request.
-  /* content(method, data) {
+  content(method, data) {
     return {
       method: `${method}`,
       headers: {
         'Content-type': 'application/json'
       },
-      body: JSON.stringify(`${data}`)
+      body: JSON.stringify(data)
     }
   }
- */
+
   // Making the HTTP GET Request
   get(url) {
 
@@ -60,13 +60,10 @@ class CustomHttp {
   post(url, data) {
 
     return new Promise((resolve, reject) => {
-      fetch(url, {
-          method: `${method}`,
-          headers: {
-            'Content-type': 'application/json'
-          },
-          body: JSON.stringify(`${data}`)
-        })
+      /*  
+        Was getting content() is not defined error. Seems i had to use the "this" key word to be able to access it.
+      */
+      fetch(url, this.content("POST", data))
         .then(res => res.json())
         .then(data => resolve(data))
         .then(error => reject(error));
