@@ -35,3 +35,9 @@ const user_data = {
 http_req.post("https://jsonplaceholder.typicode.com/users", user_data)
   .then(data => console.log(data))
   .catch(error => console.log(error));
+
+
+// Using the put request. We want to update user with id of say 5.
+http_req.put("https://jsonplaceholder.typicode.com/users/5", user_data)
+  .then(data => console.log(data))
+  .catch(error => console.log(error));

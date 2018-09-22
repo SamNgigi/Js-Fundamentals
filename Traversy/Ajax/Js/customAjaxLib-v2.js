@@ -50,7 +50,7 @@ class CustomHttp {
       fetch(url)
         .then(res => res.json())
         .then(data => resolve(data))
-        .then(error => reject(error));
+        .catch(error => reject(error));
     });
 
   }
@@ -66,8 +66,18 @@ class CustomHttp {
       fetch(url, this.content("POST", data))
         .then(res => res.json())
         .then(data => resolve(data))
-        .then(error => reject(error));
+        .catch(error => reject(error));
     });
+  }
+
+  // Making a PUT of Update request
+  put(url, data) {
+    return new Promise((resolve, reject) => {
+      fetch(url, this.content("PUT", data))
+        .then(res => res.json())
+        .then(data => resolve(data))
+        .catch(error => reject(error))
+    })
   }
 
 }
