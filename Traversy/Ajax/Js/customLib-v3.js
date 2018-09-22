@@ -34,6 +34,8 @@ class CustomLibV3 {
       headers: {
         "Content-type": "application/json"
       },
-    });
+    })
+    const resData = await "Resource Deleted";
+    return resData;
   }
 }

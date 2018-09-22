@@ -20,3 +20,8 @@ http_request.post("https://jsonplaceholder.typicode.com/users", user_data)
 http_request.put("https://jsonplaceholder.typicode.com/users/4", user_data)
   .then(res => console.log(res))
   .catch(error => console.log(error))
+
+// Deleting user data
+http_request.delete("https://jsonplaceholder.typicode.com/users/5")
+  .then(res => console.log(res))
+  .catch(error => console.log(error))
