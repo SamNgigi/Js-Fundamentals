@@ -41,12 +41,12 @@ class GitHub {
   }
 
   async getRepos(project) {
-    const repo_response = await fetch(`${this.repos_url}=${project}+language:assembly&sort=stars&order=desc`);
+    const repo_response = await fetch(`${this.repos_url}=${project}+language:python&sort=stars&order=desc`);
 
     const repo_data = await repo_response.json();
 
     return {
-      item: repo_data
+      items: repo_data
     }
   }
 

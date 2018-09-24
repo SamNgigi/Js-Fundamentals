@@ -34,26 +34,47 @@ const debounce = (a_Function, delay) => {
 // The searchStuff function
 const searchStuff = (event) => {
   event.preventDefault()
+
   // Get user input
   const user_input = event.target.value;
-  // If input field is empty.
+
+  // If input field is not empty.
   if (user_input != "") {
     console.log(user_input)
-    // Make the http call
-    github.getUser(user_input)
-      .then(data => {
-        // console.log(data)
-        if (data.profile.message === "Not Found") {
-          //TODO: Show alert
-        } else {
-          //TODO: Show user profile
-          // console.log(data)
-          // ui.showProfile(data.profile)
-        }
-      });
 
-    github.getTopics(user_input)
-      .then(data => console.log(data))
+    // If we input a user_name
+    if (user_input.includes("@")) {
+
+      // Formating username be in the form samngigi if input is s
+      let username = user_input.toLowerCase().replace(/[@ ]/g, '');
+
+      console.log(username)
+
+      // Make the http call
+      github.getUser(username)
+        .then(data => {
+          // console.log(data)
+          if (data.profile.message === "Not Found") {
+            //TODO: Show alert
+          } else {
+            //TODO: Show user profile
+            console.log(data)
+            // ui.showProfile(data.profile)
+          }
+        });
+    } else if (user_input.includes("#")) {
+
+      let topic_query = user_input.toLowerCase().replace(/#/g, '').replace(/\s/g, '-')
+
+      console.log(topic_query)
+
+      github.getTopics(topic_query)
+        .then(data => console.log(data))
+
+    } else {
+      github.getRepos(user_input)
+        .then(data => console.log(data))
+    }
   } else {
     //TODO: Clear profile.
 
