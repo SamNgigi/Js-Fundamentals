@@ -1,7 +1,10 @@
 // When importing a class we do not need to use curly braces.
 import GitHub from "./github.js";
-// Initializing github.
+import UI from "./ui.js";
+// Initializing GitHub.
 const github = new GitHub;
+// Initializing UI
+const ui = new UI;
 
 // Grabbing the form element.
 const search_user = document.getElementById("searchUser");
@@ -39,11 +42,12 @@ const searchStuff = (event) => {
     // Make the http call
     github.getUser(user_input)
       .then(data => {
-        console.log(data)
+        // console.log(data)
         if (data.profile.message === "Not Found") {
           //TODO: Show alert
         } else {
           //TODO: Show profile
+          ui.showProfile(data.profile)
         }
       });
   } else {

@@ -1,17 +1,27 @@
 // Importing the Client Secret/ Api keys
 import {
   environment,
-  test
 } from '../environment/env.js';
 
 class GitHub {
   constructor() {
-    this.client_id = environment.GITHUB_CLIENT_ID;
-    this.client_secret = environment.GITHUB_CLIENT_SECRET;
+    this.users_url = environment.GITHUB_PROFILE_URL
+    this.token = environment.GITHUB_ACCESS_TOKEN;
   }
 
-  async getUser(user) {
-    const user_response = await fetch(`https://api.github.com/users/${user}?client_id=${this.client_id}&${this.client_secret}`);
+  async getUser(user = "SamNgigi") {
+
+    /*
+      Setting default params pre-ES6
+
+      * function foo(a, b) {
+       * a = typeof a !== 'undefined' ? a : 42;
+       * b = typeof b !== 'undefined' ? b : 'default_b';
+        ...
+      *}
+    */
+
+    const user_response = await fetch(`${this.users_url}/${user}?access_token=${this.token}`);
 
     const userData = await user_response.json();
 

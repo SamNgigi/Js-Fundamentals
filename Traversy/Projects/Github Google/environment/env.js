@@ -1,6 +1,6 @@
 export const environment = {
-  GITHUB_CLIENT_ID: "f5ff4f9f3f410855b317",
-  GITHUB_CLIENT_SECRET: "ebf2d38ee3ca00ecdc150da7a0efa6c5b2ea4b6d"
+  GITHUB_PROFILE_URL: "https://api.github.com/users",
+  GITHUB_ACCESS_TOKEN: "48dbb14943dac41e6d6351743d55bf82ff4beb2e"
 }
 
 export const test = "This is a test.";
