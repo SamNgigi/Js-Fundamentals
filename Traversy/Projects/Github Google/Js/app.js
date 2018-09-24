@@ -1,9 +1,7 @@
-// Importing the Client Secret/ Api keys
-import {
-  environment,
-  test
-} from '../environment/env.js';
-
+// When importing a class we do not need to use curly braces.
+import GitHub from "./github.js";
+// Initializing github.
+const github = new GitHub;
 
 // Grabbing the form element.
 const search_user = document.getElementById("searchUser");
@@ -16,6 +14,9 @@ const searchStuff = (event) => {
 
   if (user_input != "") {
     console.log(user_input)
+    // Make the http call
+    github.getUser(user_input)
+      .then(data => console.log(data))
   }
 }
 
