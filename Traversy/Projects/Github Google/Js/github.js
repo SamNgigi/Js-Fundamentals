@@ -52,7 +52,7 @@ class GitHub {
 
   async getTopics(topics) {
     const topic_response = await fetch(
-      `https://api.github.com/search/topics?q=ruby+is:featured`, {
+      `https://api.github.com/search/topics?q=${topics}+is:featured`, {
         headers: {
           "Accept": "application/vnd.github.v3.text-match+json,application/vnd.github.mercy-preview"
         }

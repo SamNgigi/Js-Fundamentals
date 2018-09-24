@@ -40,19 +40,19 @@ const searchStuff = (event) => {
   if (user_input != "") {
     console.log(user_input)
     // Make the http call
-    // github.getUser(user_input)
-    //   .then(data => {
-    //     // console.log(data)
-    //     if (data.profile.message === "Not Found") {
-    //       //TODO: Show alert
-    //     } else {
-    //       //TODO: Show user profile
-    //       // console.log(data)
-    //       // ui.showProfile(data.profile)
-    //     }
-    //   });
+    github.getUser(user_input)
+      .then(data => {
+        // console.log(data)
+        if (data.profile.message === "Not Found") {
+          //TODO: Show alert
+        } else {
+          //TODO: Show user profile
+          // console.log(data)
+          // ui.showProfile(data.profile)
+        }
+      });
 
-    github.getTopics()
+    github.getTopics(user_input)
       .then(data => console.log(data))
   } else {
     //TODO: Clear profile.
