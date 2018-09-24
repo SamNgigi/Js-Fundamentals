@@ -5,7 +5,8 @@ import {
 
 class GitHub {
   constructor() {
-    this.users_url = environment.GITHUB_PROFILE_URL
+    this.users_url = environment.GITHUB_PROFILE_URL;
+    this.repos_url = environment.GITHUB_SEARCH_REPOS_URL
     this.token = environment.GITHUB_ACCESS_TOKEN;
   }
 
@@ -21,12 +22,13 @@ class GitHub {
       *}
     */
 
-    const user_response = await fetch(`${this.users_url}/${user}?access_token=${this.token}`);
+    const user_response = await fetch(
+      `${this.users_url}/${user}?access_token=${this.token}`);
 
-    const userData = await user_response.json();
+    const user_data = await user_response.json();
 
     return {
-      profile: userData
+      profile: user_data
     }
     /*  
       *Note if we defined userData as profile e.g
@@ -36,6 +38,30 @@ class GitHub {
         profile
       }
     */
+  }
+
+  async getRepos(project) {
+    const repo_response = await fetch(`${this.repos_url}=${project}+language:assembly&sort=stars&order=desc`);
+
+    const repo_data = await repo_response.json();
+
+    return {
+      item: repo_data
+    }
+  }
+
+  async getTopics(topics) {
+    const topic_response = await fetch(
+      `https://api.github.com/search/topics?q=ruby+is:featured`, {
+        headers: {
+          "Accept": "application/vnd.github.v3.text-match+json,application/vnd.github.mercy-preview"
+        }
+      });
+    const topic_data = await topic_response.json()
+
+    return {
+      items: topic_data
+    }
   }
 }
 
