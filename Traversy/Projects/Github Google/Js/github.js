@@ -6,7 +6,8 @@ import {
 class GitHub {
   constructor() {
     this.users_url = environment.GITHUB_PROFILE_URL;
-    this.repos_url = environment.GITHUB_SEARCH_REPOS_URL
+    this.repos_url = environment.GITHUB_REPO_SEARCH_URL;
+    this.topics_url = environment.GITHUB_TOPIC_SEARCH_URL;
     this.token = environment.GITHUB_ACCESS_TOKEN;
   }
 
@@ -41,7 +42,9 @@ class GitHub {
   }
 
   async getRepos(project) {
-    const repo_response = await fetch(`${this.repos_url}=${project}+language:python&sort=stars&order=desc`);
+    const repo_response = await fetch(
+      `${this.repos_url}=${project}+language:python&sort=stars&order=desc?access_token=${this.token}`
+    );
 
     const repo_data = await repo_response.json();
 
@@ -52,7 +55,7 @@ class GitHub {
 
   async getTopics(topics) {
     const topic_response = await fetch(
-      `https://api.github.com/search/topics?q=${topics}+is:featured`, {
+      `${this.topics_url}=${topics}+is:featured?access_token=${this.token}`, {
         headers: {
           "Accept": "application/vnd.github.v3.text-match+json,application/vnd.github.mercy-preview"
         }
