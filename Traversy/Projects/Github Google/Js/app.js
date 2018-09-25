@@ -45,25 +45,30 @@ const searchStuff = (event) => {
     // If we input a user_name
     if (user_input.includes("@")) {
 
-      // Formating username be in the form samngigi if input is s
+      // Formating username i.e "@Sam Ngigi" becomes samngigi
       let username = user_input.toLowerCase().replace(/[@ ]/g, '');
 
       console.log(username)
 
-      // Make the http call
+      // Make the http call to fetch user
       github.getUser(username)
         .then(data => {
           // console.log(data)
           if (data.profile.message === "Not Found") {
             //TODO: Show alert
+            console.log("User Not Found")
           } else {
             //TODO: Show user profile
             console.log(data)
             // ui.showProfile(data.profile)
           }
         });
+      // We we input a topic
     } else if (user_input.includes("#")) {
-
+      /*  
+        We format the input, such that "#Machine Learning"
+        becomes "machine-learning"
+      */
       let topic_query = user_input.toLowerCase().replace(/#/g, '').replace(/\s/g, '-')
 
       console.log(topic_query)
