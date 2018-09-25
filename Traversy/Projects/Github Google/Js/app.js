@@ -59,8 +59,8 @@ const searchStuff = (event) => {
             console.log("User Not Found")
           } else {
             //TODO: Show user profile
-            console.log(data)
-            // ui.showProfile(data.profile)
+            // console.log(data)
+            ui.showProfile(data.repos)
           }
         });
       // We we input a topic

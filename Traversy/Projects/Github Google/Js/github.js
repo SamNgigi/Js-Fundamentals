@@ -9,6 +9,8 @@ class GitHub {
     this.repos_url = environment.GITHUB_REPO_SEARCH_URL;
     this.topics_url = environment.GITHUB_TOPIC_SEARCH_URL;
     this.token = environment.GITHUB_ACCESS_TOKEN;
+    this.language = "go";
+    this.count = 5;
   }
 
   async getUser(user = "SamNgigi") {
@@ -26,10 +28,16 @@ class GitHub {
     const user_response = await fetch(
       `${this.users_url}/${user}?access_token=${this.token}`);
 
+    const user_repos = await fetch(
+      `${this.users_url}/${user}/repos?per_page=${this.count}&sort=stars&order=desc&access_token=${this.token}`
+    )
+
     const user_data = await user_response.json();
+    const user_repo_data = await user_repos.json()
 
     return {
-      profile: user_data
+      profile: user_data,
+      repos: user_repo_data
     }
     /*  
       *Note if we defined userData as profile e.g
@@ -43,7 +51,7 @@ class GitHub {
 
   async getRepos(project) {
     const repo_response = await fetch(
-      `${this.repos_url}=${project}+language:python&sort=stars&order=desc?access_token=${this.token}`
+      `${this.repos_url}=${project}+language:${this.language}&sort=stars&order=asc?per_page=${this.count}&access_token=${this.token}`
     );
 
     const repo_data = await repo_response.json();
@@ -55,7 +63,7 @@ class GitHub {
 
   async getTopics(topics) {
     const topic_response = await fetch(
-      `${this.topics_url}=${topics}+is:featured?access_token=${this.token}`, {
+      `${this.topics_url}=${topics}+is:featured&per_page${this.count}?access_token=${this.token}`, {
         headers: {
           "Accept": "application/vnd.github.v3.text-match+json,application/vnd.github.mercy-preview"
         }
