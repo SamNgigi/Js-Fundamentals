@@ -9,7 +9,7 @@ class GitHub {
     this.repos_url = environment.GITHUB_REPO_SEARCH_URL;
     this.topics_url = environment.GITHUB_TOPIC_SEARCH_URL;
     this.token = environment.GITHUB_ACCESS_TOKEN;
-    this.language = "go";
+    this.language = "python";
     this.count = 5;
   }
 
