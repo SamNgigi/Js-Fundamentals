@@ -1,3 +1,18 @@
+// *Fiddling with the browser console colors
+// We define some style and join them to format in a css king of way
+const success = [
+  "color: green",
+  "display: grid",
+  "justify-self: center",
+  "text-decoration: underline"
+].join(";")
+
+const fail = [
+  "color: red ",
+  "display: block",
+  "text-decoration: underline"
+].join(";")
+
 // * Producing a ReferenceError
 // Try execute whatever is within the try block
 try {
@@ -6,7 +21,8 @@ try {
 }
 // If there's an error catch the error. 
 catch (error) {
-  console.warn("Producing a ReferenceError")
+  // Color variable has to be defined at the beginning.
+  console.log("%c Producing a ReferenceError", success)
   console.log("")
   // * returns ReferenceError: myFunction is not defined.
   console.log(error);
@@ -34,7 +50,7 @@ console.log("")
 try {
   null.split("");
 } catch (error) {
-  console.warn("Producing a TypeError")
+  console.log("%c Producing a TypeError", success)
   console.log("")
   // * returns TypeError: cannot read property 'split' of null.
   console.log(error)
@@ -58,10 +74,9 @@ try {
 }
 
 console.log("")
-console.log("")
 try {
   // *Producing a SyntaxError
-  console.warn("Producing a SyntaxError")
+  console.log("%c Producing a SyntaxError", success)
   console.log("")
   /*  
     This will be evaluated as the variable Hello World which will throw a
@@ -72,22 +87,27 @@ try {
   console.log(error)
 }
 
+class UserError extends Error {
+  constructor(name = "UserError", message = "User has no name attribute") {
+    super();
+    this.name = name;
+    this.message = message;
+  }
+}
 
-// *Fiddling with the browser console colors
-// We define some style and join them to format in a css king of way
-const success = [
-  "color: green",
-  "display: block",
-  "text-decoration: underline"
-].join(";")
 
-const fail = [
-  "color: red ",
-  "display: block",
-  "text-decoration: underline"
-].join(";")
-
-// We add the %c to format the log with some style
-console.info("%c Succeed in style.\n", success);
-// Testing to see if it will work with console.log
-console.log("%c Fail in style.", fail);
+const user = {
+  email: "dude@gmail.com"
+};
+console.log("")
+console.log("%c Producing a custom error called UserError", success)
+console.log("")
+try {
+  if (!user.name) {
+    throw new UserError()
+  }
+} catch (error) {
+  console.log(error)
+  console.log(error.name)
+  console.log(error.message)
+}
