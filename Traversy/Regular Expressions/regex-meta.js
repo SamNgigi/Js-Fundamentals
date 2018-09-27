@@ -81,15 +81,27 @@ re = /^(-[0-9]){3}$/
 re = /^(R|Br)yan$/
 re = /^(Ms|Mr|Mrs).?$/
 
-/*  
- * 
- */
+// * Shorthand Character classes
 
+re = /\w/; // * Any one letter or number including the underscore _
+re = /\w+/; // * Any one or more letter or number including underscore _
+re = /\W/; // * Non letter or number or underscore. It will match a period
+re = /\W+/; // * One or more non letter or number or underscore.
+re = /\d/; // * Match any one digit. Can be string of int type.
+re = /\d+/; // * Match any one or more digits.
+re = /\D/; // * Match any one Non-digits
+re = /\s/; // * Match any one whitespace char
+re = /\s+/; // * Match any one or more whitespace
+re = /\S/; // * Match any one Non-White space.
+re = /Hi\b/i; // * Match the exact word bounded by b
 
+// * Assertions
+re = /q(?=u)/; // * Match "q" only if followed by "y"
+re = /q(?!u)/; // * Match "q" only if NOT followed by "y"
 
 
 // Test string
-const string = 'Mrs.'
+const string = "quote";
 
 // Log results
 const result = re.exec(string)
@@ -108,3 +120,19 @@ reTest = (re, str) => {
 }
 
 reTest(re, string)
+
+/*  
+
+  * Experimenting below.
+
+*/
+
+// * re = /\W+/
+
+// * let test_string = "Test  * string, # with & many special% chars."
+let test_string = "This is a spaced sentence"
+
+// * console.log("%c %s", "color: green;", test_string)
+
+// * const split_res = test_string.split(re)
+// * console.log(split_res)
