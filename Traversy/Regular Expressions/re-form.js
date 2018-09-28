@@ -88,6 +88,9 @@ validateZip = () => {
 
 submitForm = (event) => {
   event.preventDefault()
+  console.log(
+    `${name_input.value}\n${email_input.value}\n${phone_input.value}\n${zip_input.value}`
+  )
 }
 
 name_input.addEventListener('blur', validateName);
