@@ -6,6 +6,7 @@
 //    * // Declare public vars and function
 //   *}
 // *})();
+// * So whatever we want to be declared public we define in within the return statement.
 
 
 // An example STANDARD MODULE PATTERN
