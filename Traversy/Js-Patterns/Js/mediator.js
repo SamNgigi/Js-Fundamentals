@@ -44,12 +44,15 @@
    brian = new User("Brian"),
    ck = new User("Ck"),
    boyd = new User("Boyd"),
+   phill = new User("Phill"),
    chat = new Chatroom();
 
  chat.register(jax);
  chat.register(brian);
  chat.register(ck);
  chat.register(boyd);
- chat.register(jax);
+ chat.register(phill);
 
- jax.send("Hello Jeff", jax)
+ boyd.send("Hello Jeff", ck);
+ jax.send("Hello Phill, you are the best dev ever", phill);
+ ck.send("Supp y'all");
