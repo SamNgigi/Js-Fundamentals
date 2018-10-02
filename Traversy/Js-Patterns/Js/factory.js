@@ -10,7 +10,6 @@ function MemberFactory() {
   this.createMember = (name, type) => {
     let member;
 
-
     if (type === 'free') {
       member = new FreeMembership(name);
     } else if (type === 'basic') {
@@ -21,26 +20,26 @@ function MemberFactory() {
 
     member.type = type;
 
-    member.define = () => {
+    member.define = function () {
       console.log(
-        `Username: ${member.name}\nMembership:${member.type}\nFee:${member.fee}:`
+        `Username: ${this.name}\nMembership:${this.type}\nFee:${this.fee}:`
       )
     }
     return member;
   }
 }
 
-function FreeMembership(name) {
+const FreeMembership = function (name) {
   this.name = name;
   this.fee = "$0";
 }
 
-function StandardMemberShip(name) {
+const StandardMemberShip = function (name) {
   this.name = name;
   this.fee = "$10";
 }
 
-function PremiumMemberShip(name) {
+const PremiumMemberShip = function (name) {
   this.name = name;
   this.fee = "$20";
 }
