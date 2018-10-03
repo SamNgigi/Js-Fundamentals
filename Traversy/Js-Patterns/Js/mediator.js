@@ -56,3 +56,5 @@
  boyd.send("Hello Jeff", ck);
  jax.send("Hello Phill, you are the best dev ever", phill);
  ck.send("Supp y'all");
+
+ //  Todo: More research and practice on the mediator pattern.
