@@ -5,6 +5,7 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
   mode: 'development',
   devServer: {
+    clientLogLevel: 'warning',
     hot: true
   },
   plugins: [

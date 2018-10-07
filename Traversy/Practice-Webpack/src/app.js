@@ -7,16 +7,12 @@ import './styles/app.scss';
 import './styles/sub_app.scss';
 import './scripts/happy';
 
-if (module.hot) {
-  module.hot.accept();
-}
-
 
 // * We create a div element and call it root.
 const root = document.createElement("div");
 
 // * We add a paragraph tag and its content to root
-root.innerHTML = `<h1>Hello World of Webpack!</h1>`;
+root.innerHTML = `<h1>Hello World of Webpack!!</h1>`;
 
 // * Using lodash to group people object by managers
 const managerGroups = groupBy(people, "manager");
@@ -40,6 +36,15 @@ btn.onclick = () => {
   .then(chat => chat.init())
 }
 
+if (module.hot) {
+  module.hot.dispose(() => {
+    // * We add this to remove the side effects of HMR
+    root.parentNode.removeChild(root)
+    peeps.parentNode.removeChild(peeps)
+    btn.parentNode.removeChild(btn)
+  });
+  module.hot.accept();
+}
 
 /*  
  * Note that while using development mode the size of our bundle increased to
