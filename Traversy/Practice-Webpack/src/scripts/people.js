@@ -9,6 +9,14 @@ const people = [{
   {
     manager: "Awiti",
     name: "Kimani"
+  },
+  {
+    manager: "Kip",
+    name: "Ole-Sapei"
+  },
+  {
+    manager: "Nyaks",
+    name: "Oti"
   }
 ]
 

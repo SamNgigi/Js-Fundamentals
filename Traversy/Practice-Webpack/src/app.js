@@ -3,10 +3,13 @@ import {
 } from "lodash-es";
 import people from "./scripts/people";
 
-import './styles/style.scss';
+import './styles/app.scss';
 import './styles/sub_app.scss';
 import './scripts/happy';
 
+if (module.hot) {
+  module.hot.accept();
+}
 
 
 // * We create a div element and call it root.

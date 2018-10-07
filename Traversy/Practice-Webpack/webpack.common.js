@@ -1,4 +1,8 @@
 const path = require('path');
+// * Removing previous html during build
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+// * Generate new html after build
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -39,36 +43,19 @@ module.exports = {
            */
         }
       },
-      // * CSS, SCSS
-      {
-        test: /\.scss$/,
-        use: [
-          /*  
-           * These loaders will be processed in reverse order. i.e
-           * -> sass-loader will transform Sass into CSS
-           * -> css-loader parses Css into JS and resolves any
-           *    dependencies
-           * -> style-loader outputs our CSS into a <style> tag in the
-           *    document
-           */
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader'
-          }
-        ]
-      },
       // * Images and Stuff
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [{
           loader: 'file-loader'
         }]
-      }
+      },
     ]
-  }
+  },
+  plugins: [
+    new CleanWebpackPlugin(['build']),
+    new HtmlWebpackPlugin({
+      title: 'Best App in the world'
+    })
+  ]
 }
