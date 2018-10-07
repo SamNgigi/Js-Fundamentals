@@ -1,2 +1,2 @@
-let test = () => console.log("Hello world")
+let test = () => console.log("Hello world of Webpack and Babel")
 test()
