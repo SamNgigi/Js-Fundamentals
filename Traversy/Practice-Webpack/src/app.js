@@ -1,5 +1,9 @@
-import { groupBy } from "lodash-es";
-import people from "./app/people"
+import {
+  groupBy
+} from "lodash-es";
+import people from "./scripts/people";
+
+import './styles/style.scss';
 
 
 
@@ -21,11 +25,11 @@ document.body.appendChild(peeps)
 
 
 /*  
-  * Note that while using development mode the size of our bundle increased to
-  * 1.41 mb from around 2.92 Kib. This is because of the lodash-es
-  * dependency.
-  * 
-  * When we use production mode the file size is 17.3 Kib. This is
-  * because webpack removes all unused lodash modules in a process
-  * called  tree-shaking
-*/
+ * Note that while using development mode the size of our bundle increased to
+ * 1.41 mb from around 2.92 Kib. This is because of the lodash-es
+ * dependency.
+ * 
+ * When we use production mode the file size is 17.3 Kib. This is
+ * because webpack removes all unused lodash modules in a process
+ * called  tree-shaking
+ */
