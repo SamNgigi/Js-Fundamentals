@@ -4,6 +4,7 @@ import {
 import people from "./scripts/people";
 
 import './styles/style.scss';
+import './scripts/happy';
 
 
 

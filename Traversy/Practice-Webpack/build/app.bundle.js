@@ -7816,7 +7816,30 @@ eval("module.exports = function(originalModule) {\n\tif (!originalModule.webpack
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash-es */ \"./node_modules/lodash-es/lodash.js\");\n/* harmony import */ var _scripts_people__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/people */ \"./src/scripts/people.js\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/style.scss */ \"./src/styles/style.scss\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_style_scss__WEBPACK_IMPORTED_MODULE_2__);\n\n\n // * We create a div element and call it root.\n\nvar root = document.createElement(\"div\"); // * We add a paragraph tag and its content to root\n\nroot.innerHTML = \"<h1>Hello World of Webpack!</h1>\"; // * Using lodash to group people object by managers\n\nvar managerGroups = Object(lodash_es__WEBPACK_IMPORTED_MODULE_0__[\"groupBy\"])(_scripts_people__WEBPACK_IMPORTED_MODULE_1__[\"default\"], \"manager\"); // * Creating div and populating it with json data from managerGroups\n\nvar peeps = document.createElement(\"div\");\npeeps.innerHTML = \"<pre>\".concat(JSON.stringify(managerGroups, null, 2), \"</pre>\"); // * We finally add it to webpage by using appendChild. \n\ndocument.body.appendChild(root);\ndocument.body.appendChild(peeps);\n/*  \n * Note that while using development mode the size of our bundle increased to\n * 1.41 mb from around 2.92 Kib. This is because of the lodash-es\n * dependency.\n * \n * When we use production mode the file size is 17.3 Kib. This is\n * because webpack removes all unused lodash modules in a process\n * called  tree-shaking\n */\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash-es */ \"./node_modules/lodash-es/lodash.js\");\n/* harmony import */ var _scripts_people__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/people */ \"./src/scripts/people.js\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/style.scss */ \"./src/styles/style.scss\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_style_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _scripts_happy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/happy */ \"./src/scripts/happy.js\");\n\n\n\n // * We create a div element and call it root.\n\nvar root = document.createElement(\"div\"); // * We add a paragraph tag and its content to root\n\nroot.innerHTML = \"<h1>Hello World of Webpack!</h1>\"; // * Using lodash to group people object by managers\n\nvar managerGroups = Object(lodash_es__WEBPACK_IMPORTED_MODULE_0__[\"groupBy\"])(_scripts_people__WEBPACK_IMPORTED_MODULE_1__[\"default\"], \"manager\"); // * Creating div and populating it with json data from managerGroups\n\nvar peeps = document.createElement(\"div\");\npeeps.innerHTML = \"<pre>\".concat(JSON.stringify(managerGroups, null, 2), \"</pre>\"); // * We finally add it to webpage by using appendChild. \n\ndocument.body.appendChild(root);\ndocument.body.appendChild(peeps);\n/*  \n * Note that while using development mode the size of our bundle increased to\n * 1.41 mb from around 2.92 Kib. This is because of the lodash-es\n * dependency.\n * \n * When we use production mode the file size is 17.3 Kib. This is\n * because webpack removes all unused lodash modules in a process\n * called  tree-shaking\n */\n\n//# sourceURL=webpack:///./src/app.js?");
+
+/***/ }),
+
+/***/ "./src/assets/happy.png":
+/*!******************************!*\
+  !*** ./src/assets/happy.png ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"81260f7f630aab90364bc10dca2b24c0.png\";\n\n//# sourceURL=webpack:///./src/assets/happy.png?");
+
+/***/ }),
+
+/***/ "./src/scripts/happy.js":
+/*!******************************!*\
+  !*** ./src/scripts/happy.js ***!
+  \******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_happy_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/happy.png */ \"./src/assets/happy.png\");\n/* harmony import */ var _assets_happy_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_happy_png__WEBPACK_IMPORTED_MODULE_0__);\n\nvar img = document.createElement(\"img\");\nimg.src = _assets_happy_png__WEBPACK_IMPORTED_MODULE_0___default.a;\nimg.style = \"background: #2b3a42; padding: 20px;\";\nimg.width = 100;\ndocument.body.appendChild(img);\n\n//# sourceURL=webpack:///./src/scripts/happy.js?");
 
 /***/ }),
 
