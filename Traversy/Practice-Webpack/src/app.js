@@ -4,6 +4,7 @@ import {
 import people from "./scripts/people";
 
 import './styles/style.scss';
+import './styles/sub_app.scss';
 import './scripts/happy';
 
 
@@ -23,6 +24,18 @@ peeps.innerHTML = `<pre>${JSON.stringify(managerGroups, null, 2)}</pre>`
 // * We finally add it to webpage by using appendChild. 
 document.body.appendChild(root)
 document.body.appendChild(peeps)
+
+
+// * Code-Splitting and Lazy-Loading
+const btn = document.createElement("button");
+btn.textContent = "Open chat";
+
+document.body.appendChild(btn);
+
+btn.onclick = () => {
+  import( /* webpackChunkName: "chat" */ "./scripts/chat")
+  .then(chat => chat.init())
+}
 
 
 /*  
