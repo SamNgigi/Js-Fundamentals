@@ -3,7 +3,8 @@ $bluegrey: #2b3a42;
 
 pre {
   padding: 8px 16px;
-  background: $bluegrey;
+  background-color: $bluegrey;
+  background: $bluegrey url("../assets/happy.png") no-repeat center center / 150px;
   color: #e1e6e9;
   font-family: Menlo, Courier, monospace;
   font-size: 13px;
